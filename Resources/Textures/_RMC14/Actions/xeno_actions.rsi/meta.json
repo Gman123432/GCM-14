@@ -170,9 +170,6 @@
       "name": "build_tunnel"
     },
     {
-      "name": "reserve_parasite"
-    },
-    {
       "name": "ready_charge"
     },
     {
