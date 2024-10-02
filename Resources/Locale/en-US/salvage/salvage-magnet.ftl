@@ -1,45 +1,68 @@
-salvage-system-announcement-losing = The magnet is no longer able to hold the salvagable debris. Estimated time until loss: {$timeLeft} seconds.
-salvage-system-announcement-spawn-debris-disintegrated = Debris disintegrated during orbital transfer.
-salvage-system-announcement-spawn-no-debris-available = No debris could be recovered by the salvage magnet.
-salvage-system-announcement-arrived = A piece of salvagable debris has been pulled in. Estimated hold time: {$timeLeft} seconds.
-salvage-asteroid-name = Asteroid
-
-salvage-magnet-window-title = Salvage magnet
-salvage-expedition-window-progression = Progression
-
-salvage-magnet-resources = {$resource ->
-    [OreIron] Iron
-    [OreCoal] Coal
-    [OreQuartz] Quartz
-    [OreSalt] Salt
-    [OreGold] Gold
-    [OreDiamond] Diamond
-    [OreSilver] Silver
-    [OrePlasma] Plasma
-    [OreUranium] Uranium
-    [OreArtifactFragment] Artifact fragments
-    [OreBananium] Bananium
-    *[other] {$resource}
-}
-
-salvage-magnet-resources-count = {$count ->
-    [1] (Poor)
-    [2] (Moderate)
-    [3] (Moderate)
-    [4] (Rich)
-    [5] (Rich)
-    *[other] (Extraordinary)
-}
-
+salvage-system-announcement-losing = Магнит больше не может удерживать обломок. Оставшееся время удержания: { $timeLeft } секунд.
+salvage-system-announcement-spawn-debris-disintegrated = Обломок дезинтегрировал во время орбитального перемещения.
+salvage-system-announcement-spawn-no-debris-available = Нет обломков, которые можно притянуть магнитом.
+salvage-system-announcement-arrived = Обломок был притянут для утилизации. Расчётное время удержания: { $timeLeft } секунд.
+salvage-asteroid-name = Астероид
+salvage-magnet-window-title = Магнит обломков
+salvage-expedition-window-progression = Прогресс
+salvage-magnet-resources =
+    { $resource ->
+        [OreIron] Железо
+        [OreCoal] Уголь
+        [OreQuartz] Кварц
+        [OreGold] Золото
+        [OreDiamond] Алмазы
+        [OreSilver] Серебро
+        [OrePlasma] Плазма
+        [OreUranium] Уран
+       *[other] { $resource }
+    }
+salvage-magnet-resources-count =
+    { $count ->
+        [1] (Мало)
+        [2] (Средне)
+        [3] (Средне)
+        [4] (Много)
+        [5] (Много)
+       *[other] (Изобилие)
+    }
 # Asteroids
-dungeon-config-proto-BlobAsteroid = Asteroid clump
-dungeon-config-proto-ClusterAsteroid = Asteroid cluster
-dungeon-config-proto-SpindlyAsteroid = Asteroid spiral
-dungeon-config-proto-SwissCheeseAsteroid = Asteroid fragments
-
+dungeon-config-proto-BlobAsteroid = Астероидный массив
+dungeon-config-proto-ClusterAsteroid = Астероидный кластер
+dungeon-config-proto-SpindlyAsteroid = Астероидная спираль
+dungeon-config-proto-SwissCheeseAsteroid = Фрагменты астероидов
 # Wrecks
-salvage-map-wreck = Salvage wreck
-salvage-map-wreck-desc-size = Size:
-salvage-map-wreck-size-small = [color=lime]Small[/color]
-salvage-map-wreck-size-medium = [color=cornflowerblue]Medium[/color]
-salvage-map-wreck-size-large = [color=orchid]Large[/color]
+salvage-map-proto-Small1 = Инженерное хранилище
+salvage-map-proto-Small2 = Игровой уголок
+salvage-map-proto-Small3 = Прачечная
+salvage-map-proto-Small4 = Осколок бара
+salvage-map-proto-SmallShip1 = Пилюля
+salvage-map-proto-SmallAISurveyDrone = Исследовательский ИИ-дрон
+salvage-map-proto-SmallCargo = Шаттл шахтёров
+salvage-map-proto-SmallChapel = Часовня
+salvage-map-proto-SmallChef = Ресторан
+salvage-map-proto-SmallParty = День рождения
+salvage-map-proto-SmallSyndicate = Разрушенное судно Синдиката
+salvage-map-proto-SmallTesla = Зона содержания Теслы
+salvage-map-proto-SmallA1 = Плазменный пожар на астероиде
+salvage-map-proto-Medium1 = Тайник с плазменной ловушкой
+salvage-map-proto-MediumVault1 = Хранилище
+salvage-map-proto-MediumOrchestra = Безмолвный оркестр
+salvage-map-proto-MediumLibraryWreck = Покинутая библиотека
+salvage-map-proto-MediumCargoWreck = Крушение отдела снабжения
+salvage-map-proto-MediumPirateWreck = Обломок пиратской баржи
+salvage-map-proto-MediumHaulingShuttleWreck = Разрушенный грузовой корабль
+salvage-map-proto-TickColony = Колония космических клещей
+salvage-map-proto-CargoDock = Грузовой док на астероиде
+salvage-map-proto-SpaceWaffleHome = Вафельный домик
+salvage-map-proto-MediumShuttleWreck = Разбившийся эвакуационный шаттл
+salvage-map-proto-MediumPetHospital = Медвежий госпиталь
+salvage-map-proto-MediumCrashedShuttle = Разбившийся шаттл
+salvage-map-proto-Meatball = Фрикаделька
+salvage-map-proto-VeganMeatball = Веганская фрикаделька
+salvage-map-proto-StationStation = Станция станция
+salvage-map-proto-AsteroidBase = База на астероиде
+salvage-map-proto-RuinCargoBase = Разрушенный склад снабжения
+salvage-map-proto-SecurityChunk = Кусок отдела охраны
+salvage-map-proto-EngineeringChunk = Кусок инженерного отсека
+salvage-map-proto-OutpostArm = Рукав захваченного аванпоста

@@ -1,3 +1,3 @@
-cm-storage-unskilled = It must have some kind of ID lock...
-rmc-storage-limit-cant-fit = That doesn't fit in there!
-rmc-storage-limit-one-gun = That is already holding a gun!
+cm-storage-unskilled = Должно быть, у него есть какой-то идентификационный замок...
+rmc-storage-limit-cant-fit = Это туда не влезет!
+rmc-storage-limit-one-gun = Он уже держит пистолет!

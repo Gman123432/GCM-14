@@ -1,4 +1,4 @@
-﻿cmd-showautofire-desc = Shows the auto fire targeting for smart guns.
-cmd-showautofire-help = Usage: showautofire
-cmd-showautofire-enabled = Enabled showing auto fire targeting for smart guns.
-cmd-showautofire-disabled = Disabled showing auto fire targeting for smart guns.
+cmd-showautofire-desc = Показывает нацеливание автоматического огня для умных пушек.
+cmd-showautofire-help = Использование: showautofire
+cmd-showautofire-enabled = Включить показ автоприцеливания для умного оружия.
+cmd-showautofire-disabled = Отключено: показывает автоприцеливание для умных пушек.

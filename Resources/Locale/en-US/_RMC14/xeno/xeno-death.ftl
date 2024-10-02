@@ -1,4 +1,3 @@
-﻿cm-xeno-death-gasp = lets out a waning guttural screech, green blood bubbling from its maw.
-
-cm-xeno-death = Hive: {$xeno} has died at {$location}!
-cm-xeno-death-queen =  A sudden tremor ripples through the hive... the Queen has been slain! Vengeance!
+cm-xeno-death-gasp = издает слабый гортанный крик, из пасти хлещет зеленая кровь.
+cm-xeno-death = Улей: { $xeno } умерла!
+cm-xeno-death-queen = Внезапная дрожь прокатывается по улью... Королева убита! Мстите!

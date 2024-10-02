@@ -1,1 +1,1 @@
-﻿rmc-xeno-stun-shaken = We are shaken and slowed by the sudden impact!
+rmc-xeno-stun-shaken = От внезапного удара мы пошатнулись и затормозили!

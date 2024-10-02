@@ -1,5 +1,5 @@
-﻿rmc-repairable-need-blowtorch = You need a stronger blowtorch!
-rmc-repairable-start-self = You begin repairing {THE($target)}
-rmc-repairable-start-others = {$user} begin repairing {THE($target)}
-rmc-repairable-finish-self = You repair {THE($target)}
-rmc-repairable-finish-others = {$user} repairs {THE($target)}
+rmc-repairable-need-blowtorch = Вам нужен более мощный паяльник!
+rmc-repairable-start-self = Вы начинаете ремонт { THE($target) }
+rmc-repairable-start-others = { $user } начинает ремонтировать { THE($target) }
+rmc-repairable-finish-self = Вы ремонтируете { THE($target) }
+rmc-repairable-finish-others = { $user } починил { THE($target) }

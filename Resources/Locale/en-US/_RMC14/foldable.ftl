@@ -1,7 +1,6 @@
-﻿# Foldable
+# Foldable
 
-rmc-jacket-verb-fold = Take off jacket
-rmc-jacket-verb-unfold = Put on jacket
-
-rmc-sleeves-verb-fold = Roll up sleeves
-rmc-sleeves-verb-unfold = Roll down sleeves
+rmc-jacket-verb-fold = Закатать куртку
+rmc-jacket-verb-unfold = Раскатать куртку
+rmc-sleeves-verb-fold = Закатать рукава
+rmc-sleeves-verb-unfold = Раскатать рукава

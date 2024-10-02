@@ -1,10 +1,7 @@
-cm-pull-whitelist-denied = We have no use for {THE($name)}, why would we want to touch it?
-cm-pull-whitelist-denied-dead = {THE($name)} is dead, why would we want to touch it?
-
-rmc-pull-paralyze-self = You try to pull {$pulled}, getting a tail swipe to the head!
-rmc-pull-paralyze-others = {$puller} tries to pull {$pulled}, but gets a tail swipe to the head instead!
-
-rmc-pull-infect-self = You try to pull {$pulled}, but get jumped on and infected in the process!
-rmc-pull-infect-others = {$puller} tries to pull {$pulled}, but gets jumped on and infected in the process!
-
-rmc-prevent-pull-alive = You can't pull {THE($target)} while {SUBJECT($target)} {CONJUGATE-BE($target)} alive!
+cm-pull-whitelist-denied = Мы не используем { THE($name) }, зачем нам его трогать?
+cm-pull-whitelist-denied-dead = { THE($name) } мертв, зачем нам его трогать?
+rmc-pull-paralyze-self = Вы пытаетесь потянуть { $pulled }, но получаете удар хвостом по голове!
+rmc-pull-paralyze-others = { $puller } пытается потянуть { $pulled }, но вместо этого получает удар хвостом по голове!
+rmc-pull-infect-self = Вы пытаетесь вытащить { $pulled }, но на вас прыгают и заражают в процессе!
+rmc-pull-infect-others = { $puller } пытается вытащить { $pulled }, но на него прыгают и заражают в процессе!
+rmc-prevent-pull-alive = Нельзя тянуть { THE($target) }, пока { SUBJECT($target) } { CONJUGATE-BE($target) } живым!

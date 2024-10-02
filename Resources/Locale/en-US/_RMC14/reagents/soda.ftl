@@ -1,29 +1,38 @@
-reagent-name-bobda-classic = Bobda Classic
-reagent-desc-bobda-classic = A tangerine flavored soda that's canned in Havana
-
-reagent-name-bobda-cherry = Cherry Bobda
-reagent-desc-bobda-cherry = A cherry flavored soda that's canned in Havana
-
-reagent-name-bobda-lime = Lime Bobda
-reagent-desc-bobda-lime = A lime flavored soda that's canned in Havana
-
-reagent-name-bobda-grape = Grape Bobda
-reagent-desc-bobda-grape = A grape flavored soda that's canned in Havana
-
-reagent-name-bobda-blue = Blue Raspberry Bobda
-reagent-desc-bobda-blue = A blue fruit flavored soda that's canned in Havana
-
-reagent-name-bobda-peach = Peach Bobda
-reagent-desc-bobda-peach = A peach flavored soda with flecks of peach pit floating inside that's canned in Havana
-
-reagent-name-bobda-cranberry = Cranberry Bobda
-reagent-desc-bobda-cranberry = A cranberry flavored soda that's canned in Havana
-
-reagent-name-bobda-vanilla = Vanilla Bobda
-reagent-desc-bobda-vanilla = A vanilla flavored soda that's canned in Havana
-
-reagent-name-bobda-pineapple = Pineapple Bobda
-reagent-desc-bobda-pineapple = A pineapple flavored soda that's canned in Havana
-
-reagent-name-fruit-beer = Fruit Beer
-reagent-desc-fruit-beer = An insulting Mango flavored beverage. Tastes like rotten fruit.
+reagent-name-bobda-classic = Бобда Классик
+reagent-desc-bobda-classic = Газировка со вкусом мандарина, которую производят в Гаване.
+reagent-name-bobda-cherry = Вишневая Бобда
+reagent-desc-bobda-cherry = Газировка со вкусом вишни, которую производят в Гаване.
+reagent-name-bobda-lime = Лайм Бобда
+reagent-desc-bobda-lime = Газировка со вкусом лайма, которую производят в Гаване.
+reagent-name-bobda-grape = Виноградная Бобда
+reagent-desc-bobda-grape = Газировка со вкусом винограда, которую производят в Гаване.
+reagent-name-bobda-blue = Голубая малина Бобда
+reagent-desc-bobda-blue = Голубая газировка со вкусом фруктов, которую производят в Гаване.
+reagent-name-bobda-peach = Персиковая Бобда
+reagent-desc-bobda-peach = Газировка со вкусом персика, внутри которой плавают кусочки персиковой косточки, консервируется в Гаване
+reagent-name-bobda-cranberry = Клюквенная Бобда
+reagent-desc-bobda-cranberry = Газировка со вкусом клюквы, консервированная в Гаване
+reagent-name-bobda-vanilla = Ванильная Бобда
+reagent-desc-bobda-vanilla = Газировка со вкусом ванили, которую производят в Гаване.
+reagent-name-bobda-pineapple = Ананас Бобда
+reagent-desc-bobda-pineapple = Газировка со вкусом ананаса, консервированная в Гаване
+reagent-name-souto-classic = Класический Соуто
+reagent-desc-souto-classic = Газировка со вкусом мандарина, консервированная в Гаване.
+reagent-name-souto-cherry = Вишневый Соуто
+reagent-desc-souto-cherry = Газировка со вкусом вишни, консервируемая в Гаване
+reagent-name-souto-lime = Лаймовый Соуто
+reagent-desc-souto-lime = Консервированная в Гаване газировка со вкусом лайма
+reagent-name-souto-grape = Виноградный Соуто
+reagent-desc-souto-grape = Консервированная в Гаване газировка со вкусом винограда
+reagent-name-souto-blue = Голубиковый Соуто
+reagent-desc-souto-blue = Газировка со вкусом голубых фруктов, выпускаемая в Гаване
+reagent-name-souto-peach = Персиковый Соуто
+reagent-desc-souto-peach = Газировка со вкусом персика, внутри которой плавают кусочки персиковой косточки, консервируется в Гаване
+reagent-name-souto-cranberry = Клюквенный Соуто
+reagent-desc-souto-cranberry = Газировка со вкусом клюквы, консервированная в Гаване
+reagent-name-souto-vanilla = Ванильный Соуто
+reagent-desc-souto-vanilla = Консервированная в Гаване газировка со вкусом ванили
+reagent-name-souto-pineapple = Ананасовый Соуто
+reagent-desc-souto-pineapple = Консервированная в Гаване газировка со вкусом ананаса
+reagent-name-fruit-beer = Фруктовое пиво
+reagent-desc-fruit-beer = Оскорбительный напиток со вкусом манго. По вкусу напоминает гнилые фрукты.

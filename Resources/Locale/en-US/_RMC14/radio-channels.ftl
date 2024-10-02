@@ -1,22 +1,18 @@
-chat-radio-marine-highcommand = Marine High Command
-
-chat-radio-marine-common = Marine Common
-chat-radio-marine-command = Command
-chat-radio-marine-medical = Medical
-chat-radio-marine-engineer = Engineering
-chat-radio-marine-military-police = Military Police
-chat-radio-marine-requisition = Requisition
-chat-radio-marine-intel = Intelligence
-chat-radio-marine-jtac = JTAC
-
-chat-radio-marine-alpha = Alpha
-chat-radio-marine-bravo = Bravo
-chat-radio-marine-charlie = Charlie
-chat-radio-marine-delta = Delta
-chat-radio-marine-echo = Echo
-chat-radio-marine-foxtrot = Foxtrot
-
-chat-radio-colony = Colony
-chat-radio-WY = We-Ya
-
-chat-radio-hivemind = Hivemind
+chat-radio-marine-highcommand = Высшее командование КСМ США
+chat-radio-marine-common = Общий
+chat-radio-marine-command = Командование
+chat-radio-marine-medical = Медицина
+chat-radio-marine-engineer = Инженерное
+chat-radio-marine-military-police = Военная полиция
+chat-radio-marine-requisition = Поставки
+chat-radio-marine-intel = Разведка
+chat-radio-marine-jtac = СКАТ
+chat-radio-marine-alpha = Альфа
+chat-radio-marine-bravo = Браво
+chat-radio-marine-charlie = Чарли
+chat-radio-marine-delta = Дельта
+chat-radio-marine-echo = Эхо
+chat-radio-marine-foxtrot = Фокстрот
+chat-radio-colony = Колония
+chat-radio-WY = Weyland-Yutani
+chat-radio-hivemind = Улей

@@ -1,66 +1,47 @@
-﻿cm-job-name-xeno-boiler = Boiler
-CMJobXenoBoiler = Boiler
-
-cm-job-name-xeno-burrower = Burrower
-CMJobXenoBurrower = Burrower
-
-cm-job-name-xeno-carrier = Carrier
-CMJobXenoCarrier = Carrier
-
-cm-job-name-xeno-crusher = Crusher
-CMJobXenoCrusher = Crusher
-
-cm-job-name-xeno-defender = Defender
-CMJobXenoDefender = Defender
-
-cm-job-name-xeno-drone = Drone
-CMJobXenoDrone = Drone
-
-cm-job-name-xeno-hivelord = Hivelord
-CMJobXenoHivelord = Hivelord
-
-cm-job-name-xeno-parasite = Parasite
-CMJobXenoParasite = Parasite
-
-cm-job-name-xeno-larva = Larva
-CMJobXenoLarva = Larva
-
-cm-job-name-xeno-lesser-drone = Lesser Drone
-CMJobXenoLesserDrone = Lesser Drone
-
-cm-job-name-xeno-lurker = Lurker
-CMJobXenoLurker = Lurker
-
-cm-job-name-xeno-praetorian = Praetorian
-CMJobXenoPraetorian = Praetorian
-
-cm-job-name-xeno-queen = Queen
-CMJobXenoQueen = Queen
-
-cm-job-name-xeno-ravager = Ravager
-CMJobXenoRavager = Ravager
-
-cm-job-name-xeno-runner = Runner
-CMJobXenoRunner = Runner
-
-cm-job-name-xeno-sentinel = Sentinel
-CMJobXenoSentinel = Sentinel
-
-cm-job-name-xeno-spitter = Spitter
-CMJobXenoSpitter = Spitter
-
-cm-job-name-xeno-warrior = Warrior
-CMJobXenoWarrior = Warrior
-
-# TODO RMC14
-department-CMXeno = Xenonid
+cm-job-name-xeno-boiler = Бойлер
+CMJobXenoBoiler = Бойлер
+cm-job-name-xeno-burrower = Землекоп
+CMJobXenoBurrower = Землекоп
+cm-job-name-xeno-carrier = Носитель
+CMJobXenoCarrier = Носитель
+cm-job-name-xeno-crusher = Крушитель
+CMJobXenoCrusher = Крушитель
+cm-job-name-xeno-defender = Защитник
+CMJobXenoDefender = Защитник
+cm-job-name-xeno-drone = Дрон
+CMJobXenoDrone = Дрон
+cm-job-name-xeno-hivelord = Лорд Улья
+CMJobXenoHivelord = Лорд Улья
+cm-job-name-xeno-parasite = Лицехват
+CMJobXenoParasite = Лицехват
+cm-job-name-xeno-hugger = Лицехват
+CMJobXenoHugger = Лицехват
+cm-job-name-xeno-larva = Личинка
+CMJobXenoLarva = Личинка
+cm-job-name-xeno-lesser-drone = Низший Дрон
+CMJobXenoLesserDrone = Низший Дрон
+cm-job-name-xeno-lurker = Охотник
+CMJobXenoLurker = Охотник
+cm-job-name-xeno-praetorian = Преторианец
+CMJobXenoPraetorian = Преторианец
+cm-job-name-xeno-queen = Королева
+CMJobXenoQueen = Королева
+cm-job-name-xeno-ravager = Разоритель
+CMJobXenoRavager = Разоритель
+cm-job-name-xeno-runner = Бегун
+CMJobXenoRunner = Бегун
+cm-job-name-xeno-sentinel = Часовой
+CMJobXenoSentinel = Часовой
+cm-job-name-xeno-spitter = Плеватель
+CMJobXenoSpitter = Плеватель
+cm-job-name-xeno-warrior = Воин
+CMJobXenoWarrior = Воин
+# TODO CM14
+department-CMXeno = Ксеноморфы
 cm-department-Xeno-description = ""
-
-cm-job-name-selectable-xenonid = Xenonid
-CMXenoSelectableXeno = Xenonid
-
-cm-job-supervisors-queen = the Queen
-
-role-timer-xeno-roles = Xenonid
-role-timer-xeno-drones = drone and drone evolutions
-role-timer-xeno-tier-three = tier three castes
+cm-job-name-selectable-xenonid = Ксеноморф
+CMXenoSelectableXeno = Ксеноморф
+cm-job-supervisors-queen = Королеве
+role-timer-xeno-roles = Ксеноморф
+role-timer-xeno-drones = эволюция дронов и дроны
+role-timer-xeno-tier-three = касты третьего уровня

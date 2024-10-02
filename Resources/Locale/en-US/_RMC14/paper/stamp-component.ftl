@@ -1,15 +1,14 @@
-stamp-component-stamped-name-cm-default = Stamped
-
+stamp-component-stamped-name-cm-default = С печатью
 stamp-component-stamped-name-cm-we-ya = We-Ya
-stamp-component-stamped-name-cm-marine = Marine High Command
-stamp-component-stamped-name-cm-cmb = Colony Marshal Bureau
-
-stamp-component-stamped-name-cm-co = Commanding Officer
-stamp-component-stamped-name-cm-aso = Auxiliary Support Officer
-stamp-component-stamped-name-cm-cmp = Chief of Military Police
-stamp-component-stamped-name-cm-cmo = Chief Medical Officer
-stamp-component-stamped-name-cm-qm = Quartermaster
-stamp-component-stamped-name-cm-ce = Chief Engineer
-
-stamp-component-stamped-name-cm-approve = APPROVED
-stamp-component-stamped-name-cm-deny = DENIED
+stamp-component-stamped-name-cm-marine = Верховное командование морской пехоты
+stamp-component-stamped-name-cm-weyyu = Weyland-Yutani
+stamp-component-stamped-name-cm-uscm = Верховное командование КША
+stamp-component-stamped-name-cm-cmb = Бюро колониальных маршалов
+stamp-component-stamped-name-cm-co = Комендантский офицер
+stamp-component-stamped-name-cm-aso = Офицер вспомогательного обеспечения
+stamp-component-stamped-name-cm-cmp = Начальник военной полиции
+stamp-component-stamped-name-cm-cmo = Главный медицинский офицер
+stamp-component-stamped-name-cm-qm = Квартирмейстер
+stamp-component-stamped-name-cm-ce = Главный инженер
+stamp-component-stamped-name-cm-approve = ОДОБРЕННО
+stamp-component-stamped-name-cm-deny = ОТКАЗАНО

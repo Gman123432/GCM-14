@@ -1,55 +1,57 @@
-﻿cm-ui-rmc14 = RMC14
-cm-ui-audio-voicelines-arachnid = Play voicelines for arachnids
-cm-ui-audio-voicelines-diona = Play voicelines for dionae
-cm-ui-audio-voicelines-dwarf = Play voicelines for dwarves
-cm-ui-audio-voicelines-felinid = Play voicelines for felinids
-cm-ui-audio-voicelines-human = Play voicelines for humans
-cm-ui-audio-voicelines-moth = Play voicelines for moths
-cm-ui-audio-voicelines-reptilian = Play voicelines for reptilians
-cm-ui-audio-voicelines-slime = Play voicelines for slimes
-cm-ui-roadmap = Roadmap
-
-rmc-ui-link-discord-account = Link Discord Account
-rmc-ui-link-discord-account-text = Click the button below to copy your code.
-  Then go to the #account-linking channel to link your accounts.
-rmc-ui-link-discord-account-copy = Copy code
-rmc-ui-link-discord-account-copied = Copied!
-rmc-ui-link-discord-account-already-linked = [bold]Your account is already linked![/bold]
-rmc-ui-link-discord-account-open-channel = Open channel
-
-rmc-ui-named-items = Named Items
-rmc-ui-named-items-displayed-as = Will be displayed as 'Your Custom Name' M54C Assault Rifle, for example.
-  Make sure the name you choose doesn't violate the rules.
-  If you aren't sure, ask in AHelp! (F1)
-rmc-ui-named-primary-gun = Primary Gun Name
-rmc-ui-named-sidearm = Sidearm Name
-rmc-ui-named-helmet = Helmet Name
-rmc-ui-named-armor = Armor Name
-rmc-ui-named-sentry = Sentry Name
-
-rmc-ui-patron-perks = Patron Perks
-rmc-ui-lobby-message = Lobby Message
-rmc-ui-lobby-message-description = Displayed to players before the game starts.
-  One is randomly chosen between all the Patrons of this tier.
-  Make sure the message you choose doesn't break the rules.
-  If you aren't sure, ask in AHelp! (F1)
-rmc-ui-shoutout = Round-end shoutout
-rmc-ui-shoutout-marine-title = Name to use for the round-end marine shoutout.
-rmc-ui-shoutout-marine-description = Displayed at round end as the funder.
-rmc-ui-shoutout-xeno-title = Name to use for the round-end xeno shoutout.
-rmc-ui-shoutout-xeno-description = Displayed at round end as the establisher of the hive.
-rmc-ui-shoutout-example = Example:
-rmc-ui-shoutout-info = Each name is randomly chosen between all the Patrons of this tier.
-  Make sure the names you choose are in-character and don't break the rules.
-  If you aren't sure, ask in AHelp! (F1)
-rmc-ui-named-items-in-preferences = You can change the names of your items per-character in Character Setup.
-rmc-ui-figurine = Character Figurine
-rmc-ui-figurine-in-preferences = You can export your character to be made into a figurine in Character Setup.
-  Limited to one active figurine per person!
-  If you want to change yours, tell us on Discord.
-
-rmc-ui-shoutout-marine = [bold]Operation funded by [color=green]{$name}[/color]![/bold]
-rmc-ui-shoutout-xeno = [bold]Hive established by [color=purple]{$name}[/color]![/bold]
-
-rmc-ui-discord = Discord
-rmc-ui-patreon = Patreon
+cm-ui-rmc14 = RMC14
+cm-ui-audio-voicelines-arachnid = Воспроизводить голоса для арахнидов
+cm-ui-audio-voicelines-diona = Воспроизводить голоса для дион
+cm-ui-audio-voicelines-dwarf = Воспроизводить голоса для дворфов
+cm-ui-audio-voicelines-felinid = Воспроизводить голоса для фелинидов
+cm-ui-audio-voicelines-human = Воспроизводить голоса для людей
+cm-ui-audio-voicelines-moth = Воспроизводить голоса для молей
+cm-ui-audio-voicelines-reptilian = Воспроизводить голоса для унатхов
+cm-ui-audio-voicelines-slime = Воспроизводить голоса для слаймолюдов
+cm-ui-cm14 = Колониальные Морпехи 14
+rmc-ui-link-discord-account = Ссылка на аккаунт Discord
+rmc-ui-link-discord-account-text =
+    Нажмите на кнопку ниже, чтобы скопировать код.
+    Затем перейдите на канал #account-linking, чтобы связать свои аккаунты.
+rmc-ui-link-discord-account-copy = Копировать код
+rmc-ui-link-discord-account-copied = Скопировано!
+rmc-ui-link-discord-account-already-linked = [bold]Ваш аккаунт уже привязан![/bold]
+rmc-ui-link-discord-account-open-channel = Открытый канал
+rmc-ui-named-items = Названные предметы
+rmc-ui-named-items-displayed-as =
+    Будет отображаться, например, как 'Ваше пользовательское имя' Штурмовая винтовка M54C.
+    Убедитесь, что выбранное вами имя не нарушает правил.
+    Если вы не уверены, спросите в AHelp! (F1)
+rmc-ui-named-primary-gun = Название основного оружия
+rmc-ui-named-sidearm = Название вторичного оружия
+rmc-ui-named-helmet = Название шлема
+rmc-ui-named-armor = Название брони
+rmc-ui-named-sentry = Название турели
+rmc-ui-patron-perks = Привилегии спонсора
+rmc-ui-lobby-message = Сообщение в лобби
+rmc-ui-lobby-message-description =
+    Отображается у игроков перед началом игры.
+    Один выбирается случайным образом между всеми спонсорами.
+    Убедитесь, что выбранное вами сообщение не нарушает правил.
+    Если вы не уверены, спросите в AHelp! (F1)
+rmc-ui-shoutout = Окончание раунда
+rmc-ui-shoutout-marine-title = Имя, которое будет использоваться в конце раунда.
+rmc-ui-shoutout-marine-description = Отображается в конце раунда в качестве спонсора опреации.
+rmc-ui-shoutout-xeno-title = Имя, которое будет использоваться в конце раунда.
+rmc-ui-shoutout-xeno-description = Отображается в конце раунда как основатель улья.
+rmc-ui-shoutout-example = Пример:
+rmc-ui-shoutout-info =
+    Каждое имя выбирается случайным образом среди всех спонсоров.
+    Убедитесь, что выбранные вами имена соответствуют персонажу и не нарушают правил.
+    Если вы не уверены, спросите в AHelp! (F1)
+rmc-ui-named-items-in-preferences = Вы можете изменить названия предметов для каждого персонажа в настройках персонажа.
+rmc-ui-figurine = Фигурка персонажа
+rmc-ui-figurine-in-preferences =
+    Вы можете экспортировать своего персонажа, чтобы сделать из него фигурку, в разделе "Настройка персонажа".
+    Ограничение - одна активная фигурка на человека!
+    Если вы хотите изменить свой, сообщите нам об этом в Discord.
+rmc-ui-shoutout-marine = [bold]Операция финансируется [color=green]{ $name }[/color]![/bold]
+rmc-ui-shoutout-xeno = [bold]Улей, основаный [color=purple]{ $name }[/color]![/bold]
+rmc-ui-discord = Дискорд
+rmc-ui-patreon = Boosty
+cm-ui-audio-humanoid-voicelines = Воспроизводить голоса
+cm-ui-roadmap = Дорожная карта

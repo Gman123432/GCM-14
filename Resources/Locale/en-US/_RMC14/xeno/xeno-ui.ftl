@@ -1,4 +1,10 @@
-﻿rmc-xeno-words-of-the-queen-header = The words of the Queen reverberate in our head...
-
-xeno-ui-reserve-parasites-title = Reserve Parasites
-xeno-ui-reserve-parasites-apply-button-text = Apply
+rmc-xeno-words-of-the-queen-header = Слова королевы звучат в нашей голове...
+cm-ui-cm-actions = Действия СМ
+cm-ui-transform-tab = Трансформация
+cm-ui-xeno-tab = Ксено
+cm-ui-xeno-hive = Улей:
+cm-ui-open-cm-actions = Открыть действия CM
+cm-ui-create-new-hive = Создать новый улей
+cm-ui-create-hive-title = Новое название улья
+cm-ui-humanoid = Гуманоид
+cm-ui-tier = Уровень { $tier }

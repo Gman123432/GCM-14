@@ -1,10 +1,8 @@
-cm-action-popup-scoping-user = You move {THE($scope)} closer to your eyes.
-cm-action-popup-scoping-stopping-user = You move {THE($scope)} away from your eyes.
-
-cm-action-popup-scoping-user-must-hold = You must hold {$scope} in your active hand to see through it.
-cm-action-popup-scoping-user-must-not-pulled = You can't use optics of {$scope} while being pulled!
-cm-action-popup-scoping-user-must-not-contained = You can't use optics of {$scope} while being in a container!
-cm-action-popup-scoping-user-must-wield = You must hold {THE($scope)} with two hands to use the scope.
-cm-action-popup-scoping-must-attach = {CAPITALIZE(THE($scope))} must be attached to a gun in order to function!
-
-rcm-action-popup-scope-cycle-zoom = Magnification level changed to {$zoom}.
+cm-action-popup-scoping-user = Вы перемещаете { THE($scope) } ближе к глазам.
+cm-action-popup-scoping-stopping-user = Вы отодвигаете { THE($scope) } от своих глаз.
+cm-action-popup-scoping-user-must-hold = Вы должны держать { $scope } в активной руке, чтобы видеть через него.
+cm-action-popup-scoping-user-must-not-pulled = Вы не можете использовать оптику { $scope }, когда вас тянут!
+cm-action-popup-scoping-user-must-not-contained = Вы не можете использовать оптику { $scope }, находясь в контейнере!
+cm-action-popup-scoping-user-must-wield = Вы должны держать { THE($scope) } двумя руками, чтобы использовать прицел.
+cm-action-popup-scoping-must-attach = { CAPITALIZE(THE($scope)) } должен быть прикреплен к оружию, чтобы функционировать!
+rcm-action-popup-scope-cycle-zoom = Уровень увеличения изменился на { $zoom }.

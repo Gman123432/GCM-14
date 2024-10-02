@@ -1,16 +1,11 @@
-rmc-trait-category-inconveniences = Inconveniences
-
-rmc-trait-russian-accent-name = Russian accent
-rmc-trait-russian-accent-desc = You come from space Russia
-
-rmc-trait-french-accent-name = French accent
-rmc-trait-french-accent-desc = You come from space France
-
-rmc-trait-mobster-accent-name = Mobster accent
-rmc-trait-mobster-accent-desc = ey gabagool fugeddaboutit I'm walkin here 
-
-rmc-trait-spanish-accent-name = Spanish accent
-rmc-trait-spanish-accent-desc = You come from space Spain
-
-rmc-trait-scottish-accent-name = Scottish accent
-rmc-trait-scottish-accent-desc = Fer tha folk who come fae a Hielan clan.
+rmc-trait-category-inconveniences = Неудобства
+rmc-trait-russian-accent-name = Русский акцент
+rmc-trait-russian-accent-desc = Вы прилетели из космической России
+rmc-trait-french-accent-name = Французский акцент
+rmc-trait-french-accent-desc = Вы прибыли из космической Франции.
+rmc-trait-mobster-accent-name = Акцент мафиози
+rmc-trait-mobster-accent-desc = Эй, Габагул, я иду сюда.
+rmc-trait-spanish-accent-name = Испанский акцент
+rmc-trait-spanish-accent-desc = Вы прибыли из космической Испании
+rmc-trait-scottish-accent-name = Шотландский акцент
+rmc-trait-scottish-accent-desc = Для тех, кто принадлежит к клану Хиелан.

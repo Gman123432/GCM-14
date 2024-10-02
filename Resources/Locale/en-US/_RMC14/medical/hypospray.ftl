@@ -1,15 +1,13 @@
-﻿rmc-hypospray-label = Volume: [color=white]{$currentVolume}/{$totalVolume}[/color]
-    Injecting ([color=white]{$transferVolume}u[/color])
-
-rmc-hypospray-label-novial = No Vial
-    Injecting ([color=white]{$transferVolume}u[/color])
-
-rmc-hypospray-fail-tacreload = You aren't experienced enough to load this any faster.
-rmc-hypospray-swap-tacreload = You begin swapping vials.
-rmc-hypospray-load-tacreload = You begin loading a vial into {THE($hypo)}.
-
-rmc-hypospray-loaded = It is loaded with {INDEFINITE($vial)} {$vial}.
-rmc-hypospray-no-vial = No vial loaded.
-rmc-hypospray-amount-change = Now injecting {$amount}u.
-rmc-hypospray-full = {THE($vial)} is full.
-
+rmc-hypospray-label =
+    Объем: [color=white]{ $currentVolume }/{ $totalVolume }[/color]
+    Инъекция ([color=white]{ $transferVolume }u[/color])
+rmc-hypospray-label-novial =
+    Нет пробирки
+    Инъекция ([color=white]{ $transferVolume }u[/color])
+rmc-hypospray-fail-tacreload = Вы недостаточно опытны, чтобы загрузить его быстрее.
+rmc-hypospray-swap-tacreload = Вы начинаете менять флаконы местами.
+rmc-hypospray-load-tacreload = Вы начинаете загружать пробирку в { THE($hypo) }.
+rmc-hypospray-loaded = Он загружается с помощью { INDEFINITE($vial) } { $vial }.
+rmc-hypospray-no-vial = Пробирка не загружен.
+rmc-hypospray-amount-change = Теперь вводим { $amount }u.
+rmc-hypospray-full = { THE($vial) } заполнен.

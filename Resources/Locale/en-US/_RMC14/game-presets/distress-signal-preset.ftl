@@ -1,15 +1,31 @@
-﻿rmc-distress-signal-title = Distress Signal
-rmc-distress-signal-description = Respond to a distress signal sent by a nearby planet.
-
-cm-distress-signal-majormarinevictory = [color=green]All of the xenos were wiped out![/color]
-cm-distress-signal-minormarinevictory = [color=green]The xeno hive was thrown into disarray after losing its xeno Queen![/color]
-cm-distress-signal-majorxenovictory = [color=purple]All of the marines were wiped out![/color]
-cm-distress-signal-minorxenovictory = [color=purple]The xenos hijacked a dropship[/color] [color=green]but were wiped out by the marines![/color]
-cm-distress-signal-alldied = [color=yellow]Mutual Annihilation![/color]
-cm-distress-signal-none = [color=yellow]No outcome![/color]
-
-cm-distress-signal-marine = {$player}
-
-rmc-distress-signal-next-map-title = Next Planet Map
-rmc-distress-signal-next-map-tie = Tie for map vote! Picking... {$picked}
-rmc-distress-signal-next-map-win = {$winner} won the map vote!
+rmc-distress-signal-title = Сигнал бедствия
+rmc-distress-signal-description = Ответьте на сигнал бедствия, посланный соседней планетой.
+cm-distress-signal-none = Раунд был завершён досрочно
+cm-distress-signal-majormarinevictory =
+    { "[" }color=green]Крупная победа морпехов[/color]
+    Все ксеноморфы были уничтожены
+cm-distress-signal-minormarinevictory =
+    { "[" }color=green]Малая победа морпехов[/color]
+    Улей ксеноморфов был ввергнут в смятение после потери королевы ксеноморфов
+cm-distress-signal-majorxenovictory =
+    { "[" }color=purple]Крупная победа ксеноморфов[/color]
+    Все морпехи были уничтожены
+cm-distress-signal-minorxenovictory =
+    { "[" }color=purple]Малая победа ксеноморфов[/color]
+    Ксеноморфы захватили корабль, но были уничтожены морпехами
+cm-distress-signal-alldied =
+    { "[" }color=yellow]Ничья[/color]
+    Взаимное уничтожение!
+cm-distress-signal-statistic =
+    Было { $marines } морпехов, из которых выжило { $marinesAlive }.
+    Было { $xenos } ксеноморфов, из которых выжило { $xenosAlive }.
+rmc-distress-signal-next-map-title = Следующая карта планеты
+rmc-distress-signal-next-map-tie = Ничья при голосовании за карту! Выбираем... { $picked }
+rmc-distress-signal-next-map-win = { $winner } выиграла в голосование за карту!
+cm-distress-signal-discord-none = Раунд был завершён досрочно
+cm-distress-signal-discord-majormarinevictory = Крупная победа морпехов
+cm-distress-signal-discord-minormarinevictory = Малая победа морпехов
+cm-distress-signal-discord-majorxenovictory = Крупная победа ксеноморфов
+cm-distress-signal-discord-minorxenovictory = Малая победа ксеноморфов
+cm-distress-signal-discord-alldied = Ничья
+cm-distress-signal-marine = { $player }

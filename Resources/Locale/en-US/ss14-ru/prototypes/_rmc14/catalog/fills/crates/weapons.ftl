@@ -1,0 +1,10 @@
+ent-RMCCrateM54C = ящик для винтовки M54C MK1 (x2 MK2, x2 магазина)
+    .desc = { ent-RMCCrateWeapons.desc }
+ent-RMCCrateM54CE2 = ящик M54CE2 HAR (HAR x2, ящик с боеприпасами HAR x2)
+    .desc = { ent-RMCCrateWeapons.desc }
+ent-RMCCrateMK80 = ящик с ручной пушкой MK80 (x2)
+    .desc = { ent-RMCCrateWeapons.desc }
+ent-RMCCrateSmartGunSet = кейс системы ML66A умный пулемёт
+    .desc = { ent-RMCCrateWeapons.desc }
+ent-RMCCrateSU6 = кейс умного пистолета SU-6 (x2)
+    .desc = { ent-RMCCrateWeapons.desc }

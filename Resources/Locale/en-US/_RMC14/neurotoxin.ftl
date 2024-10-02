@@ -1,24 +1,17 @@
-﻿rmc-neuro-tired = Your whole body is feeling numb as you quickly tire out!
-
-rmc-neuro-numb = You body starts feeling numb, you can't feel your fingers!
-
-rmc-neuro-where = Why am I here?
-rmc-neuro-very-numb = Your entire body feels numb!
-rmc-neuro-erratic = You notice your movement is erratic!
-rmc-neuro-panic = You panic as numbness takes over your body!
-
-rmc-neuro-sting = Your eyes sting, you can't see!
-
-rmc-neuro-what = What am I doing?
-rmc-neuro-hearing = Your hearing fades away, you can't hear anything!
-rmc-neuro-pain = A sharp pain eminates from your abdomen!
-rmc-neuro-agh = EVERYTHING IS HURTING!! AGH!!!
-rmc-neuro-so-numb = Your entire body is numb, you can't feel anything!
-rmc-neuro-limbs = You can't feel your limbs at all!
-rmc-neuro-think = Your mind goes blank, you can't think of anything!
-
-rmc-stumble = You stumble!
-rmc-stumble-others = {CAPITALIZE($victim)} misteps in {POSS-ADJ($victim)} confusion!
-
-rmc-bloodcough = You cough up blood!
-
+rmc-neuro-tired = Все ваше тело немеет, и вы быстро устаете!
+rmc-neuro-numb = Тело начинает неметь, вы не чувствуете пальцев!
+rmc-neuro-where = Почему я здесь?
+rmc-neuro-very-numb = Все тело словно онемело!
+rmc-neuro-erratic = Вы заметили, что ваши движения нестабильны!
+rmc-neuro-panic = Вы паникуете, когда онемение овладевает вашим телом!
+rmc-neuro-sting = У вас щиплет глаза, вы не можете видеть!
+rmc-neuro-what = Что я делаю?
+rmc-neuro-hearing = Ваш слух исчезает, вы ничего не слышите!
+rmc-neuro-pain = Из живота вырывается резкая боль!
+rmc-neuro-agh = ВСЕ БОЛИТ!!! АГА!!!
+rmc-neuro-so-numb = Все тело онемело, вы ничего не чувствуете!
+rmc-neuro-limbs = Вы совсем не чувствуете своих конечностей!
+rmc-neuro-think = В голове пусто, вы ни о чем не можете думать!
+rmc-stumble = Вы спотыкаетесь!
+rmc-stumble-others = { CAPITALIZE($victim) } приводит к { POSS-ADJ($victim) } путанице!
+rmc-bloodcough = Вы кашляете кровью!

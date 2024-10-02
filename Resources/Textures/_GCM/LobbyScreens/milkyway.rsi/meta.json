@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-4.0",
+  "copyright": "WD team",
+  "size": {
+    "x": 1056,
+    "y": 1056
+  },
+  "states": [
+    {
+      "name": "Sprite-0004",
+	  "delays": [
+        [
+          0.1
+        ]
+      ]
+    }
+  ]
+}

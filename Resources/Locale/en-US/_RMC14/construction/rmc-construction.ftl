@@ -1,2 +1,2 @@
-﻿rmc-construction-not-proper-surface = The {$construction} must be constructed on a proper surface!
-rmc-construction-not-barricade-clear = There's already a barricade facing in this direction!
+rmc-construction-not-proper-surface = Конструкция { $construction } должна быть построена на соответствующей поверхности!
+rmc-construction-not-barricade-clear = В этом направлении уже есть баррикада!

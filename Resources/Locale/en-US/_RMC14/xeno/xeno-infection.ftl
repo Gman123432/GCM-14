@@ -1,24 +1,30 @@
-rmc-xeno-infection-shakes = {CAPITALIZE($victim)} starts shaking uncontrollably!
-rmc-xeno-infection-shakes-self = You feel something moving inside of you! You start shaking uncontrollably!
-
-rmc-xeno-infection-minorpain-chest = Your chest hurts a little bit.
-rmc-xeno-infection-minorpain-stomach = Your stomach hurts.
-
-rmc-xeno-infection-throat-sore = Your throat feels sore.
-rmc-xeno-infection-throat-mucous = Mucous runs down the back of your throat.
-rmc-xeno-infection-muscle-ache = Your muscles ache.
-
-rmc-xeno-infection-majorpain-chest = Your chest hurts badly.
-rmc-xeno-infection-majorpain-breathing = It becomes difficult to breathe.
-rmc-xeno-infection-majorpain-heart = Your heart starts beating rapidly, and each beat is painful.
-
-rmc-xeno-infection-insanepain-one = IT'S IN YOUR INSIDES!
-rmc-xeno-infection-insanepain-two = IT'S GNAWING YOU!
-rmc-xeno-infection-insanepain-three = MAKE IT STOP!
-rmc-xeno-infection-insanepain-four = YOU ARE GOING TO DIE!
-rmc-xeno-infection-insanepain-five = IT'S TEARING YOU APART!
-
-rmc-xeno-infection-burst-soon = {CAPITALIZE($victim)} starts shaking violently!
-rmc-xeno-infection-burst-soon-self = You feel something crawling through your insides!
-
-rmc-xeno-infected-bursted = {CAPITALIZE(SUBJECT($victim))} {CONJUGATE-HAVE($victim)} a giant hole in {POSS-ADJ($victim)} chest!
+rmc-xeno-infection-shakes = { CAPITALIZE($victim) } начинает неконтролируемо трястись!
+rmc-xeno-infection-shakes-self = Вы чувствуете, как внутри вас что-то движется! Вас начинает неконтролируемо трясти!
+rmc-xeno-infection-minorpain-chest = У вас немного болит грудь.
+rmc-xeno-infection-minorpain-stomach = У вас болит живот.
+rmc-xeno-infection-throat-sore = У вас болит горло.
+rmc-xeno-infection-throat-mucous = Слизь стекает по задней стенке горла.
+rmc-xeno-infection-muscle-ache = Ваши мышцы болят.
+rmc-xeno-infection-majorpain-chest = У вас сильно болит грудь.
+rmc-xeno-infection-majorpain-breathing = Становится трудно дышать.
+rmc-xeno-infection-majorpain-heart = Ваше сердце начинает биться быстро, и каждый удар причиняет боль.
+rmc-xeno-infection-insanepain-one = ОНО В ВАШИХ ВНУТРЕННОСТЯХ!
+rmc-xeno-infection-insanepain-two = ОНО ГРЫЗЕТ ТЕБЯ!
+rmc-xeno-infection-insanepain-three = ОСТАНОВИТЕСЬ!
+rmc-xeno-infection-insanepain-four = ВЫ УМРЕТЕ!
+rmc-xeno-infection-insanepain-five = ОНО РАЗРЫВАЕТ ВАС НА ЧАСТИ!
+rmc-xeno-infection-burst-soon = { CAPITALIZE($victim) } начинает яростно трястись!
+rmc-xeno-infection-burst-soon-self = Вы чувствуете, как что-то ползет по вашим внутренностям!
+rmc-xeno-infected-bursted = { CAPITALIZE(SUBJECT($victim)) } { CONJUGATE-HAVE($victim) } гигантская дыра в { POSS-ADJ($victim) } груди!
+cm-xeno-infection-shakes = { CAPITALIZE($victim) } начинает неконтролируемо трястись!
+cm-xeno-infection-shakes-self = Вы чувствуете, как внутри вас что-то движется! Вас начинает неконтролируемо трясти!
+cm-xeno-infection-minorpain-chest = Немного болит грудь.
+cm-xeno-infection-minorpain-stomach = Живот болит.
+cm-xeno-infection-throat-sore = У вас болит горло.
+cm-xeno-infection-throat-mucous = Слизь стекает по задней стенке горла.
+cm-xeno-infection-muscle-ache = Ваши мышцы болят.
+cm-xeno-infection-majorpain-chest = У вас сильно болит грудь.
+cm-xeno-infection-majorpain-breathing = Становится трудно дышать.
+cm-xeno-infection-majorpain-heart = Сердце начинает биться быстро, и каждый удар причиняет боль.
+cm-xeno-infection-burst-soon = { CAPITALIZE($victim) } начинает яростно трясти!
+cm-xeno-infection-burst-soon-self = Вы чувствуете, как что-то ползет по вашим внутренностям!

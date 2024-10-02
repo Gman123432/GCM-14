@@ -1,172 +1,112 @@
-﻿# Plasma
-cm-xeno-not-enough-plasma = You don't have enough plasma!
-
-# Energy
-rmc-xeno-not-enough-energy = Your health reserves are insufficient!
-rmc-xeno-energy-increase-user = You feel your internal health reserves increase!
-
+# Plasma
+cm-xeno-not-enough-plasma = У вас недостаточно плазмы!
 # Construction
-cm-xeno-choose-resin-structure = Choose Resin Structure
-cm-xeno-order-construction = Build Structure
-cm-xeno-too-close-to-other-node = This is too close to {THE($target)}!
-cm-xeno-requires-more-plasma = {THE($construction)} requires {$plasma} more plasma.
-cm-xeno-construction-plasma-left = A {$construction} construction is designated here. It requires [color=cyan]{$plasma}[/color] more plasma.
-cm-xeno-cant-reach-there = You can't reach there!
-cm-xeno-cant-build-in-self = You can't build structures that close!
-cm-xeno-unique-exists = There's already a {$choice} built!
-rmc-xeno-cant-build-new-yet = We can't build a new {$choice} yet!
-
+cm-xeno-choose-resin-structure = Выберите структуру смолы
+cm-xeno-order-construction = Построить структуру
+cm-xeno-too-close-to-other-node = Это слишком близко к { THE($target) }!
+cm-xeno-requires-more-plasma = { THE($construction) } требуется { $plasma } больше плазмы.
+cm-xeno-construction-plasma-left = Здесь назначено сооружение { $construction }. Оно требует [color=cyan]{ $plasma }[/color] больше плазмы.
+cm-xeno-cant-reach-there = Вы не можете туда добраться!
+cm-xeno-cant-build-in-self = Вы не можете строить сооружения так близко!
+cm-xeno-unique-exists = Здесь уже построено { $choice }!
+rmc-xeno-cant-build-new-yet = Мы пока не можем создать новый { $choice }!
 # Evolve
-cm-xeno-available-evolutions = Available Evolutions
-cm-xeno-evolution-start = You begin to twist and contort.
-cm-xeno-evolution-end = You emerge in a greater form from the husk of your old body. For the hive!
-cm-xeno-evolution-ready = Our carapace crackles and our tendons strengthen. We are ready to evolve!
-cm-xeno-evolution-failed-already-have = There already is a living {$prototype}!
-cm-xeno-evolution-failed-hive-shaken = The Hive is shaken by the death of the last Queen. We can't find the strength to evolve.
-cm-xeno-evolution-failed-cannot-support = The Hive cannot support this caste yet!
-cm-xeno-evolution-failed-hive-full = The hive cannot support another Tier {$tier}, wait for either more aliens to be born or someone to die.
-rmc-xeno-evolution-devolve-title = De-Evolve To
-rmc-xeno-evolution-devolve = You devolve to {$xeno}!
-rmc-xeno-evolution-cant-evolve-damaged = We must be at full health to evolve.
-rmc-xeno-evolution-cant-strain-damaged = We must be at full health to take a strain.
-rmc-xeno-evolution-cant-devolve-damaged = We are too weak to deevolve, we must regain our health first.
-rmc-xeno-evolution-cant-evolve-recent-queen-death-minutes = We must wait about {$minutes} minutes and {$seconds} seconds for the hive to recover from the previous Queen's death.
-rmc-xeno-evolution-cant-evolve-recent-queen-death-seconds = We must wait about {$seconds} seconds for the hive to recover from the previous Queen's death.
-rmc-xeno-evolution-failed-bad-location = We can't evolve here.
-
+cm-xeno-available-evolutions = Доступные эволюции
+cm-xeno-evolution-start = Вы начинаете извиваться и искажаться.
+cm-xeno-evolution-end = Из шелухи своего старого тела вы появляетесь в более совершенной форме. Для улья!
+cm-xeno-evolution-ready = Наш панцирь потрескивает, а сухожилия крепнут. Мы готовы к эволюции!
+cm-xeno-evolution-failed-already-have = Уже есть живой { $prototype }!
+cm-xeno-evolution-failed-hive-shaken = Улей потрясен смертью последней королевы. Мы не можем найти в себе силы для эволюции.
+cm-xeno-evolution-failed-cannot-support = Улей пока не может поддерживать эту касту!
+cm-xeno-evolution-failed-hive-full = Улей не может поддержать еще один ярус { $tier }, подождите, пока либо родятся новые пришельцы, либо кто-то умрет.
+rmc-xeno-evolution-devolve-title = Деградировать до
+rmc-xeno-evolution-devolve = Вы превращаетесь в { $xeno }!
+rmc-xeno-evolution-cant-evolve-damaged = Чтобы развиваться, мы должны быть полностью здоровы.
+rmc-xeno-evolution-cant-devolve-damaged = Мы слишком слабы для деградации, сначала нам нужно восстановить здоровье.
+rmc-xeno-evolution-cant-evolve-recent-queen-death-minutes = Мы должны подождать около { $minutes } минут и { $seconds } секунд, чтобы улей оправился от смерти предыдущей королевы.
+rmc-xeno-evolution-cant-evolve-recent-queen-death-seconds = Мы должны подождать около { $seconds } секунд, чтобы улей оправился от смерти предыдущей королевы.
+rmc-xeno-evolution-failed-bad-location = Мы не можем развиваться здесь.
 # Fortify
-cm-xeno-fortify-cant-headbutt = You can't headbutt while fortifying!
-cm-xeno-fortify-cant-rest = You can't rest while fortifying!
-cm-xeno-fortify-cant-tail-sweep = You can't tail sweep while fortifying!
-cm-xeno-fortify-cant-toggle-crest = You can't lower your crest while fortifying!
-
+cm-xeno-fortify-cant-headbutt = Вы не можете ударить головой во время укрепления!
+cm-xeno-fortify-cant-rest = Вы не можете отдыхать во время укрепления!
+cm-xeno-fortify-cant-tail-sweep = Вы не можете подметать хвостом во время укрепления!
+cm-xeno-fortify-cant-toggle-crest = Вы не можете опускать гребень во время укрепления!
 # Leap
-cm-xeno-leap-cancelled = You cancel your leap!
-
+cm-xeno-leap-cancelled = Вы отменяете свой прыжок!
 # Plant weeds
-cm-xeno-weeds-source-already-here = There is already a resin node here!
-
+cm-xeno-weeds-source-already-here = Здесь уже есть узел смолы!
 # Corrosive acid
-cm-xeno-acid-not-corrodible = We cannot dissolve {THE($target)}!
-cm-xeno-acid-already-corroding = {THE($target)} already has corrosive acid on it!
-
+cm-xeno-acid-not-corrodible = Вы не можете разъесть { THE($target) }!
+cm-xeno-acid-already-corroding = На { THE($target) } уже есть коррозийная кислота!
 # Paralyzing Slash
-cm-xeno-paralyzing-slash-activate = Our next slash will apply neurotoxin!
-cm-xeno-paralyzing-slash-expire = You have waited too long, your slash will no longer apply neurotoxin!
-cm-xeno-paralyzing-slash-hit = You add neurotoxin into your attack, {$target} is about to fall over paralyzed!
-
+cm-xeno-paralyzing-slash-activate = Ваш следующий удар применит нейротоксин!
+cm-xeno-paralyzing-slash-expire = Вы слишком долго ждали, ваш удар больше не будет применять нейротоксин!
+cm-xeno-paralyzing-slash-hit = Вы добавили нейротоксин в свою атаку, { $target } вот-вот упадет парализованный!
 # Crippling Strike
-cm-xeno-crippling-strike-activate = Our next slash will apply neurotoxin!
-cm-xeno-crippling-strike-expire = You have waited too long, your slash will no longer apply neurotoxin!
-cm-xeno-crippling-strike-hit = We significantly strengthen our attack, slowing the unknown!
-
+cm-xeno-crippling-strike-activate = Следующий удар будет нанесен нейротоксином!
+cm-xeno-crippling-strike-expire = Вы слишком долго ждали, ваш слэш больше не будет наносить нейротоксин!
+cm-xeno-crippling-strike-hit = Мы значительно усиливаем нашу атаку, замедляя неизвестного!
 # Pheromones
 rmc-xeno-pheromones-help =
-    Pheromones provide a buff to all Xenos in range at the cost of some stored plasma every second, as follows:
-
-    Frenzy (Red) - Increased run speed, damage and chance to knock off headhunter masks.
-
-    Warding (Green) - While in critical state, increased maximum negative health and slower off weed bleedout.
-
-    Recovery (Blue) - Increased plasma and health regeneration.
-cm-xeno-choose-pheromones = Choose Pheromones
-cm-pheromones-recovery = Recovery
-cm-pheromones-warding = Warding
-cm-pheromones-frenzy = Frenzy
-cm-xeno-pheromones-start = You start emitting {$pheromones} pheromones
-cm-xeno-pheromones-stop = You stop emitting pheromones
-
+    Феромоны ежесекундно дают бафф всем ксеносам в радиусе действия за счет некоторого количества запасенной плазмы, как показано ниже:
+    
+    Безумие (красный) - увеличивает скорость бега, урон и шанс сбить маски охотников за головами.
+    
+    Защита (зеленый) - в критическом состоянии увеличивается максимальное отрицательное здоровье и замедляется отток травы.
+    
+    Восстановление (синий) - увеличение регенерации плазмы и здоровья.
+# Pheromones
+cm-xeno-choose-pheromones = Выберите феромоны
+cm-pheromones-recovery = Восстановление
+cm-pheromones-warding = Охрана
+cm-pheromones-frenzy = Буйство
+cm-xeno-pheromones-start = Вы начинаете излучать феромоны { $pheromones }
+cm-xeno-pheromones-stop = Вы прекращаете испускать феромоны
 # Regurgitate
-cm-xeno-none-devoured = You haven't devoured anyone!
-
+cm-xeno-none-devoured = Вы никого не сожрали!
 # Rest
-rmc-xeno-rest-cant-headbutt = You can't headbutt while resting!
-rmc-xeno-rest-cant-fortify = You can't fortify while resting!
-rmc-xeno-rest-cant-tail-sweep = You can't tail sweep while resting!
-rmc-xeno-rest-cant-toggle-crest = You can't lower your crest while resting!
-rmc-xeno-rest-cant-leap = You can't leap while resting!
-rmc-xeno-rest-cant-lunge = You can't lunge while resting!
-rmc-xeno-rest-cant-punch = You can't punch while resting!
-rmc-xeno-rest-cant-fling = You can't fling while resting!
-rmc-xeno-rest-cant-charge = You can't charge while resting!
-rmc-xeno-rest-cant-stomp = You can't stomp while resting!
-rmc-xeno-rest-cant-gut = You can't gut while resting!
-rmc-xeno-rest-cant-screech = You can't screech while resting!
-rmc-xeno-rest-cant-secrete = You can't secrete while resting!
-rmc-xeno-rest-cant = You can't do that while resting!
-
+rmc-xeno-rest-cant-headbutt = Нельзя бить головой во время отдыха!
+rmc-xeno-rest-cant-fortify = Вы не можете укрепляться во время отдыха!
+rmc-xeno-rest-cant-tail-sweep = Вы не можете подметать хвостом во время отдыха!
+rmc-xeno-rest-cant-toggle-crest = Вы не можете опустить гребень во время отдыха!
+rmc-xeno-rest-cant-leap = Вы не можете прыгать во время отдыха!
+rmc-xeno-rest-cant-lunge = Нельзя делать выпады во время отдыха!
+rmc-xeno-rest-cant-punch = Вы не можете бить во время отдыха!
+rmc-xeno-rest-cant-fling = Вы не можете бросать, пока отдыхаете!
+rmc-xeno-rest-cant-charge = Вы не можете заряжатся, пока отдыхаете!
+rmc-xeno-rest-cant-stomp = Вы не можете топать, пока отдыхаете!
+rmc-xeno-rest-cant-gut = Вы не можете потрошить, пока отдыхаете!
+rmc-xeno-rest-cant-screech = Вы не можете кричать, пока отдыхаете!
+rmc-xeno-rest-cant-secrete = Вы не можете делать конструкции, пока отдыхаете!
+# Rest
+cm-xeno-rest-cant-headbutt = Вы не можете бить головой, пока отдыхаете!
+cm-xeno-rest-cant-fortify = Вы не можете укрепиться во время отдыха!
+cm-xeno-rest-cant-tail-sweep = Вы не можете подметать хвостом, пока отдыхаете!
+cm-xeno-rest-cant-toggle-crest = Вы не можете опустить свой гребень во время отдыха!
 # Toggle Crest Defense
-cm-xeno-toggle-crest-cant-fortify = You can't fortify while your crest is lowered!
-cm-xeno-toggle-crest-cant-rest = You can't rest while your crest is lowered!
-cm-xeno-toggle-crest-cant-tail-sweep = You can't tail sweep while your crest is lowered!
-
+cm-xeno-toggle-crest-cant-fortify = Вы не можете укрепиться, пока ваш гребень понижен!
+cm-xeno-toggle-crest-cant-rest = Вы не можете отдыхать, пока ваш гребень опущен!
+cm-xeno-toggle-crest-cant-tail-sweep = Вы не можете зачищать хвост, пока ваш гребень опущен!
 # Transfer Plasma
-cm-xeno-plasma-transferred-to-other = You have transferred {$plasma} plasma to {$target}. You now have {$total}
-cm-xeno-plasma-transferred-to-self = {$target} has transferred {$plasma} plasma to you. You now have {$total}
-cm-xeno-plasma-cannot-self = You can't transfer plasma to yourself!
-cm-xeno-plasma-other-max-zero = {$target} doesn't have any use for plasma!
-
-# Watch
-cm-xeno-watch = Watch Xeno
-
+cm-xeno-plasma-transferred-to-other = Вы передали { $plasma } плазмы в { $target }. Теперь у вас есть { $total }
 # Charge Spit
-cm-xeno-charge-spit = Our next spit will be stronger.
-cm-xeno-charge-spit-expire = Our spits are back to normal.
-
+cm-xeno-charge-spit = Наш следующий плевок будет сильнее.
+cm-xeno-charge-spit-expire = Наши плевки пришли в норму.
 # Turn Invisible
-cm-xeno-invisibility-already-invisible = We are already invisible!
-cm-xeno-invisibility-expire = We feel our invisibility end!
-
+cm-xeno-invisibility-already-invisible = Мы уже невидимы!
+cm-xeno-invisibility-expire = Мы чувствуем, что наша невидимость закончилась!
 # Ovipositor
-cm-xeno-ovipositor-attach = We start attaching to the ovipositor.
-cm-xeno-ovipositor-detach = We start detaching from the ovipositor.
-
-# Retrieve Egg
-cm-xeno-retrieve-egg-no-eggs = We don't have any eggs stored!
-cm-xeno-retrieve-egg-too-many-eggs = We can't carry more eggs!
-cm-xeno-retrieve-egg-stash-egg = We store the egg for safekeeping. Now holding: {$cur_eggs}/{$max_eggs}.
-cm-xeno-retrieve-egg-unstash-egg = We grab an egg from our storage. Now holding: {$cur_eggs}/{$max_eggs}.
-rmc-xeno-retrieve-egg-current = {CAPITALIZE(SUBJECT($xeno))} {CONJUGATE-BE($xeno)} holding: {$cur_eggs}/{$max_eggs} eggs.
-
-# Throw Parasite
-cm-xeno-throw-parasite-no-parasites = We don't have any parasites stored!
-cm-xeno-throw-parasite-too-many-parasites = We can't carry more parasites!
-cm-xeno-throw-parasite-stash-parasite = We store the parasite for safekeeping. Now sheltering: {$cur_parasites}/{$max_parasites}.
-cm-xeno-throw-parasite-unstash-parasite = We grab a parasite from our storage. Now sheltering: {$cur_parasites}/{$max_parasites}.
-rmc-xeno-throw-parasite-current = {CAPITALIZE(SUBJECT($xeno))} {CONJUGATE-BE($xeno)} sheltering: {$cur_paras}/{$max_paras} parasites.
-rmc-xeno-throw-parasite-reserves = {CAPITALIZE(SUBJECT($xeno))} {CONJUGATE-HAVE($xeno)} {$rev_paras} parasite ghost {$rev_paras ->
-   [one] role
-   *[other] roles 
-} available.
-
+cm-xeno-ovipositor-attach = Мы начинаем прикрепляться к яйцекладу.
+cm-xeno-ovipositor-detach = Мы начинаем отделяться от яйцеклада.
 # Defensive Shield
-rmc-xeno-defensive-shield-end = We feel our enhanced shield end!
-rmc-xeno-defensive-shield-resist-end = Our immunity to explosion damage ends!
-rmc-xeno-defensive-shield-activate = {$user} hunkers down and bolsters its defenses!
-rmc-xeno-defensive-shield-activate-self = We hunker down and bolster our defenses!
-
-# Acid Ball
-rmc-xeno-acid-ball-shoot-self = We lob a compressed ball of acid into the air!
-rmc-xeno-praetorian-acid-spit-hit-self = You feel acid eat into your skin!
-
-# Retrieve
-rmc-xeno-not-same-hive = We must target one of our sisters!
-rmc-xeno-retrieve-self = We cannot retrieve ourself!
-rmc-xeno-retrieve-anchored = That sister cannot move!
-rmc-xeno-retrieve-too-big = {$target} is too big to retrieve while standing up!
-rmc-xeno-retrieve-dead = {$target} is already dead!
-rmc-xeno-retrieve-blocked = We can't reach {$target} with our resin retrieval hook!
-rmc-xeno-retrieve-start-self = We prepare to fire our resin retrieval hook at {$target}!
-rmc-xeno-retrieve-start-others = {$user} prepares to fire its resin retrieval hook at {$target}!
-rmc-xeno-retrieve-finish-user = We fling {$target} over our head with our resin hook!
-rmc-xeno-retrieve-finish-target = We are pulled toward {$user}!
-
-# Aid
-rmc-xeno-aid-self = We cannot heal ourself!
-rmc-xeno-aid-dead = {$target} is already dead!
-rmc-xeno-heal-self = We heal {$target}!
-rmc-xeno-heal-target = We are healed by {$target}!
-rmc-xeno-heal-others = {$user} places its claws on {$target}, and its wounds are quickly sealed!
-rmc-xeno-heal-ailments-self = We rejuvenate {$target}!
-rmc-xeno-heal-ailments-target = We are rejuvenated by {$target}!
-rmc-xeno-heal-ailments-others = {$user} points at {$target}, and it spasms as it recuperates unnaturally quickly!
+rmc-xeno-defensive-shield-end = Мы чувствуем, как кончается наш усиленный щит!
+rmc-xeno-defensive-shield-resist-end = Наш иммунитет к урону от взрыва заканчивается!
+rmc-xeno-defensive-shield-activate = { $user } прижимается к земле и укрепляет свою оборону!
+rmc-xeno-defensive-shield-activate-self = Мы прижимаемся к земле и укрепляем свою защиту!
+cm-xeno-plasma-transferred-to-self = { $target } передал вам { $plasma } плазмы. Теперь у вас есть { $total }
+cm-xeno-plasma-cannot-self = Вы не можете передать плазму себе!
+cm-xeno-plasma-other-max-zero = У { $target } нет плазмы!
+# Watch
+cm-xeno-watch = Смотреть Ксено
+# Shield
+cm-xeno-shield-expire = Действия щита прекратилось!

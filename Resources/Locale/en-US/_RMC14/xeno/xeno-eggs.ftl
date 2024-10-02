@@ -1,26 +1,16 @@
-cm-xeno-egg-clear = We clear the hatched egg.
-cm-xeno-egg-not-developed = The egg is not developed yet.
-
-cm-xeno-egg-failed-must-weeds = The egg must be planted on weeds.
-cm-xeno-egg-failed-plant-outside = Best not to plant this thing outside of a containment cell.
-cm-xeno-egg-failed-already-there = There's already an egg there.
-cm-xeno-egg-blocked = There's something built here already.
-
-rmc-xeno-egg-dead-child = This child is dead.
-rmc-xeno-egg-has-child = This one is occupied with a child.
-rmc-xeno-egg-awake-child = {CAPITALIZE($parasite)} doesn't want to go back in!
-rmc-xeno-egg-fail-return = This egg can't hold this child.
-rmc-xeno-egg-return-start = We start putting the child into the egg.
-rmc-xeno-egg-return-user = We place the child back into the egg.
-rmc-xeno-egg-return-self = {CAPITALIZE($parasite)} crawls back into the egg.
-rmc-xeno-egg-return = {CAPITALIZE($user)} slides {$parasite} back into the egg.
-
-rmc-xeno-egg-ghost-verb = Become parasite
-rmc-xeno-egg-ghost-need-time = You ghosted too recently. You cannot become a parasite until 3 minutes have passed.
-rmc-xeno-egg-ghost-confirm = Are you sure you want to become a parasite?
-
-rmc-xeno-egg-throw-xeno = Throwing the egg would break it!
-rmc-xeno-egg-throw = That's a bad idea.
-
-rmc-xeno-egg-plant-self = We start planting the egg.
-rmc-xeno-egg-plant = {CAPITALIZE($user)} starts planting an egg.
+cm-xeno-egg-clear = Мы очищаем вылупившееся яйцо.
+cm-xeno-egg-not-developed = Яйцо еще не развилось.
+cm-xeno-egg-failed-must-weeds = Яйцо должно быть посажено на сорняки.
+cm-xeno-egg-failed-plant-outside = Лучше не сажать его за пределами защитной клетки.
+cm-xeno-egg-failed-already-there = Там уже есть яйцо.
+cm-xeno-egg-blocked = Здесь уже что-то построено.
+rmc-xeno-egg-dead-child = Этот ребенок мертв.
+rmc-xeno-egg-has-child = Этот занят ребенком.
+rmc-xeno-egg-awake-child = { CAPITALIZE($parasite) } не хочет возвращаться обратно!
+rmc-xeno-egg-fail-return = Это яйцо не может вместить этого ребенка.
+rmc-xeno-egg-return-user = Мы помещаем ребенка обратно в яйцо.
+rmc-xeno-egg-return-self = { CAPITALIZE($parasite) } заползает обратно в яйцо.
+rmc-xeno-egg-return = { CAPITALIZE($user) } задвигает { $parasite } обратно в яйцо.
+rmc-xeno-egg-ghost-verb = Стать лицехватом
+rmc-xeno-egg-ghost-need-time = Вы стали призраком слишком недавно. Вы не можете стать лицехватом, пока не пройдет 3 минуты.
+rmc-xeno-egg-ghost-confirm = Вы уверены, что хотите стать лицехватом?

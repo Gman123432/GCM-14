@@ -1,0 +1,10 @@
+ent-RMCCrateClothingLargePouches = ящик подсумков (х2 Пистолет, Магазин, Общий)
+    .desc = { ent-RMCCrateWeldable.desc }
+ent-RMCCrateClothingMedicalPouches = ящик медицинских подсумков (х1 первая помощь, медицинский, шприц, аптечка)
+    .desc = { ent-RMCCrateWeldable.desc }
+ent-RMCCrateClothingWebbing = ящик с разгрузкой (x4)
+    .desc = { ent-RMCCrateWeldable.desc }
+ent-RMCCrateClothingWebbingPouch = ящик с разгрузкой для сброса (x4)
+    .desc = { ent-RMCCrateWeldable.desc }
+ent-RMCCrateClothingOfficerOutfit = ящик офицерской экипировки
+    .desc = { ent-RMCCrateWeldable.desc }

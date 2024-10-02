@@ -1,3 +1,3 @@
-﻿rmc-shake-awake-user = You shake {$target} trying to wake {OBJECT($target)} up!
-rmc-shake-awake-target = {$user} shakes you trying to wake you up!
-rmc-shake-awake-others = {$user} shakes {$target} trying to wake {OBJECT($target)} up!
+rmc-shake-awake-user = Вы трясете { $target }, пытаясь разбудить { OBJECT($target) }!
+rmc-shake-awake-target = { $user } трясет вас, пытаясь разбудить!
+rmc-shake-awake-others = { $user } трясет { $target }, пытаясь разбудить { OBJECT($target) } up!

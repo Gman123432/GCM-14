@@ -1,19 +1,15 @@
-﻿# command
-cm-job-name-senior-enlisted-advisor = Senior Enlisted Advisor
-cm-job-description-senior-enlisted-advisor = Advise and train inexperienced crew members and marines alike. Bark out orders to new privates to get geared.
-CMJobSeniorEnlistedAdvisor = Senior Enlisted Advisor
-
-cm-job-name-staff-officer = Staff Officer
-cm-job-description-staff-officer = Monitor the marines, man the CIC. In charge of logistics and the overwatch system.
-CMJobStaffOfficer = Staff Officer
-
-cm-job-name-commanding-officer = Commanding Officer
-cm-job-description-commanding-officer = Lead your company and complete the mission.
-CMJobCommandingOfficer = Commanding Officer
-
-cm-job-name-executive-officer = Executive Officer
-cm-job-description-executive-officer = You are second in command aboard the ship, and are the next in the chain of command after the Commanding Officer.
-CMJobExecutiveOfficer = Executive Officer
-
+# command
+cm-job-name-senior-enlisted-advisor = Старший сержантский советник
+cm-job-description-senior-enlisted-advisor = Консультируйте и обучайте неопытных членов экипажа и морских пехотинцев. Отдавайте приказы новым рядовым, чтобы они были готовы.
+CMJobSeniorEnlistedAdvisor = Старший сержантский советник
+cm-job-name-staff-officer = Офицер штаба
+cm-job-description-staff-officer = Наблюдает за морскими пехотинцами, обслуживает ЦБИ. Отвечает за логистику и систему наблюдения. Следующий в очереди на командование после исполнительного офицера.
+CMJobStaffOfficer = Офицер штаба
+cm-job-name-commanding-officer = Командир
+cm-job-description-commanding-officer = Возглавьте свою роту и выполните задание.
+CMJobCommandingOfficer = Командир
+cm-job-name-executive-officer = Исполнительный офицер
+cm-job-description-executive-officer = Вы являетесь вторым командиром на борту корабля и следующим в цепочке командования после командира.
+CMJobExecutiveOfficer = Исполнительный офицер
 # Admin only right now.
-cm-job-name-high-command = High Command
+cm-job-name-high-command = Верховное командование

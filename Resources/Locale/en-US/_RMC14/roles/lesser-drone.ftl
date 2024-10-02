@@ -1,2 +1,2 @@
-﻿roles-lesser-drone-name = Lesser Drone
-roles-lesser-drone-description = Support the hive by plugging gaps where needed, moving hosts, saving the larger castes or charging the enemy to delay their advance.
+roles-lesser-drone-name = Младший дрон
+roles-lesser-drone-description = Поддерживайте улей, затыкая бреши, перемещая носителей, спасая высшие касты или нападая на врага, чтобы задержать его продвижение.
