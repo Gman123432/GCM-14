@@ -72,6 +72,8 @@ namespace Content.Server.GameTicking
                                     Loc.GetString("game-ticker-no-map-selected"));
             }
 
+            var planetName = _distressSignal.SelectedPlanetMapName ??
+                Loc.GetString("game-ticker-no-map-selected");
             var gmTitle = Loc.GetString(preset.ModeTitle);
             var desc = Loc.GetString(preset.Description);
             return Loc.GetString(
@@ -81,6 +83,7 @@ namespace Content.Server.GameTicking
                 ("roundId", RoundId),
                 ("playerCount", playerCount),
                 ("readyCount", readyCount),
+                ("planetName", planetName),
                 ("mapName", stationNames.ToString()),
                 ("gmTitle", gmTitle),
                 ("desc", desc));
@@ -150,9 +153,6 @@ namespace Content.Server.GameTicking
 
         public void ToggleReadyAll(bool ready)
         {
-            if(RunLevel != GameRunLevel.PreRoundLobby){
-                return;
-            }
             var status = ready ? PlayerGameStatus.ReadyToPlay : PlayerGameStatus.NotReadyToPlay;
             foreach (var playerUserId in _playerGameStatuses.Keys)
             {
@@ -165,10 +165,6 @@ namespace Content.Server.GameTicking
 
         public void ToggleReady(ICommonSession player, bool ready)
         {
-            if(RunLevel != GameRunLevel.PreRoundLobby){
-                return;
-            }
-
             if (!_playerGameStatuses.ContainsKey(player.UserId))
                 return;
 
@@ -191,6 +187,6 @@ namespace Content.Server.GameTicking
             => UserHasJoinedGame(session.UserId);
 
         public bool UserHasJoinedGame(NetUserId userId)
-            => PlayerGameStatuses.ContainsKey(userId) && PlayerGameStatuses[userId] == PlayerGameStatus.JoinedGame;
+            => PlayerGameStatuses[userId] == PlayerGameStatus.JoinedGame;
     }
 }

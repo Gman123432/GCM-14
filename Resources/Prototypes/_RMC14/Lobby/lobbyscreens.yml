@@ -1,0 +1,23 @@
+- type: lobbyBackground
+  id: Pyro5
+  background: /Textures/_RMC14/Lobby/1.png
+
+- type: lobbyBackground
+  id: Pyro4
+  background: /Textures/_RMC14/Lobby/2.png
+
+- type: lobbyBackground
+  id: Pyro3
+  background: /Textures/_RMC14/Lobby/3.png
+
+- type: lobbyBackground
+  id: Pyro2
+  background: /Textures/_RMC14/Lobby/4.png
+
+- type: lobbyBackground
+  id: Pyro1
+  background: /Textures/_RMC14/Lobby/5.png
+
+- type: lobbyBackground
+  id: Pyro
+  background: /Textures/_RMC14/Lobby/PyrotechnicianXeno.png
