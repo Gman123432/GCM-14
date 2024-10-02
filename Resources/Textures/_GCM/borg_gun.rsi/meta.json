@@ -1,0 +1,47 @@
+{
+   "version": 1,
+   "size": {
+     "x": 64,
+     "y": 32
+   },
+   "license": "CC-BY-SA-3.0",
+   "copyright": "Taken from https://github.com/tgstation/TerraGov-Marine-Corps",
+   "states": [
+     {
+      "name": "cannon"
+     },
+     {
+      "name": "heavy_autocannon"
+     },
+     {
+      "name": "heavy_lasergun"
+     },
+     {
+      "name": "heavy_minigun"
+     },
+     {
+      "name": "heavy_RPG"
+     },
+     {
+      "name": "laser"
+     },
+     {
+      "name": "mini_laser"
+     },
+     {
+      "name": "mini_pistol"
+     },
+     {
+      "name": "mini_smg"
+     },
+     {
+      "name": "rifle"
+     },
+     {
+      "name": "SMG"
+     },
+     {
+      "name": "mag-3"
+     }
+   ]
+ }

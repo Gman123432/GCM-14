@@ -261,6 +261,38 @@
         crate: RMCCrateMagazineM4SPRCustomStandard
       - cost: 3000
         crate: RMCCrateMagazineM4SPRCustomImpact
+      - cost: 20000
+        crate: RMCCrateWeaponGrena
 #      - cost: 3000
 #        crate: RMCCrateMagazineM4SPRCustomIncendiary These ones are straight downgrades and thus shouldn't be for sale
 #      - cost: 4000
+    - name: MLRS
+      entries:
+      - cost: 90000
+        crate: CMRSZOROCKETCrate
+      - cost: 40000
+        crate: CMROCKETAMMOHIGH
+      - cost: 60000
+        crate: CMROCKETAMMOHIGHHEFA
+      - cost: 80000
+        crate: CMRSZOROCKETCrate12
+      - cost: 35000
+        crate: CMROCKETAMMOHIGH12
+      - cost: 45000
+        crate: CMROCKETAMMOHIGHHEFA12 
+      - cost: 42000
+        crate: CMROCKETAMMOHIGH12HEFAAAA
+    - name: Robots
+      entries:
+      - cost: 60000
+        crate: PlayerDroneGenerisHeavycyborgs
+      - cost: 45000
+        crate: PlayerDroneGeneris
+      - cost: 30000
+        crate: PlayerDroneGenerisMinicyborgs
+      - cost: 30000
+        crate: PlayerDroneGenerisEnginerss
+      - cost: 15000
+        crate: PlayerDroneGenerisMedical
+      - cost: 5000
+        crate: BorgCharger

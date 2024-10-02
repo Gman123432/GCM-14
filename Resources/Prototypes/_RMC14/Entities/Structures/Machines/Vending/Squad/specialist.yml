@@ -23,6 +23,7 @@
       entries:
       - id: RMCDemoSpecEquipmentCase
       - id: RMCGrenadeSpecEquipmentCase
+      - id: RMCGrenadeAutoSpecEquipmentCase2
       #  points: 0
       #- id: PyroSet
       #  points: 0
@@ -84,6 +85,12 @@
     #  points: 40
     #- id: LargeIncineratorTankX BlueFlame
     #  points: 40
+    - name: AGS-19
+      entries:
+      - id: CMMagazineZenic
+        points: 40
+      - id: RMCAGS19Case
+        points: 40
 
 - type: entity
   parent: ColMarTechBase

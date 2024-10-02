@@ -1,0 +1,1662 @@
+- type: job
+  parent: CMJobBase
+  id: CMStandartPMC
+  name: cm-job-name-standart-pmc
+  description: cm-job-description-standart-pmc
+  playTimeTracker: CMJobStandartPMC
+  weight: 10
+  startingGear: CMGearStandartPMC
+  requireAdminNotify: true
+  joinNotifyCrew: true
+  supervisors: cm-job-supervisors-we-ya
+  accessGroups:
+  - ShipMasterAccess
+  - Corp
+
+
+- type: job
+  parent: CMJobBase
+  id: CMGunnerPMC
+  name: cm-job-name-gunner-pmc
+  description: cm-job-description-gunner-pmc
+  playTimeTracker: CMJobGunnerPMC
+  weight: 10
+  startingGear: CMGearGunnerPMC
+  requireAdminNotify: true
+  joinNotifyCrew: true
+  supervisors: cm-job-supervisors-we-ya
+  accessGroups:
+  - ShipMasterAccess
+  - Corp
+
+
+- type: job
+  parent: CMJobBase
+  id: CMMedicPMC
+  name: cm-job-name-medic-pmc
+  description: cm-job-description-medic-pmc
+  playTimeTracker: CMJobMedicPMC
+  weight: 10
+  startingGear: CMGearMedicPMC
+  requireAdminNotify: true
+  joinNotifyCrew: true
+  supervisors: cm-job-supervisors-we-ya
+  accessGroups:
+  - ShipMasterAccess
+  - Corp
+
+
+- type: job
+  parent: CMJobBase
+  id: CMSniperPMC
+  name: cm-job-name-sniper-pmc
+  description: cm-job-description-sniper-pmc
+  playTimeTracker: CMJobSniperPMC
+  weight: 10
+  startingGear: CMGearSniperPMC
+  requireAdminNotify: true
+  joinNotifyCrew: true
+  supervisors: cm-job-supervisors-we-ya
+  accessGroups:
+  - ShipMasterAccess
+  - Corp
+
+
+- type: job
+  parent: CMJobBase
+  id: CMOfficerPMC
+  name: cm-job-name-officer-pmc
+  description: cm-job-description-officer-pmc
+  playTimeTracker: CMJobOfficerPMC
+  weight: 10
+  startingGear: CMGearOfficerPMC
+  requireAdminNotify: true
+  joinNotifyCrew: true
+  supervisors: cm-job-supervisors-we-ya
+  accessGroups:
+  - ShipMasterAccess
+  - Corp
+
+
+
+- type: playTimeTracker
+  id: CMJobStandartPMC
+
+- type: playTimeTracker
+  id: CMJobGunnerPMC
+
+- type: playTimeTracker
+  id: CMJobMedicPMC
+
+- type: playTimeTracker
+  id: CMJobSniperPMC
+
+- type: playTimeTracker
+  id: CMJobOfficerPMC
+
+
+- type: entity
+  parent: CMIDCardBase
+  id: CMIDCardPMC
+  name: PMC's ID card
+  suffix: Standart
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/CMIDs/pmc_id.rsi
+    state: plain
+  - type: PresetIdCard
+    job: CMStandartPMC
+
+- type: entity
+  parent: CMIDCardBase
+  id: CMIDCardGunnerPMC
+  name: PMC's ID card
+  suffix: Gunner
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/CMIDs/pmc_id.rsi
+    state: plain
+  - type: PresetIdCard
+    job: CMGunnerPMC
+
+- type: entity
+  parent: CMIDCardBase
+  id: CMIDCardMedicPMC
+  name: PMC's ID card
+  suffix: Medic
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/CMIDs/pmc_id.rsi
+    state: plain
+  - type: PresetIdCard
+    job: CMMedicPMC
+
+- type: entity
+  parent: CMIDCardBase
+  id: CMIDCardSniperPMC
+  name: PMC's ID card
+  suffix: Sniper
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/CMIDs/pmc_id.rsi
+    state: plain
+  - type: PresetIdCard
+    job: CMSniperPMC
+
+- type: entity
+  parent: CMIDCardBase
+  id: CMIDCardOfficerPMC
+  name: PMC's ID card
+  suffix: Officer
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/CMIDs/pmc_id.rsi
+    state: plain
+  - type: PresetIdCard
+    job: CMOfficerPMC
+
+- type: entity
+  parent: RMCBaseWeaponSniperRifle
+  id: CMXM43E1SniperRifle
+  name: XM43E1 experimental anti-materiel rifle
+  description: "An experimental anti-materiel rifle produced by Armat Systems, recently reacquired from the deep storage of an abandoned prototyping facility. This one in particular is currently undergoing field testing. Chambered in 10x99mm Caseless."
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/Snipers/m42c.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Item
+    size: Large
+  - type: Clothing
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/Snipers/m42c.rsi
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 12
+  - type: Gun
+    minAngle: 50
+    maxAngle: 50
+    fireRate: 0.5
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_RMC14/Weapons/Guns/Gunshots/gun_sniper.ogg
+  - type: RMCSelectiveFire
+    recoilWielded: 1
+    scatterWielded: 3
+    baseFireRate: 0.5
+  - type: WieldDelay
+    baseDelay: 1.2
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/_RMC14/Weapons/Guns/Reload/gun_mar40_reload.ogg
+        ejectSound: /Audio/_RMC14/Weapons/Guns/Reload/gun_mar40_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - CMMagazineSniperXM43E1
+  - type: GunUserWhitelist
+    whitelist:
+      components:
+      - SniperWhitelist
+  - type: GunRequiresWield
+  - type: Corrodible
+    isCorrodible: false
+  - type: GunIFF
+    enabled: true
+  - type: RMCNameItemOnVend
+    item: PrimaryGun
+  - type: Scope
+    zoom: 1.25 # TODO RMC14 2x and 4x zoom
+    requireWielding: true
+  - type: Construction
+    graph: XM43E1SniperRifleConstruct
+    node: start
+
+- type: entity
+  parent: CMBaseMask
+  id: CMMaskArmoredCoifPMC
+  name: M8 pattern armored balaclava
+  description: An armored balaclava designed to conceal both the identity of the operator and act as an air-filter.
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Clothing/Mask/armored_coif.rsi
+  - type: Clothing
+    sprite: /Textures/_GCM/Objects/Clothing/Mask/armored_coif.rsi
+  - type: IdentityBlocker
+    coverage: MOUTH
+  - type: IngestionBlocker
+  - type: Item
+    storedRotation: -90
+
+- type: entity
+  parent: CMBaseMask
+  id: CMMaskArmoredLeaderCoifPMC
+  name: M8 pattern armored balaclava
+  description: An armored balaclava designed to conceal both the identity of the operator and act as an air-filter. This particular suit looks like it belongs to a high-ranking officer.
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Clothing/Mask/armored_leader_coif.rsi
+  - type: Clothing
+    sprite: /Textures/_GCM/Objects/Clothing/Mask/armored_leader_coif.rsi
+  - type: IdentityBlocker
+    coverage: MOUTH
+  - type: IngestionBlocker
+  - type: Item
+    storedRotation: -90
+
+- type: startingGear
+  id: CMGearStandartPMC
+  equipment:
+    jumpsuit: RMCJumpsuitVeteranPMC
+    back: CMSatchelMarinePMCStandart
+    belt: CMStunbaton
+    shoes: RMCBootsPMCFilled
+    mask: CMMaskArmoredCoifPMC
+    head: CMArmorHelmetTacticalPMC
+    outerClothing: CMArmorPMC
+    suitstorage: WeaponSMGM39B2
+    id: CMIDCardPMC
+    ears: RMCHeadsetDistressPMC
+    gloves: RMCHandsVeteranPMC
+    pocket1: RMCPouchMagazineLargePMC
+    pocket2: RMCPouchFirstAidInjectors
+  inhand:
+  - CMWebbingBlackPMC
+
+- type: startingGear
+  id: CMGearGunnerPMC
+  equipment:
+    jumpsuit: RMCJumpsuitVeteranPMC
+    mask: CMMaskArmoredCoifPMC
+    shoes: RMCBootsPMCFilled
+    head: CMArmorHelmetHeavyPMC
+    outerClothing: CMArmorHeavyPMC
+    suitstorage: CCMPMCSmartGun
+    belt: CMBeltSmartGunOperatorFilledCM56
+    id: CMIDCardGunnerPMC
+    ears: RMCHeadsetDistressPMC
+    gloves: RMCHandsVeteranPMC
+    eyes: RMCGlassesSmartGunSight
+    pocket1: RMCPouchFirstAidInjectors
+  inhand:
+  - CMWebbingBlackPMC
+
+- type: startingGear
+  id: CMGearMedicPMC
+  equipment:
+    jumpsuit: RMCJumpsuitVeteranPMC
+    back: CMSatchelMarinePMCMedic
+    mask: CMMaskArmoredCoifPMC
+    belt: CMBeltMedicBagFilled
+    shoes: RMCBootsPMCFilled
+    head: CMArmorHelmetTacticalPMC
+    outerClothing: CMArmorPMC
+    suitstorage: WeaponSMGM39B2
+    id: CMIDCardMedicPMC
+    ears: RMCHeadsetDistressPMC
+    gloves: RMCHandsVeteranPMC
+    eyes: RMCGlassesMedicalHUDGlasses
+    pocket1: RMCPouchAutoinjectorFill
+    pocket2: RMCPouchMagazineLargePMC
+  inhand:
+  - CMWebbingBlackPMC
+
+- type: startingGear
+  id: CMGearSniperPMC
+  equipment:
+    jumpsuit: RMCJumpsuitVeteranPMC
+    back: WeaponSMGM39B2
+    belt: RMCBeltUtilityGeneralPMCSniper
+    mask: CMMaskArmoredCoifPMC
+    shoes: RMCBootsPMCFilled
+    head: CMArmorHelmetSniperPMC
+    outerClothing: CMArmorSniperPMC
+    suitstorage: CMM42CSniperRifle
+    id: CMIDCardSniperPMC
+    ears: RMCHeadsetDistressPMC
+    eyes: CMGlassesM42ScoutSight
+    gloves: RMCHandsVeteranPMC
+    pocket1: RMCPouchMagazineLargePMCSniper
+    pocket2: RMCPouchFirstAidInjectors
+  inhand:
+  - CMWebbingBlackPMC
+
+- type: startingGear
+  id: CMGearOfficerPMC
+  equipment:
+    jumpsuit: RMCJumpsuitVeteranPMCLeader
+    back: CMSatchelMarine
+    belt: CMStunbaton
+    mask: CMMaskArmoredLeaderCoifPMC
+    shoes: RMCBootsPMCFilled
+    head: CMArmorHelmetBeretPMC
+    outerClothing: CMArmorOfficerPMC
+    suitstorage: WeaponRifleM54A2
+    id: CMIDCardOfficerPMC
+    ears: RMCHeadsetDistressPMC
+    gloves: RMCHandsVeteranPMC
+    eyes: RMCGlassesMedicalHUDGlasses
+    pocket1: RMCPouchMagazineLargePMCLeader
+    pocket2: RMCPouchAutoinjectorFill
+  inhand:
+  - CMWebbingBlackPMC
+  storage:
+    back:
+    - CMCrowbar
+    - CMGrenadeFragOld 
+    - RMCExplosiveBreachingCharge
+    - RMCRangefinder
+    - CMMagazineRifleM54A
+    - CMMagazineRifleM54A
+
+- type: entity
+  parent: CMArmorM3Medium
+  id: CMArmorPMC
+  name: M4 Pattern PMC Armor
+  description: A modification of the standard Armat Systems M3 armor. Designed for high-profile security operators and corporate mercenaries in mind.
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Clothing/OuterClothing/Armor/pmc_armor.rsi
+  - type: Clothing
+    sprite: /Textures/_GCM/Objects/Clothing/OuterClothing/Armor/pmc_armor.rsi
+  - type: CMArmor
+    armor: 20
+    explosionArmor: 20
+
+- type: entity
+  parent: CMArmorSmartGunCombatHarness
+  id: CMArmorHeavyPMC
+  name: PMC M56B Combat Harness
+  description: A modification of the standard Armat Systems M3 armor. Hooked up with harnesses and straps allowing the user to carry an ML66A Smartgun.
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Clothing/OuterClothing/Armor/pmc_heavy_armor.rsi
+  - type: Clothing
+    sprite: /Textures/_GCM/Objects/Clothing/OuterClothing/Armor/pmc_heavy_armor.rsi
+  - type: CMArmor
+    armor: 20
+    explosionArmor: 20
+  - type: SmartGunArmor
+
+- type: entity
+  parent: CMArmorM3Medium
+  id: CMArmorOfficerPMC
+  name: M4 Pattern PMC Leader Armor
+  description: A modification of the standard Armat Systems M3 armor. Designed for high-profile security operators and corporate mercenaries in mind. This particular suit looks like it belongs to a high-ranking officer.
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Clothing/OuterClothing/Armor/pmc_officer_armor.rsi
+  - type: Clothing
+    sprite: /Textures/_GCM/Objects/Clothing/OuterClothing/Armor/pmc_officer_armor.rsi
+  - type: CMArmor
+    armor: 20
+    explosionArmor: 20
+
+- type: entity
+  parent: CMArmorM3Medium
+  id: CMArmorSniperPMC
+  name: M4 Pattern PMC Sniper Armor
+  description: A modification of the standard Armat Systems M3 armor. Designed for high-profile security operators and corporate mercenaries in mind.
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Clothing/OuterClothing/Armor/pmc_sniper_armor.rsi
+  - type: Clothing
+    sprite: /Textures/_GCM/Objects/Clothing/OuterClothing/Armor/pmc_sniper_armor.rsi
+  - type: CMArmor
+    armor: 20
+    explosionArmor: 20
+  - type: StorageFill
+    contents:
+    - id: CMMagazineSniperM42CAntiTank
+    - id: CMMagazineSniperM42CAntiTank
+
+- type: entity
+  parent: ArmorHelmetM10
+  id: CMArmorHelmetTacticalPMC
+  name: PMC Tactical Cap
+  description: A protective cap made from flexible kevlar. Standard issue for most security forms in the place of a helmet.
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Clothing/Head/Helmets/pmc_helmet.rsi
+  - type: Clothing
+    sprite: /Textures/_GCM/Objects/Clothing/Head/Helmets/pmc_helmet.rsi
+
+- type: entity
+  parent: ArmorHelmetM10
+  id: CMArmorHelmetHeavyPMC
+  name: PMC Heavy Helmet
+  decription: heavy helmet
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Clothing/Head/Helmets/pmc_heavy_helmet.rsi
+  - type: Clothing
+    sprite: /Textures/_GCM/Objects/Clothing/Head/Helmets/pmc_heavy_helmet.rsi
+
+- type: entity
+  parent: ArmorHelmetM10
+  id: CMArmorHelmetBeretPMC
+  name: PMC Beret
+  decription: The pinnacle of fashion for any aspiring mercenary leader. Designed to protect the head from light impacts.
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Clothing/Head/Helmets/pmc_officer_helmet.rsi
+  - type: Clothing
+    sprite: /Textures/_GCM/Objects/Clothing/Head/Helmets/pmc_officer_helmet.rsi
+
+- type: entity
+  parent: ArmorHelmetM10
+  id: CMArmorHelmetSniperPMC
+  name: PMC Sniper Helmet
+  decription: A specialized variation of the M42 scout sight system, intended for use with the high-power M42C anti-tank sniper rifle. Allows for highlighted imaging of surroundings, as well as detection of thermal signatures even from a great distance. Click it to toggle.
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Clothing/Head/Helmets/pmc_sniper_helmet.rsi
+  - type: Clothing
+    sprite: /Textures/_GCM/Objects/Clothing/Head/Helmets/pmc_sniper_helmet.rsi
+
+- type: entity
+  parent: CMBaseWeaponRifle
+  name: M54A/2 Battle Rifle
+  id: WeaponRifleM54A2
+  description: A modified version M41A Pulse Rifle MK2, re-engineered for better weight, handling and accuracy. Fires precise two-round bursts. Given only to elite units.
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/Rifles/m54a2.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Clothing
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/Rifles/m54a2.rsi
+  - type: Gun
+    shotsPerBurst: 4
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    - SemiAuto
+    - Burst
+    soundGunshot:
+      collection: CMM41AShot
+  - type: RMCSelectiveFire
+    baseFireModes:
+    - SemiAuto
+    - Burst
+    recoilWielded: 0.1
+    recoilUnwielded: 4
+    scatterWielded: 2
+    scatterUnwielded: 8
+    baseFireRate: 5.2
+    burstScatterMult: 1
+    modifiers:
+      Burst:
+        fireDelay: 0.1332
+        maxScatterModifier: 10
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 6
+      FullAuto:
+        maxScatterModifier: 14
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 30
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - CMMagazineRifleM54A
+  - type: GunDamageModifier
+    multiplier: 1.1
+  - type: AttachableHolder
+    slots:
+      rmc-aslot-barrel:
+        whitelist:
+          tags:
+          - RMCAttachmentBarrelCharger
+          - RMCAttachmentExtendedBarrel
+          - RMCAttachmentSuppressor
+          - RMCM5Bayonet
+      rmc-aslot-rail:
+        whitelist:
+          tags:
+          - RMCAttachmentRailFlashlight
+          - RMCAttachmentMagneticHarness
+          - RMCAttachmentS5RedDotSight
+          - RMCAttachmentS6ReflexSight
+          - RMCAttachmentS84xTelescopicScope
+          - RMCAttachmentS42xTelescopicMiniscope
+      rmc-aslot-stock:
+        whitelist:
+          tags:
+          - RMCAttachmentM54CStockSolid
+          - RMCAttachmentM54CStockCollapsible
+      rmc-aslot-underbarrel:
+        startingAttachable: RMCAttachmentU1GrenadeLauncher
+        whitelist:
+          tags:
+          - RMCAttachmentAngledGrip
+          - RMCAttachmentBipod
+          - RMCAttachmentFlashlightGrip
+          - RMCAttachmentGyroscopicStabilizer
+          - RMCAttachmentLaserSight
+          - RMCAttachmentU1GrenadeLauncher
+          - RMCAttachmentU7UnderbarrelShotgun
+          - RMCAttachmentVerticalGrip
+  - type: AttachableHolderVisuals
+    offsets:
+      rmc-aslot-barrel: 0.75, 0.00
+      rmc-aslot-rail: 0.06, 0.185
+      rmc-aslot-stock: -0.84, 0.0325
+      rmc-aslot-underbarrel: 0.25, -0.343
+
+- type: soundCollection
+  id: CMM41AShot
+  files:
+  - /Audio/_GCM/Ogg/gun_m41a_6.ogg
+  - /Audio/_GCM/Ogg/gun_m41a_2.ogg
+  - /Audio/_GCM/Ogg/gun_m41a_3.ogg
+  - /Audio/_GCM/Ogg/gun_m41a_4.ogg
+  - /Audio/_GCM/Ogg/gun_m41a_5.ogg
+  - /Audio/_GCM/Ogg/gun_m41a_6.ogg
+
+- type: entity
+  parent: CMBaseWeaponRifle
+  name: NSG 23 Assault Rifle
+  id: WeaponRifleNSG23
+  description: A rare sight, this rifle is seen most commonly in the hands of Weyland-Yutani PMCs. It has noticeably improved handling and vastly improved performance at long and medium range. Can only be fired in bursts. It is one of the standard rifles for Corporate PMC Standards.
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/Rifles/nsg23.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Clothing
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/Rifles/nsg23.rsi
+  - type: Gun
+    shotsPerBurst: 4
+    selectedMode: Burst
+    availableModes:
+    - SemiAuto
+    - Burst
+    soundGunshot:
+      collection: CMM54CShoot
+  - type: RMCSelectiveFire
+    baseFireModes:
+    - SemiAuto
+    - Burst
+    recoilWielded: 0.1
+    recoilUnwielded: 4
+    scatterWielded: 3
+    scatterUnwielded: 11
+    baseFireRate: 2.5
+    burstScatterMult: 1
+    modifiers:
+      Burst:
+        fireDelay: 0.0432
+        maxScatterModifier: 5
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 6
+      FullAuto:
+        maxScatterModifier: 14
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 30
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - CMMagazineRifleNSG23
+
+- type: entity
+  parent: CMBaseWeaponSMG
+  name: M63B/2 submachine gun
+  id: WeaponSMGM39B2
+  description: A modified version Aegis Battlefield Armaments M-63 submachinegun, re-engineered for better weight, handling and accuracy. Given only to elite units.
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/SMGs/m39b2.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Clothing
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/SMGs/m39b2.rsi
+  - type: Gun
+    shotsPerBurst: 3
+    soundGunshot:
+      path: /Audio/_RMC14/Weapons/Guns/Gunshots/gun_m63.ogg
+  - type: RMCSelectiveFire
+    baseFireModes:
+    - SemiAuto
+    - Burst
+    - FullAuto
+    recoilWielded: 0.1
+    recoilUnwielded: 3
+    scatterWielded: 4
+    scatterUnwielded: 11
+    baseFireRate: 7.68
+    burstScatterMult: 1
+    modifiers:
+      Burst:
+        fireDelay: 0.0999
+        maxScatterModifier: 10
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 6
+      FullAuto:
+        maxScatterModifier: 3
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 4
+  - type: GunDamageModifier
+    multiplier: 1.35
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - CMMagazineSMGM63
+          - CMMagazineSMGM63AP
+          - CMMagazineSMGM63Ext
+  - type: AttachableHolder
+    slots:
+      rmc-aslot-barrel:
+        whitelist:
+          tags:
+          - RMCAttachmentBarrelCharger
+          - RMCAttachmentExtendedBarrel
+          - RMCAttachmentRecoilCompensator
+          - RMCAttachmentSuppressor
+          - RMCM5Bayonet
+      rmc-aslot-rail:
+        whitelist:
+          tags:
+          - RMCAttachmentRailFlashlight
+          - RMCAttachmentMagneticHarness
+          - RMCAttachmentS5RedDotSight
+          - RMCAttachmentS6ReflexSight
+          - RMCAttachmentS42xTelescopicMiniscope
+      rmc-aslot-stock:
+        startingAttachable: RMCAttachmentM63StockCollapsible
+        whitelist:
+          tags:
+          - RMCAttachmentM63ArmBrace
+          - RMCAttachmentM63Stock
+          - RMCAttachmentM63StockCollapsible
+      rmc-aslot-underbarrel:
+        whitelist:
+          tags:
+          - RMCAttachmentAngledGrip
+          - RMCAttachmentFlashlightGrip
+          - RMCAttachmentGyroscopicStabilizer
+          - RMCAttachmentLaserSight
+          - RMCAttachmentVerticalGrip
+  - type: AttachableHolderVisuals
+    offsets:
+      rmc-aslot-barrel: 0.715, 0.092
+      rmc-aslot-rail: 0.032, 0.155
+      rmc-aslot-stock: -0.81, 0.032
+      rmc-aslot-underbarrel: 0.25, -0.25
+
+- type: entity
+  parent: CMBaseWeaponSMG
+  name: FN FP9000 Submachine Gun
+  id: WeaponSMGFNFP9000
+  description: A variant of the FP9000 SMG that appears to feature some special modifications for elite forces. It is one of the standard SMGs Corporate PMC Standards.
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/SMGs/fp9000.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Clothing
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/SMGs/fp9000.rsi
+  - type: Gun
+    shotsPerBurst: 3
+    soundGunshot:
+      path: /Audio/_RMC14/Weapons/Guns/Gunshots/gun_m63.ogg
+  - type: RMCSelectiveFire
+    baseFireModes:
+    - SemiAuto
+    - Burst
+    - FullAuto
+    recoilWielded: 0.1
+    recoilUnwielded: 1
+    scatterWielded: 7
+    scatterUnwielded: 12
+    baseFireRate: 7.6
+    burstScatterMult: 1
+    modifiers:
+      Burst:
+        fireDelay: 0.0999
+        maxScatterModifier: 10
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 6
+      FullAuto:
+        maxScatterModifier: 3
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 4
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - CMMagazineFP9000AP
+
+- type: entity
+  parent: RMCBaseWeaponSniperRifle
+  id: CMM42CSniperRifle
+  name: M42C Anti-Tank rifle
+  description: A high power sniper rifle, this weapon deals immense damage per bullet and is capable of attacking and hitting targets at extreme ranges. It comes equipped with a high power scope allowing the user a wide range of vision. This weapon is limited to six supersonic rifle rounds per magazine, combined with a slow rate of fire, a very obvious and loud firing noise and the fact that it is ineffective in close range combat as bullets fired too close to the user will miss. However, despite these drawbacks, the M42C is an exceptionally effective weapon when properly utilized. It is the standard sniper rifle for Corporate PMC snipers.
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/Snipers/m42c.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Item
+    size: Large
+  - type: Clothing
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/Snipers/m42c.rsi
+  - type: Gun
+    shotsPerBurst: 1
+    soundGunshot:
+      path: /Audio/_RMC14/Weapons/Guns/Gunshots/gun_sniper.ogg
+  - type: RMCSelectiveFire
+    recoilWielded: 1
+    scatterWielded: 0
+    baseFireRate: 0.667
+  - type: WieldDelay
+    baseDelay: 1.2
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - CMMagazineSniperM42C
+  - type: GunRequiresWield
+  - type: Corrodible
+    isCorrodible: false
+  - type: GunIFF
+  - type: AttachableHolder
+    slots:
+      rmc-aslot-rail:
+        locked: true
+        startingAttachable: RMCM96SIntegratedScope
+        whitelist:
+          tags:
+          - RMCM96SIntegratedScope
+
+- type: entity
+  parent: CMMobHuman
+  id: CMMobHumanPMCStandart
+  name: PMC Standart
+  suffix: PMCRole, Standart
+  components:
+    - type: RandomHumanoidAppearance
+      randomizeName: true
+      hair: HairBald
+    - type: GhostTakeoverAvailable
+    - type: GhostRole
+      name: ghost-role-information-pmc-standard-name
+      description: ghost-role-information-pmc-standard-description
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: default
+    - type: Loadout
+      prototypes: [ CMGearStandartPMC ]
+    - type: Skills
+      skills:
+        RMCSkillConstruction: 2 
+        RMCSkillFirearms: 2 
+        RMCSkillFireman: 2 
+        RMCSkillEndurance: 3 
+        RMCSkillEngineer: 2 
+        RMCSkillPolice: 2 
+
+- type: entity
+  parent: CMMobHuman
+  id: CMMobHumanPMCGunner
+  name: PMC Support Specialist
+  suffix: PMCRole, Gunner
+  components:
+    - type: RandomHumanoidAppearance
+      randomizeName: true
+      hair: HairBald
+    - type: GhostTakeoverAvailable
+    - type: GhostRole
+      name: ghost-role-information-pmc-gunner-name
+      description: ghost-role-information-pmc-standard-description
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: default
+    - type: Loadout
+      prototypes: [ CMGearGunnerPMC ]
+    - type: Skills
+      skills:
+        RMCSkillConstruction: 2 
+        RMCSkillFirearms: 2 
+        RMCSkillFireman: 2 
+        RMCSkillEndurance: 3 
+        RMCSkillEngineer: 2 
+        RMCSkillPolice: 2
+        RMCSkillJtac: 1
+        RMCSkillSmartGun: 1
+
+- type: entity
+  parent: CMMobHuman
+  id: CMMobHumanPMCMedic
+  name: PMC Medical Specialist
+  suffix: PMCRole, Medic
+  components:
+    - type: RandomHumanoidAppearance
+      randomizeName: true
+      hair: HairBald
+    - type: GhostTakeoverAvailable
+    - type: GhostRole
+      name: ghost-role-information-pmc-medic-name
+      description: ghost-role-information-pmc-standard-description
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: default
+    - type: Loadout
+      prototypes: [ CMGearMedicPMC ]
+    - type: Skills
+      skills:
+        RMCSkillConstruction: 2 
+        RMCSkillFirearms: 2 
+        RMCSkillFireman: 2 
+        RMCSkillEndurance: 3 
+        RMCSkillEngineer: 2 
+        RMCSkillPolice: 2
+        RMCSkillMedical: 2
+        RMCSkillSurgery: 1
+
+- type: entity
+  parent: CMMobHuman
+  id: CMMobHumanPMCSniper
+  name: PMC Sniper
+  suffix: PMCRole, Sniper
+  components:
+    - type: RandomHumanoidAppearance
+      randomizeName: true
+      hair: HairBald
+    - type: GhostTakeoverAvailable
+    - type: GhostRole
+      name: ghost-role-information-pmc-sniper-name
+      description: ghost-role-information-pmc-standard-description
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: default
+    - type: Loadout
+      prototypes: [ CMGearSniperPMC ]
+    - type: Skills
+      skills:
+        RMCSkillConstruction: 2 
+        RMCSkillFirearms: 2 
+        RMCSkillFireman: 2 
+        RMCSkillEndurance: 3 
+        RMCSkillEngineer: 2 
+        RMCSkillPolice: 2
+        RMCSkillSmartGun: 1
+        RMCSkillCqc: 1
+        RMCSkillJtac: 1
+
+- type: entity
+  parent: CMMobHuman
+  id: CMMobHumanPMCOfficer
+  name: PMC Team Leader
+  suffix: PMCRole, Officer
+  components:
+    - type: RandomHumanoidAppearance
+      randomizeName: true
+      hair: HairBald
+    - type: GhostTakeoverAvailable
+    - type: GhostRole
+      name: ghost-role-information-pmc-leader-name
+      description: ghost-role-information-pmc-standard-description
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: default
+    - type: Loadout
+      prototypes: [ CMGearOfficerPMC ]
+    - type: Skills
+      skills:
+        RMCSkillConstruction: 2 
+        RMCSkillFirearms: 2 
+        RMCSkillFireman: 2 
+        RMCSkillEndurance: 3 
+        RMCSkillEngineer: 2 
+        RMCSkillPolice: 2
+        RMCSkillMedical: 1
+        RMCSkillCqc: 1
+        RMCSkillJtac: 2
+        RMCSkillLeadership: 1
+    - type: MarineOrders
+    - type: SquadLeader
+
+- type: entity
+  parent: BaseBullet
+  id: BulletRifleM4SPRA19Incendiary
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 20
+        Heat: 10
+  - type: CMArmorPiercing
+    amount: 20
+  - type: IgniteOnCollide
+    fireStacks: 1
+
+- type: entity
+  parent: BulletRifle10x24mm
+  id: BulletRifle10x24mmNSG
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 56
+  - type: CMArmorPiercing
+    amount: 5
+
+- type: entity
+  parent: BulletRifle10x24mm
+  id: BulletRifle10x24mmNSGAP
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 42
+  - type: CMArmorPiercing
+    amount: 40
+
+- type: entity
+  parent: Bullet10x20mm
+  id: Bullet5_7x28mmAP
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 31.2
+  - type: CMArmorPiercing
+    amount: 30
+
+- type: entity
+  parent: CMBulletSniper10x28mm
+  id: CMBulletSniper10x99mmAntiTank
+  name: bullet (10x99mm)
+  noSpawn: true
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 150
+  - type: CMArmorPiercing
+    amount: 50
+
+- type: entity
+  parent: CMMagazineSniperM96S
+  id: CMMagazineSniperM42CAntiTank
+  name: "M42C Marksman Magazine (10x99mm)"
+  description: A magazine of 10x99mm anti-tank rounds.
+  components:
+  - type: Tag
+    tags:
+    - CMMagazineSniper
+    - CMMagazineSniperM42C
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - CMCartridgeSniper10x99mm
+    proto: CMCartridgeSniper10x99mmAntiTank
+    capacity: 6
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/Ammunition/Magazines/m42c.rsi
+    layers:
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: band_e
+      color: "#FFFF00"
+
+- type: Tag
+  id: CMMagazineSniperM42C
+
+- type: entity
+  parent: CMMagazineRifleBase
+  id: RMCMagazineRifleM4SPRA19Incendiary
+  name: "M4SPR A19 magazine (incendiary)"
+  description: "A magazine of incendiary A19 rounds for use in the M4SPR battle rifle."
+  components:
+  - type: Tag
+    tags:
+    - CMMagazineRifle
+    - RMCMagazineRifleM4SPRA19
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - RMCCartridgeRifleM4SPRA19
+    proto: RMCCartridgeRifleM4SPRA19Incendiary
+    capacity: 18
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Magazines/m4spr.rsi
+
+- type: entity
+  parent: CMMagazineRifleBase
+  id: CMMagazineRifleNSG23
+  name: "NSG 23 magazine (10x24mm)"
+  components:
+  - type: Tag
+    tags:
+    - CMMagazineRifle
+    - CMMagazineRifleNSG23
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - CMCartridgeRifle10x24mm
+    proto: CMCartridgeRifle10x24mmNSG
+    capacity: 30
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/Ammunition/Magazines/nsg23.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Appearance
+
+- type: entity
+  parent: CMMagazineRifleBase
+  id: CMMagazineRifleExtendedNSG23
+  name: "NSG 23 extended magazine (10x24mm)"
+  components:
+  - type: Tag
+    tags:
+    - CMMagazineRifle
+    - CMMagazineRifleNSG23
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - CMCartridgeRifle10x24mm
+    proto: CMCartridgeRifle10x24mmNSG
+    capacity: 45
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/Ammunition/Magazines/nsg23e.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Appearance
+
+- type: entity
+  parent: CMMagazineRifleBase
+  id: CMMagazineRifleNSG23AP
+  name: "NSG 23 AP magazine (10x24mm)"
+  components:
+  - type: Tag
+    tags:
+    - CMMagazineRifle
+    - CMMagazineRifleNSG23
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - CMCartridgeRifle10x24mmAP
+    proto: CMCartridgeRifle10x24mmNSGAP
+    capacity: 30
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/Ammunition/Magazines/nsg23.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+    - state: ammo_band
+      color: "#00FF00"
+  - type: Appearance
+
+- type: Tag
+  id: CMMagazineRifleNSG23
+
+- type: entity
+  parent: BaseMagazineRifle
+  id: CMMagazineFP9000AP
+  name: "FP9000 magazine (5.7x28mm)"
+  components:
+  - type: Tag
+    tags:
+    - CMMagazineSmg
+    - CMMagazineFP9000AP
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - CMCartridge5_7x28mmAP
+    proto: CMCartridge5_7x28mmAP
+    capacity: 50
+  - type: Sprite
+    sprite:  /Textures/_GCM/Objects/Weapons/Guns/Ammunition/Magazines/fp9000.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+    zeroOnlyOnEmpty: true
+  - type: Appearance
+
+- type: Tag
+  id: CMMagazineFP9000AP
+
+- type: entity
+  parent: CMCartridgeSniper10x28mm
+  id: CMCartridgeSniper10x99mmAntiTank
+  name: cartridge (10x99mm) (AntiTank)
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CMCartridgeSniper10x99mm
+  - type: CartridgeAmmo
+    proto: CMBulletSniper10x99mmAntiTank
+
+- type: entity
+  parent: CMBaseCartridgeRifle
+  id: RMCCartridgeRifleM4SPRA19Incendiary
+  name: cartridge (A19 incendiary)
+  description: A incendiary A19 cartridge. Fits in M4SPR custom magazines.
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - RMCCartridgeRifleM4SPRA19
+  - type: CartridgeAmmo
+    proto: BulletRifleM4SPRA19Incendiary
+
+- type: entity
+  parent: CMBaseCartridgeRifle
+  id: CMCartridgeRifle10x24mmNSG
+  name: NSG cartridge (10x24mm)
+  description: A 10x24mm NSG cartridge. Fits in 10x24mm magazines.
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CMCartridgeRifle10x24mm
+  - type: CartridgeAmmo
+    proto: BulletRifle10x24mmNSG
+
+- type: entity
+  parent: CMBaseCartridgeRifle
+  id: CMCartridgeRifle10x24mmNSGAP
+  name: NSG AP cartridge (10x24mm)
+  description: An armor piercing 10x24mm NSG cartridge. Fits in 10x24mm AP magazines.
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CMCartridgeRifle10x24mmAP
+  - type: CartridgeAmmo
+    proto: BulletRifle10x24mmNSGAP
+
+- type: Tag
+  id: CMCartridgeRifle10x24mmNSG
+
+- type: Tag
+  id: CMCartridgeRifle10x24mmNSGAP
+
+- type: Tag
+  id: CMCartridge5_7x28mmAP
+
+- type: entity
+  parent: CMCartridgeSMGBase
+  id: CMCartridge5_7x28mmAP
+  name: AP cartridge (5.7x28mm)
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CMCartridge5_7x28mmAP
+  - type: CartridgeAmmo
+    proto: Bullet5_7x28mmAP
+
+- type: entity
+  parent: RMCPouchMagazineLarge
+  id: RMCPouchMagazineLargePMC
+  suffix: Filled, PMC, Standart
+  components:
+  - type: StorageFill
+    contents:
+    - id: CMMagazineSMGM63AP
+    - id: CMMagazineSMGM63AP
+    - id: CMMagazineSMGM63AP
+    - id: CMMagazineSMGM63AP
+
+- type: entity
+  parent: RMCPouchMagazineLarge
+  id: RMCPouchMagazineLargePMCLeader
+  suffix: Filled, PMC, Leader
+  components:
+  - type: StorageFill
+    contents:
+    - id: CMMagazineRifleM54A
+    - id: CMMagazineRifleM54A
+    - id: CMMagazineRifleM54A
+    - id: CMMagazineRifleM54A
+
+- type: entity
+  parent: RMCPouchMagazineLarge
+  id: RMCPouchMagazineLargePMCSniper
+  suffix: Filled, PMC, Sniper
+  components:
+  - type: StorageFill
+    contents:
+    - id: CMMagazineSniperM42CAntiTank
+    - id: CMMagazineSniperM42CAntiTank
+    - id: CMMagazineSniperM42CAntiTank
+    - id: CMMagazineSniperM42CAntiTank
+
+- type: entity
+  parent: CMWebbingBlack
+  id: CMWebbingBlackPMC
+  suffix: Filled, PMC
+  components:
+  - type: StorageFill
+    contents:
+    - id: CMGauze10
+    - id: CMGauze10
+    - id: CMOintment10
+    - id: CMHealthAnalyzer
+    - id: CMFireExtinguisherPortable
+
+- type: entity
+  parent: CMSatchelMarine
+  id: CMSatchelMarinePMCStandart
+  suffix: Filled, PMC, Standart
+  components:
+  - type: StorageFill
+    contents:
+    - id: CMGrenadeFragOld
+    - id: RMCExplosiveBreachingCharge
+    - id: CMStunbaton
+    - id: CMCrowbar
+    - id: CMMagazineSMGM63AP
+    - id: CMMagazineSMGM63AP
+    - id: CMMagazineSMGM63AP
+
+- type: entity
+  parent: CMSatchelMarine
+  id: CMSatchelMarinePMCMedic
+  suffix: Filled, PMC, Medic
+  components:
+  - type: StorageFill
+    contents:
+    - id: CMDefibrillator
+    - id: CMStunbaton
+    - id: CMCrowbar
+    - id: CMRollerBedSpawnFolded
+    - id: CMSurgicalLine
+    - id: CMHyposprayFilledTricord
+
+- type: entity
+  parent: RMCBeltUtilityGeneral
+  id: RMCBeltUtilityGeneralPMCSniper
+  suffix: Filled, PMC, Sniper
+  components:
+  - type: StorageFill
+    contents:
+    - id: CMCrowbar
+    - id: RMCExplosiveBreachingCharge
+    - id: CMMagazineSMGM63AP
+    - id: CMMagazineSMGM63AP
+    - id: CMMagazineSMGM63AP
+    - id: CMMagazineSMGM63AP
+
+- type: entity
+  parent: CMBaseWeaponRifle
+  id: CCMPMCSmartGun
+  name: M56B Dirty Smartgun
+  description: The actual firearm in the Smart Gun System. Essentially a heavy, mobile machinegun.
+  components:
+  - type: GunRequiresWield
+  - type: Corrodible
+    isCorrodible: false
+  - type: GunIFF
+    enabled: true
+  - type: WieldDelay
+    baseDelay: 0.4
+  - type: WieldableSpeedModifiers
+    baseWalk: 0.696
+    baseSprint: 0.559
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/SmartGuns/smart_gun_pmc.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Clothing
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/SmartGuns/smart_gun_pmc.rsi
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 30
+  - type: Gun
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot: 
+      collection: CMM56BShoot
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+  - type: RMCSelectiveFire
+    baseFireModes:
+    - FullAuto
+    recoilWielded: 3
+    scatterWielded: 10
+    baseFireRate: 5
+    burstScatterMult: 4
+    modifiers:
+      FullAuto:
+        maxScatterModifier: 4
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 80
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      cell_slot: !type:ContainerSlot { }
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: RMCMagazineSmartGunCM
+        insertSound: /Audio/_RMC14/Weapons/Guns/Reload/gun_sg_reload.ogg
+        ejectSound: /Audio/_RMC14/Weapons/Guns/Reload/gun_sg_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - RMCMagazineSmartGunCM
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: RMCPowerCellSmartgun
+  - type: GunDamageModifier
+    multiplier: 1
+  - type: GunToggleableAmmo
+    settings:
+    - damage:
+        types:
+          Piercing: 30
+      armorPiercing: 0
+      name: rmc-toggleable-ammo-highly-precise
+      icon:
+        sprite: _RMC14/Actions/marine_smart_gun_actions.rsi
+        state: ammo_swap_normal
+    - damage:
+        types:
+          Piercing: 20
+      armorPiercing: 40
+      name: rmc-toggleable-ammo-armor-shredding
+      icon:
+        sprite: _RMC14/Actions/marine_smart_gun_actions.rsi
+        state: ammo_swap_ap
+  - type: RMCMagneticItem
+  - type: GunRequiresSkills
+    skills:
+      RMCSkillSmartGun: 1
+  - type: GunSkilledRecoil
+    skills:
+      RMCSkillFirearms: 100
+  - type: GunDrainBatteryOnShoot
+  - type: GunRequireEquipped
+    whitelist:
+      components:
+      - SmartGunArmor
+  - type: GunToggleableRecoil
+  - type: GunToggleableAutoFire
+  - type: SmartGun
+  - type: AttachableHolder
+    slots:
+      rmc-aslot-rail:
+        whitelist:
+          tags:
+          - RMCAttachmentRailFlashlight
+  - type: AttachableHolderVisuals
+    offsets:
+      rmc-aslot-rail: -0.1875, 0.125
+
+
+- type: soundCollection
+  id: CMM56BShoot
+  files:
+  - /Audio/_GCM/Ogg/gun_smartgun1.ogg
+  - /Audio/_GCM/Ogg/gun_smartgun2.ogg
+  - /Audio/_GCM/Ogg/gun_smartgun3.ogg
+  - /Audio/_GCM/Ogg/gun_smartgun4.ogg
+
+- type: Tag
+  id: RMCMagazineSmartGunCM
+
+- type: entity
+  parent: CMMagazineRifleBase
+  id: RMCMagazineSmartGunCM
+  name: "M56B drum magazine (10x30mm)"
+  components:
+  - type: Tag
+    tags:
+    - RMCMagazineSmartGunCM
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - CMCartridgeSmartGun10x30mm
+    proto: CMCartridgeSmartGun10x30mm
+    capacity: 600
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/Ammunition/Magazines/m56b.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    slots:
+    - suitStorage
+
+- type: entity
+  parent: CMMagazineRifleBase
+  id: CMMagazineRifleM54A
+  name: "M54A magazine (10x24mm)"
+  components:
+  - type: Tag
+    tags:
+    - CMMagazineRifle
+    - CMMagazineRifleM54A
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - CMCartridgeRifle10x24mmAP
+    proto: CMCartridgeRifle10x24mmAP
+    capacity: 50
+  - type: Sprite
+    sprite: /Textures/_GCM/Objects/Weapons/Guns/Ammunition/Magazines/m41a.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Appearance
+
+- type: Tag
+  id: CMMagazineRifleM54A
+
+- type: entity
+  parent: CMBeltSmartGunOperatorCM65
+  id: CMBeltSmartGunOperatorFilledCM56
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: RMCMagazineSmartGunCM
+      amount: 3
+
+- type: Tag
+  id: CMBeltSmartGunOperatorFilledCM56
+
+- type: entity
+  parent: CMBeltMarine
+  id: CMBeltSmartGunOperatorCM65
+  name: M280 pattern smart gun operator drum belt
+  description: Despite the fact that 1. drum magazines are incredibly non-ergonomical, and 2. require incredibly precise machining in order to fit universally (spoiler, they don't, adding further to the myth of 'Smart Gun Personalities'), the Marines decided to issue a modified marine belt (more formally known by the designation M280) with hooks and dust covers (overly complex for the average jarhead) for the ML66A system's drum munitions. When the carry catch on the drum isn't getting stuck in the oiled up velcro, the rig actually does do a decent job at holding a plentiful amount of drums. But at the end of the day, compared to standard rigs... it sucks, but isn't that what being a Marine is all about?
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Belt/smart_gun_operator.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Belt/smart_gun_operator.rsi
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,11,1 # 6 slots
+    whitelist:
+      tags:
+      - RMCMagazineSmartGunCM
+      - CMMagazineRifle
+      - CMMagazineSmg
+      - CMMagazineSniper
+      - RMCMagazineSmartGun
+#      - # TODO RMC14 shotgun handfuls
+      - Flare
+  - type: FixedItemSizeStorage
+  - type: IgnoreContentsSize
+    items:
+      tags:
+      - RMCMagazineSmartGunCM
+
+- type: entity
+  parent: RMCCrateAmmoPMC
+  id: FN9000SUBMAH
+  name: PMC FN 9000 Submachine gun (x2)
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponSMGFNFP9000
+      amount: 2 
+    - id: CMMagazineFP9000AP
+      amount: 6 
+
+- type: entity
+  parent: RMCCrateAmmoPMC
+  id: RMCCrateWeaponRifleNSG23
+  name: PMC NSG 23 Assault Rifle (x2)
+  components:
+  - type: StorageFill
+    contents:
+    - id: WeaponRifleNSG23
+      amount: 2
+    - id: CMMagazineRifleNSG23AP
+      amount: 2
+    - id: CMMagazineRifleExtendedNSG23
+      amount: 2
+    - id: CMMagazineRifleNSG23
+      amount: 2
+
+- type: entity
+  parent: RMCCrateAmmoPMC
+  id: RMCCratePMCKIT
+  name: Cartridge kit PMC
+  components:
+  - type: StorageFill
+    contents:
+    - id: CMMagazineSMGM63AP
+      amount: 3
+    - id: CMMagazineRifleM54A
+      amount: 3
+    - id: CMMagazineRifleNSG23
+      amount: 1
+    - id: CMMagazineRifleExtendedNSG23
+      amount: 1
+    - id: CMMagazineRifleNSG23AP
+      amount: 1
+    - id: CMMagazineFP9000AP
+      amount: 3  
+    - id: RMCMagazineSmartGunCM
+      amount: 2
+
+- type: entity
+  parent: RMCCrateWeldable
+  id: RMCCrateAmmoPMC
+  name: ammunitions crate
+  description: An ammunitions crate.
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/ammo.rsi
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: closed
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+    - state: invoice
+      sprite: _RMC14/Structures/Storage/Crates/labels.rsi
+      visible: false
+      map: ["enum.PaperLabelVisuals.Layer"]
+  - type: Icon
+    sprite: /Textures/_GCM/ammo.rsi

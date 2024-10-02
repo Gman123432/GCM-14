@@ -1,0 +1,374 @@
+- type: entity
+  abstract: true
+  parent: [ CMBaseWeaponGun, BaseItem, RMCBaseAttachableHolder ]
+  id: CMBaseWeaponRifledGCM
+  components:
+  - type: Gun
+    shotsPerBurst: 3
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    - Burst
+  - type: RMCSelectiveFire
+    baseFireModes:
+    - FullAuto
+    - Burst
+    recoilWielded: 0.1
+    recoilUnwielded: 4
+    scatterWielded: 2
+    scatterUnwielded: 8
+    baseFireRate: 2.5
+    burstScatterMult: 1
+    modifiers:
+      Burst:
+        fireDelay: 0.1332
+        maxScatterModifier: 10
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 6
+      FullAuto:
+        maxScatterModifier: 14
+        useBurstScatterMult: true
+        unwieldedScatterMultiplier: 2
+        shotsToMaxScatter: 30
+    soundGunshot:
+      path: /Audio/_GCM/m2hb_0.ogg
+  - type: Item
+    size: Large
+  - type: AmmoCounter
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: StaticPrice
+    price: 500
+  - type: MagazineAmmoProvider
+    autoEject: true
+  - type: RMCAmmoEject
+  - type: Appearance
+  - type: RMCNameItemOnVend
+    item: PrimaryGun
+  - type: OnShootTriggerAmmoTimer
+    delay: 0.5
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Back
+
+- type: entity
+  name: AGS-19
+  parent: [ CMBaseWeaponRifledGCM ]
+  id: WeaponLauncherAGS19
+  description: Предназначен для поражения личного состава и огневых средств противника, расположенных вне укрытий, в открытых окопах (траншеях) и за естественными складками местности (в лощинах, оврагах, на обратных скатах высот).
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/m54a2.rsi
+    layers:
+    - state: icon
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Clothing
+    sprite: /Textures/_GCM/m54a2.rsi
+  - type: RMCSelectiveFire
+    baseFireRate: 2.5
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/_GCM/t42_reload.ogg
+        ejectSound: /Audio/_GCM/t42_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - CMMagazineZenic
+  - type: Corrodible
+    isCorrodible: false
+  - type: ExplosionResistance
+    damageCoefficient: 0
+  - type: AttachableHolder
+    slots:
+      rmc-aslot-rail:
+        whitelist:
+          tags:
+          - RMCAttachmentMagneticHarness
+  - type: AttachableHolderVisuals
+    offsets:
+      rmc-aslot-rail: 0.0, 0.185
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.3
+    sprintModifier: 0.3
+  - type: HeldSpeedModifier
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: false
+    zeroOnlyOnEmpty: true
+  - type: Gun
+    soundGunshot:
+      path: /Audio/_GCM/m2hb_0.ogg
+  - type: Tag
+    tags:
+    - WeaponLauncherM83SFD
+
+- type: entity
+  parent: CMMagazineRifleBase
+  id: CMMagazineZenic
+  name: "Магазин AGS-19 (30mm)"
+  components:
+  - type: Tag
+    tags:
+    - CMMagazineZenic
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - GrenadeHighExplosiveCM
+    proto: GrenadeHighExplosiveCM
+    capacity: 25
+  - type: Sprite
+    sprite: /Textures/_GCM/m56b.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Appearance
+
+- type: Tag
+  id: CMMagazineZenic
+
+- type: entity
+  id: BaseGrenadeCMGrenadeAGS
+  name: base grenade
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+  - type: Explosive
+    explosionType: RMC
+  - type: ExplosionResistance
+    damageCoefficient: 0
+
+- type: entity
+  id: GrenadeHighExplosiveCM
+  name: Граната AGS-19
+  parent: BaseGrenadeCMGrenadeAGS
+  components:
+  - type: CartridgeAmmo
+    proto: GrenadeFireAGSCM
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: /Textures/_GCM/patron.rsi
+    layers:
+    - state: Sprite-0001
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+    state: Sprite-0002
+    suffix: false
+
+- type: entity
+  id: GrenadeFireAGSCM
+  name: Выстрел AGS-19
+  noSpawn: true
+  description: Uh oh.
+  components:
+  - type: TriggerOnCollide
+  # TODO RMC14 Make TriggerOnCollide spawn the explosion on the OtherEntity tile more consistently, so the explosion is centered properly
+    fixtureID: projectile # no parent entity from BaseBulletTrigger because it has Clickable
+  - type: Physics
+    bodyType: Dynamic
+    fixedRotation: false
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.15,0.15,0.15"
+          # Bigger than bullets. Rectangle won't work since AABB shapes don't rotate. This should help significantly with explosion consistency.
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+        restitution: 0.0
+        density: 20
+  - type: Projectile
+    impactEffect: BulletImpactEffect
+    damage:
+      types:
+        Blunt: 15
+    maxFixedRange: 100 # 7 tiles
+  - type: Sprite
+    sprite: /Textures/_GCM/patron.rsi
+    layers:
+    - state: Sprite-0001
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: RMC
+    maxIntensity: 5
+    intensitySlope: 5
+    totalIntensity: 5
+    maxTileBreak: 0
+  - type: CMExplosionEffect
+  - type: PointLight
+    radius: 1
+    color: orange
+    energy: 0.5
+
+- type: entity
+  parent: BaseStorageItem
+  id: RMCBaseGunCase2
+  abstract: true
+  name: base gun case
+  description: A gun case.
+  components:
+  - type: Sprite
+    noRot: true
+    sprite: _RMC14/Objects/Storage/guncase.rsi
+    layers:
+    - state: closed
+      map: [ base ]
+  - type: Icon
+    sprite: _RMC14/Objects/Storage/guncase.rsi
+    state: closed
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.StorageVisuals.Open:
+        base:
+          True: { state: open }
+          False: { state: closed }
+  - type: Item
+    size: Huge
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,27,1
+  - type: FixedItemSizeStorage
+  - type: InteractedBlacklist
+    blacklist:
+      components:
+      - Xeno
+
+- type: entity
+  parent: RMCBaseGunCase
+  id: RMCBaseEquipmentCase2
+  abstract: true
+  name: base equipment case
+  description: A loadout case.
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/loadout_kits.rsi
+    layers:
+    - state: closed
+      map: [ base ]
+    - state: sniper
+      map: [ label ]
+  - type: Icon
+    sprite: /Textures/_GCM/loadout_kits.rsi
+  - type: GenericVisualizer
+    visuals:
+      enum.StorageVisuals.Open:
+        base:
+          True: { state: open }
+          False: { state: closed }
+        label:
+          True: { visible: false }
+          False: { visible: true }
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,27,1
+  - type: RemoveOnlyStorage
+  - type: FixedItemSizeStorage
+  - type: InteractedBlacklist
+    blacklist:
+      components:
+      - Xeno
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+
+- type: entity
+  parent: RMCBaseEquipmentCase
+  id: RMCGrenadeAutoSpecEquipmentCase2
+  name: AGS-19 equipment case
+  components:
+  - type: Sprite
+    layers:
+    - state: closed
+      map: [ base ]
+    - state: grenadier
+      map: [ label ]
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,21,1
+  - type: StorageFill
+    contents:
+    - id: WeaponLauncherAGS19
+    - id: CMMagazineZenic
+      amount: 3
+    - id: RMCHandsVeteranRoyalMarine
+    - id: RMCArmorXarmor
+    - id: RMCArmorHelmetXarmor
+    - id: CMWeaponPistolMK80
+    - id: CMMagazinePistolMK80
+      amount: 2
+    - id: RMCBinoculars
+
+- type: entity
+  parent: CMArmorM3Medium
+  id: RMCArmorXarmor
+  name: Xarmor-I3 light 
+  description: A custom set of M3 armor designed for users of long-ranged explosive weaponry. Provides better protection against explosives than standard M3 armor, while remaining nimble.
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/t.rsi
+  - type: CMArmor
+    explosionArmor: 30
+  - type: ClothingSpeedModifier # light armor speed
+    walkModifier: .814
+    sprintModifier: .814
+  - type: Corrodible
+    isCorrodible: false
+
+- type: entity
+  parent: ArmorHelmetM10
+  id: RMCArmorHelmetXarmor
+  name: Xarmor-I3 helmet
+  description: A custom-built helmet for explosive weaponry users. Comes with inbuilt ear blast protection, firing a rocket launcher without this is not recommended.
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/t_demo.rsi
+  - type: Clothing
+    sprite: /Textures/_GCM/t_demo.rsi # TODO RMC14 Give hearing protection component if ear damage is added
+
+- type: entity
+  parent: RMCCrateAmmo
+  id: RMCCrateWeaponGrena
+  name: AGS-19 (30mm) (x3)
+  components:
+  - type: StorageFill
+    contents:
+    - id: CMMagazineZenic
+      amount: 6
+
+- type: entity
+  parent: RMCBaseGunCase2
+  id: RMCAGS19Case
+  name: AGS-19 case
+  components:
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,3,1
+    whitelist:
+      tags:
+      - WeaponLauncherAGS19

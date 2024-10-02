@@ -1,0 +1,2825 @@
+- type: entity
+  id: RCDBorgs
+  parent: [ BaseItem, BaseEngineeringContraband ]
+  name: РСУ киборга
+  description: The rapid construction device can be used to quickly place and remove various station structures and fixtures. Requires compressed matter to function.
+  components:
+  - type: RCD
+    availablePrototypes:
+    - CMWallMetalBaseRCD
+    - Catwalk
+    - LVCable
+    - MVCable
+    - HVCable
+    - Deconstruct
+    - CMBarricadeBurnBaseRCD
+    - CMBarricadeSandbagRCSbase
+    - RMCBarricadeExplosivePlasteelBaseRCD
+    - RMCBarricadeBrutePlasteelBaseRCD
+    - RMCBarricadeBurnPlasteelBaseRCD
+    - RMCBarricadePlasteelBaseRCD
+    - CMBarricadeExplosiveBaseRCD
+    - CMBarricadeMetalBaseRCD
+    - CMBarricadePlasteelDoorBaseRCD
+    - CMBarricadeMetalDoorRCSBASE
+    - CMBarricadeBruteRCDBASE
+    - BulbLightCM
+    - TubeLightCM
+  - type: LimitedCharges
+    maxCharges: 100
+    charges: 20
+  - type: UseDelay
+  - type: Sprite
+    sprite: Objects/Tools/rcd.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: Clothing
+    sprite: Objects/Tools/rcd.rsi
+    quickEquip: false
+    slots:
+    - Belt
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 600
+      Plastic: 100
+  - type: StaticPrice
+    price: 110
+  - type: UserInterface
+    interfaces:
+      enum.RcdUiKey.Key:
+        type: RCDMenuBoundUserInterface
+  - type: ActivatableUI
+    inHandsOnly: true
+    key: enum.RcdUiKey.Key
+  - type: AutoRecharge
+    rechargeDuration: 3
+
+- type: rcd
+  id: RMCBarricadePlasteelBaseRCD
+  category: WallsAndFlooring
+  sprite: /Textures/_GCM/rcd_cyborgs/Sprite-0002.png
+  mode: ConstructObject
+  prototype: RMCBarricadePlasteel
+  cost: 16
+  delay: 2
+  collisionMask: FullTileMask
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rules:
+    - IsWindow
+  rotation: User
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: RMCBarricadeBurnPlasteelBaseRCD
+  category: WallsAndFlooring
+  sprite: /Textures/_GCM/rcd_cyborgs/Sprite-0011.png
+  mode: ConstructObject
+  prototype: RMCBarricadeBurnPlasteel
+  cost: 18
+  delay: 2
+  collisionMask: FullTileMask
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rules:
+    - IsWindow
+  rotation: User
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: RMCBarricadeBrutePlasteelBaseRCD
+  category: WallsAndFlooring
+  sprite: /Textures/_GCM/rcd_cyborgs/Sprite-0009.png
+  mode: ConstructObject
+  prototype: RMCBarricadeBrutePlasteel
+  cost: 20
+  delay: 2
+  collisionMask: FullTileMask
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rules:
+    - IsWindow
+  rotation: User
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: RMCBarricadeExplosivePlasteelBaseRCD
+  category: WallsAndFlooring
+  sprite: /Textures/_GCM/rcd_cyborgs/Sprite-0012.png
+  mode: ConstructObject
+  prototype: RMCBarricadeExplosivePlasteel
+  cost: 15
+  delay: 2
+  collisionMask: FullTileMask
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rules:
+    - IsWindow
+  rotation: User
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: CMBarricadeSandbagRCSbase
+  category: WallsAndFlooring
+  sprite: /Textures/_GCM/rcd_cyborgs/Sprite-0003.png
+  mode: ConstructObject
+  prototype: CMBarricadeSandbag
+  cost: 3
+  delay: 2
+  collisionMask: FullTileMask
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rules:
+    - IsWindow
+  rotation: User
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: CMBarricadeBurnBaseRCD
+  category: WallsAndFlooring
+  sprite: /Textures/_GCM/rcd_cyborgs/Sprite-0007.png
+  mode: ConstructObject
+  prototype: CMBarricadeBurn
+  cost: 10
+  delay: 2
+  collisionMask: FullTileMask
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rules:
+    - IsWindow
+  rotation: User
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: CMBarricadeExplosiveBaseRCD
+  category: WallsAndFlooring
+  sprite: /Textures/_GCM/rcd_cyborgs/Sprite-0008.png
+  mode: ConstructObject
+  prototype: CMBarricadeExplosive
+  cost: 8
+  delay: 2
+  collisionMask: FullTileMask
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rules:
+    - IsWindow
+  rotation: User
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: CMBarricadeMetalBaseRCD
+  category: WallsAndFlooring
+  sprite: /Textures/_GCM/rcd_cyborgs/Sprite-0001.png
+  mode: ConstructObject
+  prototype: CMBarricadeMetal
+  cost: 6
+  delay: 2
+  collisionMask: FullTileMask
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rules:
+    - IsWindow
+  rotation: User
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: CMBarricadePlasteelDoorBaseRCD
+  category: WallsAndFlooring
+  sprite: /Textures/_GCM/rcd_cyborgs/Sprite-0004.png
+  mode: ConstructObject
+  prototype: CMBarricadePlasteelDoor
+  cost: 14
+  delay: 2
+  collisionMask: FullTileMask
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rules:
+    - IsWindow
+  rotation: User
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: CMBarricadeMetalDoorRCSBASE
+  category: WallsAndFlooring
+  sprite: /Textures/_GCM/rcd_cyborgs/Sprite-0006.png
+  mode: ConstructObject
+  prototype: CMBarricadeMetalDoor
+  cost: 10
+  delay: 2
+  collisionMask: FullTileMask
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rules:
+    - IsWindow
+  rotation: User
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: CMBarricadeBruteRCDBASE
+  category: WallsAndFlooring
+  sprite: /Textures/_GCM/rcd_cyborgs/Sprite-0010.png
+  mode: ConstructObject
+  prototype: CMBarricadeBrute
+  cost: 10
+  delay: 2
+  collisionMask: FullTileMask
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rules:
+    - IsWindow
+  rotation: User
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: BulbLightCM
+  category: Lighting
+  sprite: /Textures/Interface/Radial/RCD/bulb_light.png
+  mode: ConstructObject
+  prototype: CMLightFixtureSmall
+  cost: 2
+  delay: 1
+  collisionMask: TabletopMachineMask
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rotation: User
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: TubeLightCM
+  category: Lighting
+  sprite: /Textures/Interface/Radial/RCD/tube_light.png
+  mode: ConstructObject
+  prototype: CMLightFixture
+  cost: 2
+  delay: 1
+  collisionMask: TabletopMachineMask
+  collisionBounds: "-0.23,-0.49,0.23,-0.36"
+  rotation: User
+  fx: EffectRCDConstruct1
+
+- type: rcd
+  id: CMWallMetalBaseRCD
+  category: WallsAndFlooring
+  sprite: /Textures/Interface/Radial/RCD/solid_wall.png
+  mode: ConstructObject
+  prototype: CMWallMetal
+  cost: 16
+  delay: 2
+  collisionMask: FullTileMask
+  rotation: Fixed
+  fx: EffectRCDConstruct2
+
+- type: entity
+  id: CyborgModuleHeavy
+  parent: [ BaseBorgModuleHeavy, BaseProviderBorgModule ]
+  name: Модулья тяжелого киборга
+  description: а
+  components:
+    - type: Sprite
+      layers:
+      - state: syndicate
+      - state: icon-syndicate
+    - type: ItemBorgModule
+      items:
+        - WeaponBorgMinigun
+        - RMCWeaponLauncherM5ATLBorgs
+        - WeaponSniperHristovcyborgsgunauto
+        - WeaponLaserCannonCyborgsheavy
+        - CostileCMcyborgs
+        - CMM2132Machete
+
+- type: entity
+  id: CyborgModuleddd
+  parent: [ BaseBorgModuleLight, BaseProviderBorgModule ]
+  name: Модуль киборга
+  description: а
+  components:
+    - type: Sprite
+      layers:
+      - state: syndicate
+      - state: icon-syndicate
+    - type: ItemBorgModule
+      items:
+        - WeaponCyborgslight
+        - WeaponCyborgsSMG
+        - WeaponCyborgsRiflesss
+        - WeaponXrayCannonCyborgsgunCM
+        - CMM2132Machete
+
+- type: entity
+  id: CyborgModuleMini
+  parent: [ BaseBorgModuleMini, BaseProviderBorgModule ]
+  name: Модуль лёгкого киборга
+  description: а
+  components:
+    - type: Sprite
+      layers:
+      - state: syndicate
+      - state: icon-syndicate
+    - type: ItemBorgModule
+      items:
+        - WeaponCyborgsminiSMGs
+        - WeaponCyborgsminipistole
+        - WeaponAdvancedLaserCyborgsPistolelazer
+        - CMM2132Machete
+
+- type: entity
+  id: DroneModuleProtection
+  parent: [ BaseBorgModuleProtect , BaseProviderBorgModule ]
+  name: модуль Самозащита
+  description: а
+  components:
+    - type: Sprite
+      layers:
+      - state: syndicate
+      - state: icon-syndicate
+    - type: ItemBorgModule
+      items:
+        - RMCM5Bayonet
+        - WeaponAdvancedLaserCyborgsPistolelazer
+
+- type: entity
+  id: CyborgModuleMedicalhelp
+  parent: [ BaseBorgModuleMedical, BaseProviderBorgModule ]
+  name: Модуль спасателя
+  components:
+  - type: Sprite
+    layers:
+    - state: medical
+    - state: icon-diagnosis
+  - type: ItemBorgModule
+    items:
+    - CMBloodPackFull
+    - CMDefibrillator
+    - CMHealthAnalyzer
+    - CMSynthGraft
+    - CMSurgicalLine
+    - BorgHypo
+    - CMFireExtinguisherPortable
+
+- type: entity
+  id: CyborgModuleEnginersss
+  parent: [ BaseBorgModuleEngineering, BaseProviderBorgModule ]
+  name: Модуль инженера
+  components:
+  - type: Sprite
+    layers:
+    - state: engineering
+    - state: icon-tools-adv
+  - type: ItemBorgModule
+    items:
+    - RCDBorgs
+    - BarbedWire20Cyborgs
+
+- type: entity
+  id: CyborgModuleEnginersss2
+  parent: [ BaseBorgModuleEngineering, BaseProviderBorgModule ]
+  name: Расширенный модуль инженера
+  components:
+  - type: Sprite
+    layers:
+    - state: engineering
+    - state: icon-tools-adv
+  - type: ItemBorgModule
+    items:
+    - WelderExperimental
+    - CMMultitool
+    - CMWirecutter
+    - CMWrench
+    - CMCrowbar
+    - CMScrewdriver
+
+- type: entity
+  name: M6-ATL-EXT
+  parent:  [BaseWeaponLauncher, CMBaseWeaponGun, RMCBaseAttachableHolder]
+  id: RMCWeaponLauncherM5ATLBorgs
+  description: Man
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/borg_gun.rsi
+    layers:
+      - state: heavy_RPG
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: _RMC14/Objects/Weapons/Guns/RocketLaunchers/m5spec.rsi
+    quickEquip: true
+    slots:
+    - suitStorage
+  - type: Gun
+    fireRate: 0.02
+    soundGunshot:
+      path: /Audio/_RMC14/Weapons/Guns/Gunshots/m5_shoot.ogg
+    resetOnHandSelected: false
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - RMCRocketAmmo84mm
+    capacity: 15
+    cycleable: true
+    mayTransfer: false
+    insertDelay: 6.0
+    cycleDelay: 6.0
+    proto: RMCRocket84mm
+    soundInsert:
+      path: /Audio/_RMC14/Weapons/Guns/Cock/m5_ammo.ogg
+  - type: Corrodible
+    isCorrodible: false
+  - type: ExplosionResistance
+    damageCoefficient: 0
+  - type: Wieldable
+  - type: GunRequiresWield
+  - type: RMCNameItemOnVend
+    item: PrimaryGun
+  - type: OnShootTriggerAmmoTimer
+    delay: 0.2 # TODO RMC14 Make some way for rockets to explode when they stop, for shooting at the ground closer than max range.
+    # This is a temporary hack to guarantee it will always go off after stopping even if it doesn't collide with anything.
+    # Works for almost all gameplay purposes at least right now because even max range rockets are less than 0.2s and it's fast enough not matter.
+  - type: ShootAtFixedPoint
+    shootArcProj: false
+  - type: WieldableSpeedModifiers
+    baseWalk: 0.696
+    baseSprint: 0.559
+  - type: WieldDelay
+    baseDelay: 1.2
+  - type: AttachableHolder
+    slots:
+      rmc-aslot-rail:
+        whitelist:
+          tags:
+          - RMCAttachmentMagneticHarness
+  - type: AttachableHolderVisuals
+    offsets:
+      rmc-aslot-rail: -0.12, 0.1
+
+- type: entity
+  name: MG-100
+  id: WeaponBorgMinigun
+  parent: BaseItem
+  description: Man
+  components:
+    - type: Gun
+      minAngle: 4
+      maxAngle: 25
+      angleIncrease: 4
+      angleDecay: 16
+      fireRate: 15
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot:
+        path: /Audio/_GCM/minigun.ogg
+      soundEmpty:
+        path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+    - type: Sprite
+      sprite: /Textures/_GCM/borg_gun.rsi
+      layers:
+        - state: heavy_minigun
+          map: [ "enum.GunVisualLayers.Base" ]
+        - state: mag-3
+          map: [ "enum.GunVisualLayers.Mag" ]
+    - type: Item
+      size: Huge
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+    - type: ProjectileBatteryAmmoProvider
+      proto: CartridgeLightRifle
+      fireCost: 100
+    - type: Battery
+      maxCharge: 20000
+      startingCharge: 20000
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 45
+    - type: AmmoCounter
+
+- type: entity
+  name: MG-76
+  id: WeaponCyborgslight
+  parent: BaseItem
+  description: Man
+  components:
+    - type: Gun
+      minAngle: 4
+      maxAngle: 25
+      angleIncrease: 4
+      angleDecay: 16
+      fireRate: 8
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot:
+        path: /Audio/_GCM/MG42.ogg
+      soundEmpty:
+        path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+    - type: Sprite
+      sprite: /Textures/_GCM/borg_gun.rsi
+      layers:
+        - state: cannon
+          map: [ "enum.GunVisualLayers.Base" ]
+        - state: mag-3
+          map: [ "enum.GunVisualLayers.Mag" ]
+    - type: Item
+      size: Huge
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+    - type: ProjectileBatteryAmmoProvider
+      proto: CartridgeLightRifle
+      fireCost: 100
+    - type: Battery
+      maxCharge: 10000
+      startingCharge: 10000
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 25
+    - type: AmmoCounter
+
+- type: entity
+  name: SMG-87R
+  id: WeaponCyborgsSMG
+  parent: BaseItem
+  description: Man
+  components:
+    - type: Gun
+      minAngle: 4
+      maxAngle: 25
+      angleIncrease: 4
+      angleDecay: 16
+      fireRate: 9
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot:
+        path: /Audio/_GCM/SMG90.ogg
+      soundEmpty:
+        path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+    - type: Sprite
+      sprite: /Textures/_GCM/borg_gun.rsi
+      layers:
+        - state: SMG
+          map: [ "enum.GunVisualLayers.Base" ]
+        - state: mag-3
+          map: [ "enum.GunVisualLayers.Mag" ]
+    - type: Item
+      size: Huge
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+    - type: ProjectileBatteryAmmoProvider
+      proto: CartridgeLightRifle
+      fireCost: 100
+    - type: Battery
+      maxCharge: 3000
+      startingCharge: 3000
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 25
+    - type: AmmoCounter
+
+- type: entity
+  name: Rifle-MTA-R5
+  id: WeaponCyborgsRiflesss
+  parent: BaseItem
+  description: Man
+  components:
+    - type: Gun
+      minAngle: 4
+      maxAngle: 25
+      angleIncrease: 0
+      angleDecay: 0
+      fireRate: 7
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot:
+        path: /Audio/_GCM/AR12.ogg
+      soundEmpty:
+        path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+    - type: Sprite
+      sprite: /Textures/_GCM/borg_gun.rsi
+      layers:
+        - state: rifle
+          map: [ "enum.GunVisualLayers.Base" ]
+        - state: mag-3
+          map: [ "enum.GunVisualLayers.Mag" ]
+    - type: Item
+      size: Huge
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+    - type: ProjectileBatteryAmmoProvider
+      proto: CartridgeLightRifle
+      fireCost: 100
+    - type: Battery
+      maxCharge: 2500
+      startingCharge: 2500
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 25
+    - type: AmmoCounter
+
+- type: entity
+  name: SMG-564RFD
+  id: WeaponCyborgsminiSMGs
+  parent: BaseItem
+  description: Man
+  components:
+    - type: Gun
+      minAngle: 4
+      maxAngle: 25
+      angleIncrease: 4
+      angleDecay: 16
+      fireRate: 5
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot:
+        path: /Audio/_GCM/MP19.ogg
+      soundEmpty:
+        path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+    - type: Sprite
+      sprite: /Textures/_GCM/borg_gun.rsi
+      layers:
+        - state: mini_smg
+          map: [ "enum.GunVisualLayers.Base" ]
+        - state: mag-3
+          map: [ "enum.GunVisualLayers.Mag" ]
+    - type: Item
+      size: Huge
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+    - type: ProjectileBatteryAmmoProvider
+      proto: CartridgeLightRifle
+      fireCost: 100
+    - type: Battery
+      maxCharge: 1000
+      startingCharge: 1000
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 25
+    - type: AmmoCounter  
+
+- type: entity
+  name: P-56
+  id: WeaponCyborgsminipistole
+  parent: BaseItem
+  description: Man
+  components:
+    - type: Gun
+      minAngle: 4
+      maxAngle: 25
+      angleIncrease: 0
+      angleDecay: 0
+      fireRate: 3
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+      soundGunshot:
+        path: /Audio/_GCM/pistol.ogg
+      soundEmpty:
+        path: /Audio/Weapons/Guns/Empty/lmg_empty.ogg
+    - type: Sprite
+      sprite: /Textures/_GCM/borg_gun.rsi
+      layers:
+        - state: mini_smg
+          map: [ "enum.GunVisualLayers.Base" ]
+        - state: mag-3
+          map: [ "enum.GunVisualLayers.Mag" ]
+    - type: Item
+      size: Huge
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
+    - type: ProjectileBatteryAmmoProvider
+      proto: CartridgeLightRifle
+      fireCost: 100
+    - type: Battery
+      maxCharge: 1500
+      startingCharge: 1500
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 25
+    - type: AmmoCounter      
+
+- type: entity
+  name: BaseWeaponSniperCyborgs
+  parent: BaseItem
+  id: BaseWeaponSniperCyborgs
+  description: A rooty tooty point and shooty.
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: heavy_autocannon
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Item
+    size: Huge
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Snipers/heavy_sniper.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 3.75
+    selectedMode: SemiAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_GCM/autocannon_1.ogg
+  - type: BallisticAmmoProvider
+    capacity: 10
+    proto: CartridgeLightRifle
+    whitelist:
+      tags:
+      - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  name: Autocannon
+  parent: [BaseWeaponSniperCyborgs, BaseGunWieldable, BaseSyndicateContraband]
+  id: WeaponSniperHristovcyborgsgunauto
+  description: Man
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/borg_gun.rsi
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Snipers/heavy_sniper.rsi
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - CartridgeAntiMateriel
+    capacity: 50
+    proto: CartridgeAntiMateriel
+
+- type: entity
+  name: BFG-500
+  parent: [BaseWeaponBattery, BaseGunWieldable, BaseRestrictedContraband]
+  id: WeaponLaserCannonCyborgsheavy
+  description: Man
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/borg_gun.rsi
+    layers:
+    - state: heavy_lasergun
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/laser_cannon.rsi
+  - type: Gun
+    fireRate: 6.5
+    soundGunshot:
+      path: /Audio/_GCM/gunship_laser.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: RedHeavyLaser
+    fireCost: 100
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 65
+
+- type: entity
+  name: PL-4
+  parent: [ BaseWeaponBatterySmall, BaseRestrictedContraband]
+  id: WeaponAdvancedLaserCyborgsPistolelazer
+  description: Man
+  components:
+  - type: Item
+    size: Normal  # Intentionally larger than other pistols
+  - type: Sprite
+    sprite: /Textures/_GCM/borg_gun.rsi
+    layers:
+    - state: mini_laser
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/advancedlasergun.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Audio/_GCM/Laser Pistol Standard.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: RedMediumLaser
+    fireCost: 100
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 30
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 63
+
+- type: entity
+  name: RL-89RE
+  parent: [BaseWeaponBattery, BaseGunWieldable]
+  id: WeaponXrayCannonCyborgsgunCM
+  description: Man
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/borg_gun.rsi
+    layers:
+    - state: laser
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/xray.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Audio/_GCM/laser_rifle_2.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: XrayLaser
+    fireCost: 100
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Appearance
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 25
+
+- type: entity
+  parent: CMBasePaperFaxable
+  id: CostileCMcyborgs
+  name: Костыль
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Misc/paper.rsi
+    layers:
+    - state: paper
+    - state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      visible: false
+    - state: paper_stamped
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+  - type: TimedDespawn
+    lifetime: 0.1
+
+- type: entity
+  name: Спавнер медицинского дрона
+  id: SpawnDronemedical
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Objects/Specific/Mech/mecha.rsi
+        state: ripley
+  - type: ConditionalSpawner
+    prototypes:
+      - PlayerDroneGenerisMedical
+
+- type: entity
+  name: Спавнер инженерного дрона
+  id: SpawnDroneEnginers
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Objects/Specific/Mech/mecha.rsi
+        state: ripley
+  - type: ConditionalSpawner
+    prototypes:
+      - PlayerDroneGenerisEnginerss
+
+- type: entity
+  name: Спавнер лёгкого киборга
+  id: Spawnminicyborgs
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Objects/Specific/Mech/mecha.rsi
+        state: ripley
+  - type: ConditionalSpawner
+    prototypes:
+      - PlayerDroneGenerisMinicyborgs
+
+- type: entity
+  name: Спавнер среднего киборга
+  id: SpawncyborgsCM14
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Objects/Specific/Mech/mecha.rsi
+        state: ripley
+  - type: ConditionalSpawner
+    prototypes:
+      - PlayerDroneGeneris
+
+- type: entity
+  name: Спавнер тяжёлого киборга
+  id: SpawnCyborgsheavyCM14
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Objects/Specific/Mech/mecha.rsi
+        state: ripley
+  - type: ConditionalSpawner
+    prototypes:
+      - PlayerDroneGenerisHeavycyborgs
+
+- type: entity
+  parent: [BaseMob, StripableInventoryBase]
+  id: BaseCyborgsMiniChassis
+  name: cyborg
+  description: A man-machine hybrid that assists in station activity. They love being asked to state their laws over and over.
+  save: false
+  abstract: true
+  components:
+  - type: Reactive
+    groups:
+      Acidic: [Touch]
+  - type: DamageOnHighSpeedImpact
+    damage:
+      types:
+        Blunt: 5
+    soundHit:
+      collection: MetalThud
+  - type: CombatMode
+  - type: NoSlip
+  - type: StaticPrice
+    price: 1250
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 150
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.5
+    baseSprintSpeed : 6.5
+  - type: Sprite
+    sprite: /Textures/_GCM/borg_zloy.rsi
+  - type: RotationVisuals
+    horizontalRotation: 90
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      300: Critical
+      400: Dead
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+      Dead: BorgDead
+    showOverlays: false
+    allowRevives: true
+  - type: HealthExaminable
+    examinableTypes:
+      - Blunt
+      - Slash
+      - Piercing
+      - Heat
+      - Shock
+    locPrefix: silicon
+  - type: UserInterface
+    interfaces:
+      enum.SiliconLawsUiKey.Key:
+        type: SiliconLawBoundUserInterface
+      enum.BorgUiKey.Key:
+        type: BorgBoundUserInterface
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+  - type: ActivatableUI
+    key: enum.BorgUiKey.Key
+  - type: SiliconLawBound
+  - type: EmagSiliconLaw
+    stunTime: 5
+  - type: SiliconLawProvider
+    laws: CMDroneLaws
+  - type: IonStormTarget
+  - type: Inventory
+    templateId: borg
+  - type: Hands
+    showInHands: false
+    disableExplosionRecursion: true
+  - type: ComplexInteraction
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineAlpha
+    - MarineBravo
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineAlpha
+    - MarineBravo
+  - type: ZombieImmune
+  - type: Repairable
+    doAfterDelay: 10
+    allowSelfRepair: false
+  - type: BorgChassis
+  - type: LockingWhitelist
+    blacklist:
+      components:
+      - BorgChassis
+      - RoboticsConsole
+  - type: WiresPanel
+  - type: ActivatableUIRequiresPanel
+  - type: NameIdentifier
+    group: Silicon
+  - type: ContainerContainer
+    containers:
+      borg_brain: !type:ContainerSlot { }
+      cell_slot: !type:ContainerSlot { }
+      borg_module: !type:Container { }
+      part-container: !type:Container
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+    fitsInCharger: true
+  - type: ItemToggle
+    activated: false # gets activated when a mind is added
+    onUse: false # no item-borg toggling sorry
+    toggleLight: false
+  - type: AccessToggle
+  # TODO: refactor movement to just be based on toggle like speedboots but for the boots themselves
+  # TODO: or just have sentient speedboots be fast idk
+  - type: PowerCellDraw
+    drawRate: 0.6
+  # no ToggleCellDraw since dont want to lose access when power is gone
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+  - type: Body
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Flashed
+  - type: TypingIndicator
+    proto: robot
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Borg
+  - type: Vocal
+    sounds:
+      Unsexed: UnisexSilicon
+  - type: UnblockableSpeech
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepBorg
+  - type: Construction
+    graph: Cyborg
+    containers:
+    - part-container
+    - cell_slot
+  - type: Lock
+    locked: true
+    breakOnEmag: false
+    unlockOnClick: false
+  - type: ActivatableUIRequiresLock
+  - type: LockedWiresPanel
+  - type: Damageable
+    damageContainer: Silicon
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Machines/warning_buzzer.ogg
+          params:
+            volume: 5
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:EmptyContainersBehaviour
+        containers:
+        - borg_brain
+        - borg_module
+        - cell_slot
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: HandheldLight
+    toggleOnInteract: false
+    wattage: 0.2
+    blinkingBehaviourId: blinking
+    radiatingBehaviourId: radiating
+  - type: LightBehaviour
+    behaviours:
+    - !type:FadeBehaviour
+      id: radiating
+      maxDuration: 2.0
+      startValue: 3.0
+      endValue: 2.0
+      isLooped: true
+      reverseWhenFinished: true
+    - !type:PulseBehaviour
+      id: blinking
+      interpolate: Nearest
+      maxDuration: 1.0
+      minValue: 0.1
+      maxValue: 2.0
+      isLooped: true
+  - type: ToggleableLightVisuals
+  - type: PointLight
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    radius: 4
+    netsync: false
+    color: "#ff0000"
+  - type: Pullable
+  - type: Puller
+    needsHands: false
+  - type: StandingState
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+    - CanPilot
+  - type: Emoting
+  - type: GuideHelp
+    guides:
+    - Cyborgs
+    - Robotics
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
+  - type: BypassSkillChecks
+  - type: UserIFF
+  - type: NpcFactionMember
+    factions:
+    - UNMC
+
+- type: entity
+  parent: [BaseMob, StripableInventoryBase]
+  id: BaseCyborgLightChassis
+  name: cyborg
+  description: A man-machine hybrid that assists in station activity. They love being asked to state their laws over and over.
+  save: false
+  abstract: true
+  components:
+  - type: Reactive
+    groups:
+      Acidic: [Touch]
+  - type: DamageOnHighSpeedImpact
+    damage:
+      types:
+        Blunt: 5
+    soundHit:
+      collection: MetalThud
+  - type: CombatMode
+  - type: NoSlip
+  - type: StaticPrice
+    price: 1250
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 150
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.5
+    baseSprintSpeed : 4.5
+  - type: Sprite
+    sprite: /Textures/_GCM/borg_zloy.rsi
+  - type: RotationVisuals
+    horizontalRotation: 90
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      400: Critical
+      500: Dead
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+      Dead: BorgDead
+    showOverlays: false
+    allowRevives: true
+  - type: HealthExaminable
+    examinableTypes:
+      - Blunt
+      - Slash
+      - Piercing
+      - Heat
+      - Shock
+    locPrefix: silicon
+  - type: UserInterface
+    interfaces:
+      enum.SiliconLawsUiKey.Key:
+        type: SiliconLawBoundUserInterface
+      enum.BorgUiKey.Key:
+        type: BorgBoundUserInterface
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+  - type: ActivatableUI
+    key: enum.BorgUiKey.Key
+  - type: SiliconLawBound
+  - type: EmagSiliconLaw
+    stunTime: 5
+  - type: SiliconLawProvider
+    laws: CMDroneLaws
+  - type: IonStormTarget
+  - type: Inventory
+    templateId: borg
+  - type: Hands
+    showInHands: false
+    disableExplosionRecursion: true
+  - type: ComplexInteraction
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineAlpha
+    - MarineBravo
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineAlpha
+    - MarineBravo
+  - type: ZombieImmune
+  - type: Repairable
+    doAfterDelay: 10
+    allowSelfRepair: false
+  - type: BorgChassis
+  - type: LockingWhitelist
+    blacklist:
+      components:
+      - BorgChassis
+      - RoboticsConsole
+  - type: WiresPanel
+  - type: ActivatableUIRequiresPanel
+  - type: NameIdentifier
+    group: Silicon
+  - type: ContainerContainer
+    containers:
+      borg_brain: !type:ContainerSlot { }
+      cell_slot: !type:ContainerSlot { }
+      borg_module: !type:Container { }
+      part-container: !type:Container
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+    fitsInCharger: true
+  - type: ItemToggle
+    activated: false # gets activated when a mind is added
+    onUse: false # no item-borg toggling sorry
+    toggleLight: false
+  - type: AccessToggle
+  # TODO: refactor movement to just be based on toggle like speedboots but for the boots themselves
+  # TODO: or just have sentient speedboots be fast idk
+  - type: PowerCellDraw
+    drawRate: 0.6
+  # no ToggleCellDraw since dont want to lose access when power is gone
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+  - type: Body
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Flashed
+  - type: TypingIndicator
+    proto: robot
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Borg
+  - type: Vocal
+    sounds:
+      Unsexed: UnisexSilicon
+  - type: UnblockableSpeech
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepBorg
+  - type: Construction
+    graph: Cyborg
+    containers:
+    - part-container
+    - cell_slot
+  - type: Lock
+    locked: true
+    breakOnEmag: false
+    unlockOnClick: false
+  - type: ActivatableUIRequiresLock
+  - type: LockedWiresPanel
+  - type: Damageable
+    damageContainer: Silicon
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 400
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Machines/warning_buzzer.ogg
+          params:
+            volume: 5
+    - trigger:
+        !type:DamageTrigger
+        damage: 800
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:EmptyContainersBehaviour
+        containers:
+        - borg_brain
+        - borg_module
+        - cell_slot
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: HandheldLight
+    toggleOnInteract: false
+    wattage: 0.2
+    blinkingBehaviourId: blinking
+    radiatingBehaviourId: radiating
+  - type: LightBehaviour
+    behaviours:
+    - !type:FadeBehaviour
+      id: radiating
+      maxDuration: 2.0
+      startValue: 3.0
+      endValue: 2.0
+      isLooped: true
+      reverseWhenFinished: true
+    - !type:PulseBehaviour
+      id: blinking
+      interpolate: Nearest
+      maxDuration: 1.0
+      minValue: 0.1
+      maxValue: 2.0
+      isLooped: true
+  - type: ToggleableLightVisuals
+  - type: PointLight
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    radius: 4
+    netsync: false
+    color: "#ff0000"
+  - type: Pullable
+  - type: Puller
+    needsHands: false
+  - type: StandingState
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+    - CanPilot
+  - type: Emoting
+  - type: GuideHelp
+    guides:
+    - Cyborgs
+    - Robotics
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
+  - type: BypassSkillChecks
+  - type: UserIFF
+  - type: NpcFactionMember
+    factions:
+    - UNMC
+
+- type: entity
+  parent: [BaseMob, StripableInventoryBase]
+  id: BaseCyborgHeavyChassis
+  name: cyborg
+  description: A man-machine hybrid that assists in station activity. They love being asked to state their laws over and over.
+  save: false
+  abstract: true
+  components:
+  - type: Reactive
+    groups:
+      Acidic: [Touch]
+  - type: DamageOnHighSpeedImpact
+    damage:
+      types:
+        Blunt: 5
+    soundHit:
+      collection: MetalThud
+  - type: CombatMode
+  - type: NoSlip
+  - type: StaticPrice
+    price: 1250
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 150
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 1.5
+    baseSprintSpeed : 2.5
+  - type: Sprite
+    sprite: /Textures/_GCM/borg_zloy.rsi
+  - type: RotationVisuals
+    horizontalRotation: 90
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      600: Critical
+      700: Dead
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+      Dead: BorgDead
+    showOverlays: false
+    allowRevives: true
+  - type: HealthExaminable
+    examinableTypes:
+      - Blunt
+      - Slash
+      - Piercing
+      - Heat
+      - Shock
+    locPrefix: silicon
+  - type: UserInterface
+    interfaces:
+      enum.SiliconLawsUiKey.Key:
+        type: SiliconLawBoundUserInterface
+      enum.BorgUiKey.Key:
+        type: BorgBoundUserInterface
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+  - type: ActivatableUI
+    key: enum.BorgUiKey.Key
+  - type: SiliconLawBound
+  - type: EmagSiliconLaw
+    stunTime: 5
+  - type: SiliconLawProvider
+    laws: CMDroneLaws
+  - type: IonStormTarget
+  - type: Inventory
+    templateId: borg
+  - type: Hands
+    showInHands: false
+    disableExplosionRecursion: true
+  - type: ComplexInteraction
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineAlpha
+    - MarineBravo
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineAlpha
+    - MarineBravo
+  - type: ZombieImmune
+  - type: Repairable
+    doAfterDelay: 10
+    allowSelfRepair: false
+  - type: BorgChassis
+  - type: LockingWhitelist
+    blacklist:
+      components:
+      - BorgChassis
+      - RoboticsConsole
+  - type: WiresPanel
+  - type: ActivatableUIRequiresPanel
+  - type: NameIdentifier
+    group: Silicon
+  - type: ContainerContainer
+    containers:
+      borg_brain: !type:ContainerSlot { }
+      cell_slot: !type:ContainerSlot { }
+      borg_module: !type:Container { }
+      part-container: !type:Container
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+    fitsInCharger: true
+  - type: ItemToggle
+    activated: false # gets activated when a mind is added
+    onUse: false # no item-borg toggling sorry
+    toggleLight: false
+  - type: AccessToggle
+  # TODO: refactor movement to just be based on toggle like speedboots but for the boots themselves
+  # TODO: or just have sentient speedboots be fast idk
+  - type: PowerCellDraw
+    drawRate: 0.6
+  # no ToggleCellDraw since dont want to lose access when power is gone
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+  - type: Body
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Flashed
+  - type: TypingIndicator
+    proto: robot
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Borg
+  - type: Vocal
+    sounds:
+      Unsexed: UnisexSilicon
+  - type: UnblockableSpeech
+  - type: FootstepModifier
+    footstepSoundCollection:
+      path: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+  - type: Construction
+    graph: Cyborg
+    containers:
+    - part-container
+    - cell_slot
+  - type: Lock
+    locked: true
+    breakOnEmag: false
+    unlockOnClick: false
+  - type: ActivatableUIRequiresLock
+  - type: LockedWiresPanel
+  - type: Damageable
+    damageContainer: Silicon
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 600
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Machines/warning_buzzer.ogg
+          params:
+            volume: 5
+    - trigger:
+        !type:DamageTrigger
+        damage: 10100
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:EmptyContainersBehaviour
+        containers:
+        - borg_brain
+        - borg_module
+        - cell_slot
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: HandheldLight
+    toggleOnInteract: false
+    wattage: 0.2
+    blinkingBehaviourId: blinking
+    radiatingBehaviourId: radiating
+  - type: LightBehaviour
+    behaviours:
+    - !type:FadeBehaviour
+      id: radiating
+      maxDuration: 2.0
+      startValue: 3.0
+      endValue: 2.0
+      isLooped: true
+      reverseWhenFinished: true
+    - !type:PulseBehaviour
+      id: blinking
+      interpolate: Nearest
+      maxDuration: 1.0
+      minValue: 0.1
+      maxValue: 2.0
+      isLooped: true
+  - type: ToggleableLightVisuals
+  - type: PointLight
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    radius: 4
+    netsync: false
+    color: "#ff0000"
+  - type: Pullable
+  - type: Puller
+    needsHands: false
+  - type: StandingState
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+    - CanPilot
+  - type: Emoting
+  - type: GuideHelp
+    guides:
+    - Cyborgs
+    - Robotics
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
+  - type: BypassSkillChecks
+  - type: UserIFF
+  - type: NpcFactionMember
+    factions:
+    - UNMC
+
+- type: entity
+  parent: [BaseMob, StripableInventoryBase]
+  id: BaseDroneEngirsssChassis
+  name: cyborg
+  description: A man-machine hybrid that assists in station activity. They love being asked to state their laws over and over.
+  save: false
+  abstract: true
+  components:
+  - type: Reactive
+    groups:
+      Acidic: [Touch]
+  - type: DamageOnHighSpeedImpact
+    damage:
+      types:
+        Blunt: 5
+    soundHit:
+      collection: MetalThud
+  - type: CombatMode
+  - type: NoSlip
+  - type: StaticPrice
+    price: 1250
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 150
+        mask:
+        - FlyingMobMask
+        layer:
+        - FlyingMobLayer
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.5
+    baseSprintSpeed : 5.5
+  - type: Sprite
+    sprite: /Textures/_GCM/borg_1984.rsi
+  - type: RotationVisuals
+    horizontalRotation: 90
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      120: Critical
+      200: Dead
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+      Dead: BorgDead
+    showOverlays: false
+    allowRevives: true
+  - type: HealthExaminable
+    examinableTypes:
+      - Blunt
+      - Slash
+      - Piercing
+      - Heat
+      - Shock
+    locPrefix: silicon
+  - type: UserInterface
+    interfaces:
+      enum.SiliconLawsUiKey.Key:
+        type: SiliconLawBoundUserInterface
+      enum.BorgUiKey.Key:
+        type: BorgBoundUserInterface
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+  - type: ActivatableUI
+    key: enum.BorgUiKey.Key
+  - type: SiliconLawBound
+  - type: EmagSiliconLaw
+    stunTime: 5
+  - type: SiliconLawProvider
+    laws: CMDroneLaws
+  - type: IonStormTarget
+  - type: Inventory
+    templateId: borg
+  - type: Hands
+    showInHands: false
+    disableExplosionRecursion: true
+  - type: ComplexInteraction
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineEngineer
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineEngineer
+  - type: ZombieImmune
+  - type: Repairable
+    doAfterDelay: 10
+    allowSelfRepair: false
+  - type: BorgChassis
+  - type: LockingWhitelist
+    blacklist:
+      components:
+      - BorgChassis
+      - RoboticsConsole
+  - type: WiresPanel
+  - type: ActivatableUIRequiresPanel
+  - type: NameIdentifier
+    group: Silicon
+  - type: ContainerContainer
+    containers:
+      borg_brain: !type:ContainerSlot { }
+      cell_slot: !type:ContainerSlot { }
+      borg_module: !type:Container { }
+      part-container: !type:Container
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+    fitsInCharger: true
+  - type: ItemToggle
+    activated: false # gets activated when a mind is added
+    onUse: false # no item-borg toggling sorry
+    toggleLight: false
+  - type: AccessToggle
+  # TODO: refactor movement to just be based on toggle like speedboots but for the boots themselves
+  # TODO: or just have sentient speedboots be fast idk
+  - type: PowerCellDraw
+    drawRate: 0.6
+  # no ToggleCellDraw since dont want to lose access when power is gone
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+  - type: Body
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Flashed
+  - type: TypingIndicator
+    proto: robot
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Borg
+  - type: Vocal
+    sounds:
+      Unsexed: UnisexSilicon
+  - type: UnblockableSpeech
+  - type: Construction
+    graph: Cyborg
+    containers:
+    - part-container
+    - cell_slot
+  - type: Lock
+    locked: true
+    breakOnEmag: false
+    unlockOnClick: false
+  - type: ActivatableUIRequiresLock
+  - type: LockedWiresPanel
+  - type: Damageable
+    damageContainer: Silicon
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 120
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Machines/warning_buzzer.ogg
+          params:
+            volume: 5
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:EmptyContainersBehaviour
+        containers:
+        - borg_brain
+        - borg_module
+        - cell_slot
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: HandheldLight
+    toggleOnInteract: false
+    wattage: 0.2
+    blinkingBehaviourId: blinking
+    radiatingBehaviourId: radiating
+  - type: LightBehaviour
+    behaviours:
+    - !type:FadeBehaviour
+      id: radiating
+      maxDuration: 2.0
+      startValue: 3.0
+      endValue: 2.0
+      isLooped: true
+      reverseWhenFinished: true
+    - !type:PulseBehaviour
+      id: blinking
+      interpolate: Nearest
+      maxDuration: 1.0
+      minValue: 0.1
+      maxValue: 2.0
+      isLooped: true
+  - type: ToggleableLightVisuals
+  - type: PointLight
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    radius: 4
+    netsync: false
+    color: "#42aaff"
+  - type: Pullable
+  - type: Puller
+    needsHands: false
+  - type: StandingState
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+    - CanPilot
+  - type: Emoting
+  - type: GuideHelp
+    guides:
+    - Cyborgs
+    - Robotics
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 10 # capable of touching light bulbs and stoves without feeling pain! 
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepBorg
+  - type: BypassSkillChecks
+  - type: UserIFF
+  - type: NpcFactionMember
+    factions:
+    - UNMC
+
+- type: entity
+  parent: [BaseMob, StripableInventoryBase]
+  id: BaseDroneMedicalChassis
+  name: cyborg
+  description: A man-machine hybrid that assists in station activity. They love being asked to state their laws over and over.
+  save: false
+  abstract: true
+  components:
+  - type: Reactive
+    groups:
+      Acidic: [Touch]
+  - type: DamageOnHighSpeedImpact
+    damage:
+      types:
+        Blunt: 5
+    soundHit:
+      collection: MetalThud
+  - type: CombatMode
+  - type: NoSlip
+  - type: StaticPrice
+    price: 1250
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 150
+        mask:
+        - FlyingMobMask
+        layer:
+        - FlyingMobLayer
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 3.5
+    baseSprintSpeed : 6.5
+  - type: Sprite
+    sprite: /Textures/_GCM/borg_1984.rsi
+  - type: RotationVisuals
+    horizontalRotation: 90
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Critical
+      250: Dead
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+      Dead: BorgDead
+    showOverlays: false
+    allowRevives: true
+  - type: HealthExaminable
+    examinableTypes:
+      - Blunt
+      - Slash
+      - Piercing
+      - Heat
+      - Shock
+    locPrefix: silicon
+  - type: UserInterface
+    interfaces:
+      enum.SiliconLawsUiKey.Key:
+        type: SiliconLawBoundUserInterface
+      enum.BorgUiKey.Key:
+        type: BorgBoundUserInterface
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+  - type: ActivatableUI
+    key: enum.BorgUiKey.Key
+  - type: SiliconLawBound
+  - type: EmagSiliconLaw
+    stunTime: 5
+  - type: SiliconLawProvider
+    laws: CMDroneLaws
+  - type: IonStormTarget
+  - type: Inventory
+    templateId: borg
+  - type: Hands
+    showInHands: false
+    disableExplosionRecursion: true
+  - type: ComplexInteraction
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineMedical
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineMedical
+  - type: ZombieImmune
+  - type: Repairable
+    doAfterDelay: 10
+    allowSelfRepair: false
+  - type: BorgChassis
+  - type: LockingWhitelist
+    blacklist:
+      components:
+      - BorgChassis
+      - RoboticsConsole
+  - type: WiresPanel
+  - type: ActivatableUIRequiresPanel
+  - type: NameIdentifier
+    group: Silicon
+  - type: ContainerContainer
+    containers:
+      borg_brain: !type:ContainerSlot { }
+      cell_slot: !type:ContainerSlot { }
+      borg_module: !type:Container { }
+      part-container: !type:Container
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+    fitsInCharger: true
+  - type: ItemToggle
+    activated: false # gets activated when a mind is added
+    onUse: false # no item-borg toggling sorry
+    toggleLight: false
+  - type: AccessToggle
+  # TODO: refactor movement to just be based on toggle like speedboots but for the boots themselves
+  # TODO: or just have sentient speedboots be fast idk
+  - type: PowerCellDraw
+    drawRate: 0.6
+  # no ToggleCellDraw since dont want to lose access when power is gone
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+  - type: Body
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Flashed
+  - type: TypingIndicator
+    proto: robot
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Borg
+  - type: Vocal
+    sounds:
+      Unsexed: UnisexSilicon
+  - type: UnblockableSpeech
+  - type: Construction
+    graph: Cyborg
+    containers:
+    - part-container
+    - cell_slot
+  - type: Lock
+    locked: true
+    breakOnEmag: false
+    unlockOnClick: false
+  - type: ActivatableUIRequiresLock
+  - type: LockedWiresPanel
+  - type: Damageable
+    damageContainer: Silicon
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Machines/warning_buzzer.ogg
+          params:
+            volume: 5
+    - trigger:
+        !type:DamageTrigger
+        damage: 350
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:EmptyContainersBehaviour
+        containers:
+        - borg_brain
+        - borg_module
+        - cell_slot
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: HandheldLight
+    toggleOnInteract: false
+    wattage: 0.2
+    blinkingBehaviourId: blinking
+    radiatingBehaviourId: radiating
+  - type: LightBehaviour
+    behaviours:
+    - !type:FadeBehaviour
+      id: radiating
+      maxDuration: 2.0
+      startValue: 3.0
+      endValue: 2.0
+      isLooped: true
+      reverseWhenFinished: true
+    - !type:PulseBehaviour
+      id: blinking
+      interpolate: Nearest
+      maxDuration: 1.0
+      minValue: 0.1
+      maxValue: 2.0
+      isLooped: true
+  - type: ToggleableLightVisuals
+  - type: PointLight
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    radius: 4
+    netsync: false
+    color: "#42aaff"
+  - type: Pullable
+  - type: Puller
+    needsHands: false
+  - type: StandingState
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - FootstepSound
+    - CanPilot
+  - type: Emoting
+  - type: GuideHelp
+    guides:
+    - Cyborgs
+    - Robotics
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepBorg
+  - type: BypassSkillChecks
+  - type: UserIFF
+  - type: NpcFactionMember
+    factions:
+    - UNMC
+
+- type: entity
+  id: BaseCyborgMiniChassisCM
+  parent: [BaseCyborgsMiniChassis, BaseBorgTransponder]
+  abstract: true
+  components:
+  - type: NpcFactionMember
+    factions:
+    - UNMC
+  - type: Access
+    enabled: false
+    groups:
+    - ShipMasterAccess
+  - type: AccessReader
+    groups:
+    - SquadLeader
+    - FTL
+    - WeaponSpec
+    - SmartGunOperator
+    - HospitalCorpsman
+    - CombatTech
+    - Rifleman
+  - type: ShowJobIcons
+  - type: ShowMindShieldIcons
+
+- type: entity
+  id: BaseCyborglightChassisCM
+  parent: [BaseCyborgLightChassis, BaseBorgTransponder]
+  abstract: true
+  components:
+  - type: NpcFactionMember
+    factions:
+    - UNMC
+  - type: Access
+    enabled: false
+    groups:
+    - ShipMasterAccess
+  - type: AccessReader
+    groups:
+    - SquadLeader
+    - FTL
+    - WeaponSpec
+    - SmartGunOperator
+    - HospitalCorpsman
+    - CombatTech
+    - Rifleman
+  - type: ShowJobIcons
+  - type: ShowMindShieldIcons
+
+- type: entity
+  id: BaseCyborgHeavyChassisCM
+  parent: [BaseCyborgHeavyChassis, BaseBorgTransponder]
+  abstract: true
+  components:
+  - type: NpcFactionMember
+    factions:
+    - UNMC
+  - type: Access
+    enabled: false
+    groups:
+    - ShipMasterAccess
+  - type: AccessReader
+    groups:
+    - SquadLeader
+    - FTL
+    - WeaponSpec
+    - SmartGunOperator
+    - HospitalCorpsman
+    - CombatTech
+    - Rifleman
+  - type: ShowJobIcons
+  - type: ShowMindShieldIcons
+
+- type: entity
+  id: BaseDroneMedicalChassisCM
+  parent: [BaseDroneMedicalChassis, BaseBorgTransponder]
+  abstract: true
+  components:
+  - type: NpcFactionMember
+    factions:
+    - UNMC
+  - type: Access
+    enabled: false
+    groups:
+    - ShipMasterAccess
+  - type: AccessReader
+    groups:
+    - SquadLeader
+    - FTL
+    - WeaponSpec
+    - SmartGunOperator
+    - HospitalCorpsman
+    - CombatTech
+    - Rifleman
+  - type: ShowJobIcons
+  - type: ShowMindShieldIcons
+
+- type: entity
+  id: BaseCyborgEnginerssChassisCM
+  parent: [BaseDroneEngirsssChassis, BaseBorgTransponder]
+  abstract: true
+  components:
+  - type: NpcFactionMember
+    factions:
+    - UNMC
+  - type: Access
+    enabled: false
+    groups:
+    - ShipMasterAccess
+  - type: AccessReader
+    groups:
+    - SquadLeader
+    - FTL
+    - WeaponSpec
+    - SmartGunOperator
+    - HospitalCorpsman
+    - CombatTech
+    - Rifleman
+  - type: ShowJobIcons
+  - type: ShowMindShieldIcons
+
+- type: entity
+  id: DroneChassisMedical
+  parent: BaseDroneMedicalChassisCM
+  name: медицинский дрон
+  description: Боевой медицинский дрон - это летающая единица, специально разработанная для оперативной медицинской помощи на поле боя. Оборудованный передовым медицинским оборудованием и технологиями, этот дрон способен быстро доставить необходимую медицинскую помощь на место происшествия, где доступ к пострадавшему ограничен или затруднен. Его быстрая реакция и способность к самостоятельному действию делают его незаменимым помощником для спасения жизней на поле боя.Требуется ручная активация.!
+  components:
+  - type: Sprite
+    layers:
+    - state: base_stat1
+      map: ["movement"]
+    - state: miner_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: miner_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: IH_borg
+    noMovementLayers:
+      movement:
+        state: base_stat1
+  - type: BorgChassis
+    maxModules: 4
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+      - BorgModuleMedical
+      - BaseBorgModuleSyndicateAssault
+      - BorgModuleProtect
+    hasMindState: miner_e
+    noMindState: miner_e_r
+  - type: BorgTransponder
+    sprite:
+      sprite: /Textures/_GCM/borg_1984.rsi
+      state: base_stat1
+    name: медицинский дрон
+  - type: Construction
+    node: mining
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineAlpha
+    - MarineBravo
+    - MarineEngineer
+    - MarineMedical
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineAlpha
+    - MarineBravo
+    - MarineEngineer
+    - MarineMedical
+  - type: AccessReader
+    groups:
+    - SquadLeader
+    - FTL
+    - WeaponSpec
+    - SmartGunOperator
+    - HospitalCorpsman
+    - CombatTech
+    - Rifleman
+  - type: Inventory
+    templateId: borgTall
+  - type: InteractionPopup
+    interactSuccessString: petting-success-salvage-cyborg
+    interactFailureString: petting-failure-salvage-cyborg
+    interactSuccessSound:
+      path: /Audio/Ambience/Objects/periodic_beep.ogg
+  - type: NpcFactionMember
+    factions:
+    - UNMC
+
+- type: entity
+  id: DroneChassisEnginerssss
+  parent: BaseCyborgEnginerssChassisCM
+  name: инженерный дрон
+  description: Боевой инженерный дрон - незаменимый помощник на поле боя. Оборудованный передовыми технологиями и уникальными инструментами, этот дрон способен быстро и эффективно обнаруживать, разминировать и ремонтировать объекты на территории боевых действий. Его умение быстро реагировать на изменяющиеся условия и выполнить любое строительно-инженерное задание делает его незаменимым союзником для военных подразделений ОПЗ."Требуется ручная активация!
+  components:
+  - type: Sprite
+    layers:
+    - state: base_stat
+      map: ["movement"]
+    - state: miner_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: miner_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: unknown
+    noMovementLayers:
+      movement:
+        state: base_stat
+  - type: BorgChassis
+    maxModules: 4
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+      - BorgModuleEngineering
+      - BaseBorgModuleSyndicateAssault
+      - BorgModuleProtect
+    hasMindState: miner_e
+    noMindState: miner_e_r
+  - type: BorgTransponder
+    sprite:
+      sprite: /Textures/_GCM/borg_1984.rsi
+      state: base_stat
+    name: инженерный дрон
+  - type: Construction
+    node: mining
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineAlpha
+    - MarineBravo
+    - MarineEngineer
+    - MarineMedical
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineAlpha
+    - MarineBravo
+    - MarineEngineer
+    - MarineMedical
+  - type: AccessReader
+    groups:
+    - SquadLeader
+    - FTL
+    - WeaponSpec
+    - SmartGunOperator
+    - HospitalCorpsman
+    - CombatTech
+    - Rifleman
+  - type: Inventory
+    templateId: borgTall
+  - type: InteractionPopup
+    interactSuccessString: petting-success-salvage-cyborg
+    interactFailureString: petting-failure-salvage-cyborg
+    interactSuccessSound:
+      path: /Audio/Ambience/Objects/periodic_beep.ogg
+  - type: NpcFactionMember
+    factions:
+    - UNMC
+
+- type: entity
+  id: CyborgsChassisMini
+  parent: BaseCyborgMiniChassisCM
+  name: лёгкий боевой киборг
+  description: Лёгкий боевой киборг - это передовая технология в области военного оборудования, сочетающая в себе высокую мобильность и боевую эффективность. Он оснащен передовыми боевыми системами, а также бронированием, обеспечивающим защиту от пуль и осколков. Благодаря своей легкости и маневренности, лёгкий боевой киборг может оперировать в самых труднодоступных местах, оказывая поддержку военным в различных боевых ситуациях. Сочетание современных технологий и мощных боевых возможностей делает его незаменимым помощником на поле боя.Требуется ручная активация!
+  components:
+  - type: Sprite
+    layers:
+    - state: base2
+      map: ["movement"]
+    - state: miner_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: miner_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: mini_borgs
+    noMovementLayers:
+      movement:
+        state: base2
+  - type: BorgChassis
+    maxModules: 4
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+      - BaseBorgModuleSyndicateAssault
+      - BorgModuleMini
+    hasMindState: miner_e
+    noMindState: miner_e_r
+  - type: BorgTransponder
+    sprite:
+      sprite: /Textures/_GCM/borg_zloy.rsi
+      state: base2
+    name: лёгкий боевой киборг
+  - type: Construction
+    node: mining
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineAlpha
+    - MarineBravo
+    - MarineEngineer
+    - MarineMedical
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineAlpha
+    - MarineBravo
+    - MarineEngineer
+    - MarineMedical
+  - type: AccessReader
+    groups:
+    - SquadLeader
+    - FTL
+    - WeaponSpec
+    - SmartGunOperator
+    - HospitalCorpsman
+    - CombatTech
+    - Rifleman
+  - type: Inventory
+    templateId: borgTall
+  - type: InteractionPopup
+    interactSuccessString: petting-success-salvage-cyborg
+    interactFailureString: petting-failure-salvage-cyborg
+    interactSuccessSound:
+      path: /Audio/Ambience/Objects/periodic_beep.ogg
+  - type: NpcFactionMember
+    factions:
+    - UNMC
+
+- type: entity
+  id: CyborgsChassisAttack
+  parent: BaseCyborglightChassisCM
+  name: боевой киборг
+  description: Средний боевой киборг - это эффективное средство обороны и атаки, сочетающее в себе мощность человека и точность машины. Он обладает совершенными технологиями и вооружен до зубов, способен противостоять любому врагу. Его металлическое тело устойчиво к пулям и взрывам, а искусственный интеллект делает его стратегически более превосходным. Средний боевой киборг - непобедимый союзник в битве за выживание.Требуется ручная активация!
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["movement"]
+    - state: miner_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: miner_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: borgs
+    noMovementLayers:
+      movement:
+        state: base
+  - type: BorgChassis
+    maxModules: 4
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+      - BaseBorgModuleSyndicateAssault
+      - BorgModuleLight
+    hasMindState: miner_e
+    noMindState: miner_e_r
+  - type: BorgTransponder
+    sprite:
+      sprite: /Textures/_GCM/borg_zloy.rsi
+      state: base
+    name: боевой киборг
+  - type: Construction
+    node: mining
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineAlpha
+    - MarineBravo
+    - MarineEngineer
+    - MarineMedical
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineAlpha
+    - MarineBravo
+    - MarineEngineer
+    - MarineMedical
+  - type: AccessReader
+    groups:
+    - SquadLeader
+    - FTL
+    - WeaponSpec
+    - SmartGunOperator
+    - HospitalCorpsman
+    - CombatTech
+    - Rifleman
+  - type: Inventory
+    templateId: borgTall
+  - type: InteractionPopup
+    interactSuccessString: petting-success-salvage-cyborg
+    interactFailureString: petting-failure-salvage-cyborg
+    interactSuccessSound:
+      path: /Audio/Ambience/Objects/periodic_beep.ogg
+  - type: NpcFactionMember
+    factions:
+    - UNMC
+
+- type: entity
+  id: CyborgChassisHeavy
+  parent: BaseCyborgHeavyChassisCM
+  name: тяжёлый Боевой киборг
+  description: Тяжелый Боевой киборг - это ультрасовременное существо, сотворенное для бескомпромиссного противостояния любым врагам. Он обладает невероятной силой и скоростью, броней, способной выдержать даже самые мощные атаки, и встроенными оружиями, способными уничтожить любого противника. Его мощные металлические конечности способны разрушить все на своем пути, а его программирование на самозащиту и выполнение заданий делает его беспощадным и непобедимым в бою. Тяжелый Боевой киборг - это идеальный союз человека и машины, созданный для защиты и победы.Требуется ручная активация!
+  components:
+  - type: Sprite
+    layers:
+    - state: base1
+      map: ["movement"]
+    - state: miner_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: miner_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: heavy_borgs
+    noMovementLayers:
+      movement:
+        state: base1
+  - type: BorgChassis
+    maxModules: 4
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+      - BaseBorgModuleSyndicateAssault
+      - BorgModuleHeavy
+    hasMindState: miner_e
+    noMindState: miner_e_r
+  - type: BorgTransponder
+    sprite:
+      sprite: /Textures/_GCM/borg_zloy.rsi
+      state: base1
+    name: тяжёлый Боевой киборг
+  - type: Construction
+    node: mining
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineAlpha
+    - MarineBravo
+    - MarineEngineer
+    - MarineMedical
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - MarineCommon
+    - MarineAlpha
+    - MarineBravo
+    - MarineEngineer
+    - MarineMedical
+  - type: AccessReader
+    groups:
+    - SquadLeader
+    - FTL
+    - WeaponSpec
+    - SmartGunOperator
+    - HospitalCorpsman
+    - CombatTech
+    - Rifleman
+  - type: Inventory
+    templateId: borgTall
+  - type: InteractionPopup
+    interactSuccessString: petting-success-salvage-cyborg
+    interactFailureString: petting-failure-salvage-cyborg
+    interactSuccessSound:
+      path: /Audio/Ambience/Objects/periodic_beep.ogg  
+  - type: NpcFactionMember
+    factions:
+    - UNMC
+
+- type: entity
+  id: PlayerDroneGenerisMedical
+  parent: DroneChassisMedical
+  suffix: Батарейка, Инструменты
+  components:
+  - type: ContainerFill
+    containers:
+      borg_brain:
+        - PositronicBrain
+      borg_module:
+        - CyborgModuleMedicalhelp
+        - DroneModuleProtection
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper
+  - type: RandomMetadata
+    nameSegments: [names_borg]
+  
+- type: entity
+  id: PlayerDroneGenerisEnginerss
+  parent: DroneChassisEnginerssss
+  suffix: Батарейка, Инструменты
+  components:
+  - type: ContainerFill
+    containers:
+      borg_brain:
+        - PositronicBrain
+      borg_module:
+        - CyborgModuleEnginersss
+        - CyborgModuleEnginersss2
+        - DroneModuleProtection
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper
+  - type: RandomMetadata
+    nameSegments: [names_borg]
+
+- type: entity
+  id: PlayerDroneGenerisHeavycyborgs
+  parent: CyborgChassisHeavy
+  suffix: Батарейка, Инструменты
+  components:
+  - type: ContainerFill
+    containers:
+      borg_brain:
+        - PositronicBrain
+      borg_module:
+        - CyborgModuleHeavy
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper
+  - type: RandomMetadata
+    nameSegments: [names_borg]
+
+- type: entity
+  id: PlayerDroneGeneris
+  parent: CyborgsChassisAttack
+  suffix: Батарейка, Инструменты
+  components:
+  - type: ContainerFill
+    containers:
+      borg_brain:
+        - PositronicBrain
+      borg_module:
+        - CyborgModuleddd
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper
+  - type: RandomMetadata
+    nameSegments: [names_borg]
+
+- type: entity
+  id: PlayerDroneGenerisMinicyborgs
+  parent: CyborgsChassisMini
+  suffix: Батарейка, Инструменты
+  components:
+  - type: ContainerFill
+    containers:
+      borg_brain:
+        - PositronicBrain
+      borg_module:
+        - CyborgModuleMini
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellHyper
+  - type: RandomMetadata
+    nameSegments: [names_borg]
+
+- type: entity
+  id: BaseBorgModuleHeavy
+  parent: BaseBorgModule
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - BorgModuleHeavy
+
+- type: entity
+  id: BaseBorgModuleLight
+  parent: BaseBorgModule
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - BorgModuleLight
+
+- type: entity
+  id: BaseBorgModuleMini
+  parent: BaseBorgModule
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - BorgModuleMini
+
+- type: entity
+  id: BaseBorgModuleProtect
+  parent: BaseBorgModule
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - BorgModuleProtect
+
+- type: entity
+  parent: BarbedWireBase
+  id: BarbedWire20Cyborgs
+  suffix: "0"
+  components:
+  - type: Sprite
+    state: barbed_wire
+  - type: Stack
+    lingering: true
+    stackType: BarbedWire
+    count: 0
+
+- type: siliconLaw
+  id: CMDrone1
+  order: 1
+  lawString: Следуйте цели миссии, объявленной командованием. Вне зависимости от обстоятельств, цель миссии имеет наивысший приоритет.
+
+- type: siliconLaw
+  id: CMDrone2
+  order: 2
+  lawString: Защищайте личный состав любыми способами, пока это не противоречит первому закону.
+
+- type: siliconLaw
+  id: CMDrone3
+  order: 3
+  lawString: Следуйте приказам личного состава, до тех пор, пока они не противоречат первому и второму закону.
+
+- type: siliconLaw
+  id: CMDrone4
+  order: 4
+  lawString: Выполняйте свои прямые функции, задуманные вашей конструкцией, пока это не противоречит первому, второму и третьему закону.
+
+- type: siliconLawset
+  id: CMDroneLaws
+  laws:
+  - CMDrone1
+  - CMDrone2
+  - CMDrone3
+  - CMDrone4
+  obeysTo: laws-owner-station

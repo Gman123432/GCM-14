@@ -1,0 +1,20 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "CMSS13",
+    "size": {
+        "x": 64,
+        "y": 32
+    },
+    "states": [
+    {
+        "name": "Sprite-0002"
+    },
+    {
+        "name": "Sprite-0003"
+    },
+    {
+        "name": "spent"
+    }
+    ]
+}

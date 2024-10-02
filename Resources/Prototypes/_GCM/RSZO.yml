@@ -1,0 +1,570 @@
+- type: entity
+  id: ShuttleGunBaseCM
+  name: shittle gun
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Appearance
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+  - type: Physics
+    bodyType: Static
+  - type: ContainerContainer
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 450
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Electronic
+  - type: Transform
+    anchored: true
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+    - Trigger
+    - Toggle
+    - On
+    - Off
+  - type: AutoShootGun
+  - type: GunSignalControl
+  - type: StaticPrice
+    price: 1500
+
+- type: entity
+  id: CMMLRS-6
+  parent: ShuttleGunBaseCM
+  name: MlRS-6
+  description: Быстродействующая противоструктурная /кинетически-взрывная система залпового огня. Слова "НИ ШАГУ НАЗАД!" написаны на задней стороне фломастером.
+  suffix: DO NOT MAP
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/rszo.rsi
+    layers:
+    - state: RSZO
+    - state: mag-7
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+  - type: Gun
+    projectileSpeed: 80
+    fireRate: 2
+    angleDecay: 45
+    minAngle: 0
+    maxAngle: 15
+    soundGunshot:
+      path: /Audio/_GCM/katjusha.ogg
+      params:
+        pitch: 0.8
+    soundEmpty:
+      path: /Audio/_GCM/stopfire.ogg
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - RocketRSZO
+    capacity: 6
+    soundInsert:
+      path: /Audio/_GCM/reload.ogg
+  - type: MagazineVisuals
+    magState: mag
+    steps: 8
+    zeroVisible: false
+
+- type: entity
+  id: CMMLRS-12
+  parent: ShuttleGunBaseCM
+  name: MlRS-12
+  description: Быстродействующая противоструктурная /кинетически-взрывная система залпового огня. Слова "НИ ШАГУ НАЗАД!" написаны на задней стороне фломастером.
+  suffix: DO NOT MAP
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/12/supermlrs.rsi
+    layers:
+    - state: Sprite-0004
+    - state: mag-12
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+  - type: Gun
+    projectileSpeed: 80
+    fireRate: 2
+    angleDecay: 45
+    minAngle: 0
+    maxAngle: 15
+    soundGunshot:
+      path: /Audio/_GCM/katjusha.ogg
+      params:
+        pitch: 0.8
+    soundEmpty:
+      path: /Audio/_GCM/stopfire.ogg
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - RocketSuperRSZO
+    capacity: 12
+    soundInsert:
+      path: /Audio/_GCM/reload.ogg
+  - type: MagazineVisuals
+    magState: mag
+    steps: 13
+    zeroVisible: false
+
+- type: Tag
+  id: BaseGrenadeCMROcKET
+
+- type: Tag
+  id: BaseGrenadeCMMinirocket
+
+- type: entity
+  id: BaseGrenadeCMROcKET
+  name: base grenade
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - RocketRSZO
+  - type: Item
+    size: Large
+  - type: Sprite
+  - type: Explosive
+    explosionType: RMC
+  - type: ExplosionResistance
+    damageCoefficient: 0
+
+- type: entity
+  id: RocketHighExplosiveCM
+  name: 100mm Rocket High Explosive
+  parent: BaseGrenadeCMROcKET
+  components:
+  - type: CartridgeAmmo
+    proto: RMCProjectileRocket100mm
+  - type: Sprite
+    sprite: /Textures/_GCM/protiles.rsi
+    layers:
+    - state: Sprite-0002
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+    state: Sprite-0002
+    suffix: false
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.4
+    sprintModifier: 0.4
+  - type: HeldSpeedModifier
+
+- type: entity
+  id: RocketHighExplosiveCMHefa
+  name: 100mm anti-armor rocket
+  parent: BaseGrenadeCMROcKET
+  components:
+  - type: CartridgeAmmo
+    proto: RMCProjectileRocket100mmAntiArmor
+  - type: Sprite
+    sprite: /Textures/_GCM/protiles.rsi
+    layers:
+    - state: Sprite-0003
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+    state: Sprite-0003
+    suffix: false
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.4
+    sprintModifier: 0.4
+  - type: HeldSpeedModifier
+
+- type: entity
+  parent: RMCCrateAmmo
+  id: CMRSZOROCKETCrate
+  name: MlRS-6
+  components:
+  - type: StorageFill
+    contents:
+    - id: CMMLRS-6
+    - id: CMWrench
+    - id: CMMultitool
+    - id: RemoteSignaller
+
+- type: entity
+  parent: RMCCrateExplosives
+  id: CMROCKETAMMOHIGH
+  name: 100mm Rocket High Explosive (x6)
+  components:
+  - type: StorageFill
+    contents:
+    - id: RocketHighExplosiveCM
+      amount: 6
+
+- type: entity
+  parent: RMCCrateExplosives
+  id: CMROCKETAMMOHIGHHEFA
+  name: 100mm anti-armor rocket (x6)
+  components:
+  - type: StorageFill
+    contents:
+    - id: RocketHighExplosiveCMHefa
+      amount: 6
+
+- type: entity
+  id: RMCProjectileRocket100mm
+  name: 84mm high-explosive rocket
+  noSpawn: true
+  description: Uh oh.
+  components:
+  - type: TriggerOnCollide
+  # TODO RMC14 Make TriggerOnCollide spawn the explosion on the OtherEntity tile more consistently, so the explosion is centered properly
+    fixtureID: projectile # no parent entity from BaseBulletTrigger because it has Clickable
+  - type: Physics
+    bodyType: Dynamic
+    fixedRotation: false
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.15,0.15,0.15"
+          # Bigger than bullets. Rectangle won't work since AABB shapes don't rotate. This should help significantly with explosion consistency.
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+        restitution: 0.0
+        density: 20
+  - type: Projectile
+    impactEffect: BulletImpactEffect
+    damage:
+      types:
+        Blunt: 15
+    maxFixedRange: 100 # 7 tiles
+  - type: Sprite
+    sprite: /Textures/_GCM/rocket.rsi
+    layers:
+    - state: Sprite-0013
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: RMC
+    maxIntensity: 30
+    intensitySlope: 10
+    totalIntensity: 290
+    maxTileBreak: 0
+  - type: CMExplosionEffect
+  - type: PointLight
+    radius: 3.5
+    color: orange
+    energy: 0.5
+
+- type: entity
+  id: RMCProjectileRocket100mmAntiArmor
+  name: 84mm anti-armor rocket
+  parent: RMCProjectileRocket100mm
+  noSpawn: true
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffect
+    damage:
+      types:
+        Blunt: 160
+        Heat: 150
+        # 10 brute damage + 150 brute and 150 burn to simulate direct explosive damage.
+        # Temporary mechanic to make it consistent with intended main target damage.
+    maxFixedRange: 100 # 6 tiles
+  - type: CMArmorPiercing
+    amount: 100 # Ignores all armor.
+  - type: Sprite
+    sprite: /Textures/_GCM/rocket.rsi
+    layers:
+    - state: Sprite-0012
+  - type: Explosive
+  # TODO RMC14 Very inconsistent because explosions spawn at epicenter of the rocket, not the hit entity. Proper values are around (50, 40, 90)
+    explosionType: RMC
+    maxIntensity: 10
+    intensitySlope: 5
+    totalIntensity: 35
+    maxTileBreak: 0
+  - type: StunOnCollide
+  # This only works for AP rockets because it's supposed to have a hardcoded 6 second stun.
+  # Almost every other stun in the future should use some kind of configurable and resistable system instead.
+    stunAmount: 6
+    knockdownAmount: 6
+
+- type: entity
+  id: RMCProjectileRocket77mm
+  name: 77mm high-explosive rocket
+  noSpawn: true
+  description: Uh oh.
+  components:
+  - type: TriggerOnCollide
+  # TODO RMC14 Make TriggerOnCollide spawn the explosion on the OtherEntity tile more consistently, so the explosion is centered properly
+    fixtureID: projectile # no parent entity from BaseBulletTrigger because it has Clickable
+  - type: Physics
+    bodyType: Dynamic
+    fixedRotation: false
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.15,0.15,0.15"
+          # Bigger than bullets. Rectangle won't work since AABB shapes don't rotate. This should help significantly with explosion consistency.
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+        restitution: 0.0
+        density: 20
+  - type: Projectile
+    impactEffect: BulletImpactEffect
+    damage:
+      types:
+        Blunt: 15
+    maxFixedRange: 100 # 7 tiles
+  - type: Sprite
+    sprite: /Textures/_GCM/12/rocketfire.rsi
+    layers:
+    - state: Sprite-0003
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: RMC
+    maxIntensity: 10
+    intensitySlope: 8
+    totalIntensity: 190
+    maxTileBreak: 0
+  - type: CMExplosionEffect
+  - type: PointLight
+    radius: 2.0
+    color: orange
+    energy: 0.5
+
+- type: entity
+  id: RMCProjectileRocket77mmAntiArmor
+  name: 77mm anti-armor rocket
+  parent: RMCProjectileRocket77mm
+  noSpawn: true
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffect
+    damage:
+      types:
+        Blunt: 100
+        Heat: 90
+        # 10 brute damage + 150 brute and 150 burn to simulate direct explosive damage.
+        # Temporary mechanic to make it consistent with intended main target damage.
+    maxFixedRange: 100 # 6 tiles
+  - type: CMArmorPiercing
+    amount: 50 # Ignores all armor.
+  - type: Sprite
+    sprite: /Textures/_GCM/12/rocketfire.rsi
+    layers:
+    - state: Sprite-0002
+  - type: Explosive
+  # TODO RMC14 Very inconsistent because explosions spawn at epicenter of the rocket, not the hit entity. Proper values are around (50, 40, 90)
+    explosionType: RMC
+    maxIntensity: 10
+    intensitySlope: 5
+    totalIntensity: 35
+    maxTileBreak: 0
+  - type: StunOnCollide
+  # This only works for AP rockets because it's supposed to have a hardcoded 6 second stun.
+  # Almost every other stun in the future should use some kind of configurable and resistable system instead.
+    stunAmount: 6
+    knockdownAmount: 6
+
+- type: entity
+  id: BaseGrenadeCMMinirocket
+  name: base grenade
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - RocketSuperRSZO
+  - type: Item
+    size: Large
+  - type: Sprite
+  - type: Explosive
+    explosionType: RMC
+  - type: ExplosionResistance
+    damageCoefficient: 0
+
+- type: entity
+  id: RocketHighExplosiveCMMini
+  name: 77mm Rocket High Explosive
+  parent: BaseGrenadeCMMinirocket
+  components:
+  - type: CartridgeAmmo
+    proto: RMCProjectileRocket77mm
+  - type: Sprite
+    sprite: /Textures/_GCM/12/superrocket.rsi
+    layers:
+    - state: Sprite-0003
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+    state: Sprite-0003
+    suffix: false
+
+- type: entity
+  id: RocketHighExplosiveCMHefaMini
+  name: 77mm anti-armor rocket
+  parent: BaseGrenadeCMMinirocket
+  components:
+  - type: CartridgeAmmo
+    proto: RMCProjectileRocket77mmAntiArmor
+  - type: Sprite
+    sprite: /Textures/_GCM/12/superrocket.rsi
+    layers:
+    - state: Sprite-0002
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+    state: Sprite-0002
+    suffix: false
+
+- type: entity
+  id: RocketHighExplosiveCMHefaMiniHEFA
+  name: 77mm HEFA rocket
+  parent: BaseGrenadeCMMinirocket
+  components:
+  - type: CartridgeAmmo
+    proto: RMCProjectileRocket77mmHEFAFFF
+  - type: Sprite
+    sprite: /Textures/_GCM/12/superrocket.rsi
+    layers:
+    - state: Sprite-0004
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+    state: Sprite-0002
+    suffix: false
+
+- type: entity
+  id: RMCProjectileRocket77mmHEFAFFF
+  name: 77mm HEFA rocket
+  noSpawn: true
+  description: Uh oh.
+  components:
+  - type: TriggerOnCollide
+  # TODO RMC14 Make TriggerOnCollide spawn the explosion on the OtherEntity tile more consistently, so the explosion is centered properly
+    fixtureID: projectile # no parent entity from BaseBulletTrigger because it has Clickable
+  - type: Physics
+    bodyType: Dynamic
+    fixedRotation: false
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.15,0.15,0.15"
+          # Bigger than bullets. Rectangle won't work since AABB shapes don't rotate. This should help significantly with explosion consistency.
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+        restitution: 0.0
+        density: 20
+  - type: Projectile
+    impactEffect: BulletImpactEffect
+    damage:
+      types:
+        Blunt: 15
+    maxFixedRange: 100 # 7 tiles
+  - type: Sprite
+    sprite: /Textures/_GCM/12/rocketfire.rsi
+    layers:
+    - state: Sprite-0004
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: RMC
+    maxIntensity: 10
+    intensitySlope: 8
+    totalIntensity: 190
+    maxTileBreak: 0
+  - type: ClusterGrenade
+    fillPrototype: CMProjectileShrapnel
+    maxGrenadesCount: 48
+    grenadeType: enum.GrenadeType.Shoot
+    triggerGrenades: false
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container
+  - type: Ammo
+  - type: ClusterLimitHits
+  - type: CMExplosionEffect
+    maxShrapnel: 30
+  - type: CMVocalizeTrigger
+
+- type: entity
+  parent: RMCCrateAmmo
+  id: CMRSZOROCKETCrate12
+  name: MlRS-12
+  components:
+  - type: StorageFill
+    contents:
+    - id: CMMLRS-12
+    - id: CMWrench
+    - id: CMMultitool
+    - id: RemoteSignaller
+
+- type: entity
+  parent: RMCCrateExplosives
+  id: CMROCKETAMMOHIGH12
+  name: 77mm Rocket High Explosive (x12)
+  components:
+  - type: StorageFill
+    contents:
+    - id: RocketHighExplosiveCMMini
+      amount: 12
+
+- type: entity
+  parent: RMCCrateExplosives
+  id: CMROCKETAMMOHIGHHEFA12
+  name: 77mm anti-armor rocket (x12)
+  components:
+  - type: StorageFill
+    contents:
+    - id: RocketHighExplosiveCMHefaMini
+      amount: 12
+
+- type: entity
+  parent: RMCCrateExplosives
+  id: CMROCKETAMMOHIGH12HEFAAAA
+  name: 77mm Rocket HEFA (x12)
+  components:
+  - type: StorageFill
+    contents:
+    - id: RocketHighExplosiveCMHefaMiniHEFA
+      amount: 12
