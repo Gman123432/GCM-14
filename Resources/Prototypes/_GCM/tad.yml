@@ -1,0 +1,86 @@
+- type: entity
+  parent: CMBaseStructure
+  abstract: true
+  id: CMComputerTad
+  components:
+  - type: Sprite
+    sprite: /Textures/_GCM/TAD/shuttle_console.rsi
+    drawdepth: SmallObjects
+  - type: Corrodible
+    isCorrodible: false
+  - type: InteractionOutline
+
+- type: entity
+  parent: CMComputerTad
+  id: CMComputerDropshipNavigationTad
+  name: TAD navigation computer
+  description: A flight computer that can be used for autopilot or long-range flights.
+  components:
+  - type: Sprite
+    state: console
+  - type: DropshipNavigationComputer
+  - type: ActivatableUI
+    key: enum.DropshipNavigationUiKey.Key
+  - type: AccessReader
+    access: [ [ "CMAccessPilot" ] ]
+  - type: ActivatableUIRequiresAccess
+  - type: UserInterface
+    interfaces:
+      enum.DropshipNavigationUiKey.Key:
+        type: DropshipNavigationBui
+
+- type: entity
+  parent: CMComputerTad
+  id: CMComputerDropshipWeaponsTad
+  name: weapons controls TAD
+  description: A computer to manage equipment, weapons and simulations installed on the dropship.
+  components:
+  - type: Sprite
+    state: consoleright
+  - type: ActivatableUI
+    key: enum.DropshipTerminalWeaponsUi.Key
+  - type: AccessReader
+    access: [ [ "CMAccessPilot" ], [ "CMAccessSquadLeaderPrep" ] ]
+  - type: ActivatableUIRequiresAccess
+  - type: UserInterface
+    interfaces:
+      enum.DropshipTerminalWeaponsUi.Key:
+        type: DropshipWeaponsBui
+  - type: DropshipTerminalWeapons
+  - type: RequiresSkill
+    skills:
+      RMCSkillPilot: 1
+
+- type: entity
+  id: WeldingFuelTankTAD
+  parent: [StorageTank, StructureWheeled]
+  name: TAD fuel Tank
+  description: A fuel tank. It's used to store high amounts of fuel.
+  suffix: Empty
+  components:
+  - type: StaticPrice
+    price: 750
+  - type: Sprite
+    sprite: /Textures/_GCM/TAD/shuttle_console.rsi
+    layers:
+      - state: cell-empty-filterless
+      - state: cell-full-filterless
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: Appearance
+  - type: SolutionContainerVisuals
+    maxFillLevels: 3
+    fillBaseName: fueltank-2-
+  - type: ExaminableSolution
+    solution: tank
+  - type: ReagentTank
+    tankType: Fuel
+  - type: DamageOnToolInteract
+    tools: Welding
+    weldingDamage:
+      types:
+        Heat: 10
+  - type: PacifismDangerousAttack
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 60 # Mediocre explosion. Not enough to do any meaningful structural damage to anything other then windows, provided you're only using one tank.
