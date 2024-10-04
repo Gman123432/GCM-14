@@ -84,3 +84,19 @@
   - type: Explosive
     explosionType: Default
     totalIntensity: 60 # Mediocre explosion. Not enough to do any meaningful structural damage to anything other then windows, provided you're only using one tank.
+
+- type: entity
+  parent: RMCPodDoorAlmayer
+  id: RMCPodDoorAlmayerOpen2
+  suffix: Open
+  components:
+  - type: Door
+    state: Open
+  - type: Occluder
+    enabled: false
+  - type: Physics
+    canCollide: false
+  - type: Airtight
+    airBlocked: false
+  - type: RadiationBlocker
+    enabled: false
