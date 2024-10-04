@@ -2,6 +2,7 @@
   abstract: true
   id: CMApcBase
   name: area power controller
+  description: This model doesn't let you change its power cell yet!
   categories: [ HideSpawnMenu ]
   components:
   - type: Transform
@@ -39,6 +40,7 @@
       map: [ "enum.ApcVisualLayers.Environment" ]
   - type: Appearance
   - type: WallMount
+    arc: 360
   - type: UserInterface
     interfaces:
       enum.RMCApcUiKey.Key:
