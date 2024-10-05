@@ -107,7 +107,7 @@ public abstract class SharedEvacuationSystem : EntitySystem
             Dirty(uid, door);
         }
 
-        _config.SetCVar(CCVars.GameDisallowLateJoins, false);
+        _config.SetCVar(CCVars.GameDisallowLateJoins, true);
     }
 
     private void OnEvacuationEnabled(ref EvacuationEnabledEvent ev)

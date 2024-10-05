@@ -512,7 +512,7 @@ public sealed class CMDistressSignalRuleSystem : GameRuleSystem<CMDistressSignal
     {
         StartPlanetVote();
         ResetSelectedPlanet();
-        _config.SetCVar(CCVars.GameDisallowLateJoins, true);
+        _config.SetCVar(CCVars.GameDisallowLateJoins, false);
     }
 
     private void OnDropshipHijackLanded(ref DropshipHijackLandedEvent ev)
